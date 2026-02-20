@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 import { PcbLinesBackground } from "@/components/ui/PcbLinesBackground";
 
 export function Hero() {
@@ -105,11 +106,13 @@ export function Hero() {
                     </p>
 
                     <div className="hero-element pt-8 flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center">
-                        <button className="w-full sm:w-auto px-8 py-4 rounded-md bg-vyr-wine hover:bg-vyr-wine-light text-white font-medium transition-all shadow-[0_0_20px_rgba(93,36,60,0.5)] hover:scale-[1.02]">
+                        <button className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#3d4f1c] hover:bg-[#4a5d23] text-white font-medium transition-all shadow-[0_0_20px_rgba(61,79,28,0.5)] hover:shadow-[0_0_30px_rgba(74,93,35,0.8)] hover:scale-[1.02] group flex items-center justify-center border border-[#526a25]/50">
                             Solicitar Diagnóstico
+                            <ArrowUpRight className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
                         </button>
-                        <button className="w-full sm:w-auto px-8 py-4 rounded-md border border-white/10 hover:bg-white/5 text-vyr-text transition-all font-medium hover:scale-[1.02]" onClick={() => document.getElementById('metodologia')?.scrollIntoView({ behavior: 'smooth' })}>
+                        <button className="w-full sm:w-auto px-8 py-4 rounded-full border border-white/10 hover:bg-white/5 text-vyr-text transition-all font-medium hover:scale-[1.02] group flex items-center justify-center" onClick={() => document.getElementById('metodologia')?.scrollIntoView({ behavior: 'smooth' })}>
                             A Metodologia SAFRA
+                            <ArrowUpRight className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 opacity-70 group-hover:opacity-100" />
                         </button>
                     </div>
                 </div>
