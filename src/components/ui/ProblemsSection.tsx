@@ -78,27 +78,27 @@ export function ProblemsSection() {
         <section ref={sectionRef} className="py-24 md:py-32 bg-vyr-dark relative overflow-hidden">
 
             {/* Neon section divider */}
-            <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-vyr-wine-light to-transparent opacity-50 shadow-[0_0_10px_rgba(255,23,68,0.8)] z-20" />
-            <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#ff1744] to-transparent opacity-30 shadow-[0_0_20px_rgba(255,23,68,1)] z-20" />
+            <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-vyr-wine to-transparent opacity-50 shadow-[0_0_10px_rgba(109,39,73,0.8)] z-20" />
+            <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#6D2749] to-transparent opacity-30 shadow-[0_0_20px_rgba(109,39,73,1)] z-20" />
 
             {/* Area/Line Graph SVG Background for Entrepreneurial Growth */}
             <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
                 <svg className="w-full h-full opacity-40 mix-blend-screen" preserveAspectRatio="none" viewBox="0 0 1440 800" xmlns="http://www.w3.org/2000/svg">
                     <defs>
                         <linearGradient id="graph-gradient-1" x1="0" y1="0" x2="1" y2="0">
-                            <stop offset="0%" stopColor="#5D243C" stopOpacity="0" />
-                            <stop offset="30%" stopColor="#7A3351" stopOpacity="0.8" />
-                            <stop offset="70%" stopColor="#ff1744" stopOpacity="1" />
-                            <stop offset="100%" stopColor="#ff1744" stopOpacity="0" />
+                            <stop offset="0%" stopColor="#2D111E" stopOpacity="0" />
+                            <stop offset="30%" stopColor="#4A1731" stopOpacity="0.8" />
+                            <stop offset="70%" stopColor="#6D2749" stopOpacity="1" />
+                            <stop offset="100%" stopColor="#6D2749" stopOpacity="0" />
                         </linearGradient>
                         <linearGradient id="graph-gradient-2" x1="0" y1="0" x2="1" y2="0">
-                            <stop offset="0%" stopColor="#ff1744" stopOpacity="0" />
-                            <stop offset="40%" stopColor="#ff1744" stopOpacity="0.5" />
-                            <stop offset="80%" stopColor="#5D243C" stopOpacity="0.8" />
-                            <stop offset="100%" stopColor="#5D243C" stopOpacity="0" />
+                            <stop offset="0%" stopColor="#6D2749" stopOpacity="0" />
+                            <stop offset="40%" stopColor="#6D2749" stopOpacity="0.5" />
+                            <stop offset="80%" stopColor="#4A1731" stopOpacity="0.8" />
+                            <stop offset="100%" stopColor="#2D111E" stopOpacity="0" />
                         </linearGradient>
                         <linearGradient id="fill-gradient" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="0%" stopColor="#ff1744" stopOpacity="0.08" />
+                            <stop offset="0%" stopColor="#6D2749" stopOpacity="0.08" />
                             <stop offset="100%" stopColor="#0C0C0E" stopOpacity="0" />
                         </linearGradient>
                     </defs>
@@ -115,12 +115,12 @@ export function ProblemsSection() {
                     <path d="M 0 750 C 400 700, 500 550, 800 450 C 1100 350, 1200 250, 1440 200" fill="none" stroke="url(#graph-gradient-2)" strokeWidth="1.5" strokeDasharray="6 6" />
 
                     {/* Data Points / Nodes */}
-                    <circle cx="700" cy="400" r="4" fill="#0C0C0E" stroke="#ff1744" strokeWidth="2" />
-                    <circle cx="1100" cy="150" r="5" fill="#0C0C0E" stroke="#ff1744" strokeWidth="2" />
+                    <circle cx="700" cy="400" r="4" fill="#0C0C0E" stroke="#6D2749" strokeWidth="2" />
+                    <circle cx="1100" cy="150" r="5" fill="#0C0C0E" stroke="#6D2749" strokeWidth="2" />
                 </svg>
 
                 {/* Subtle Glows */}
-                <div className="absolute top-[20%] right-[10%] w-[400px] h-[400px] bg-[#ff1744]/5 rounded-full blur-[120px]" />
+                <div className="absolute top-[20%] right-[10%] w-[400px] h-[400px] bg-[#6D2749]/10 rounded-full blur-[120px]" />
                 <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-vyr-dark to-transparent" />
             </div>
 
@@ -144,7 +144,7 @@ export function ProblemsSection() {
                             <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:24px_24px] rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
                             {/* Glowing Accent Line */}
-                            <div className="absolute top-0 left-0 w-0 h-[3px] bg-gradient-to-r from-vyr-wine-light to-[#ff1744] group-hover:w-full transition-all duration-700 ease-out" />
+                            <div className="absolute top-0 left-0 w-0 h-[3px] bg-gradient-to-r from-vyr-wine to-[#6D2749] group-hover:w-full transition-all duration-700 ease-out" />
 
                             <div className="flex justify-between items-start mb-6 relative z-10 w-full">
                                 <div className="font-mono text-[11px] tracking-widest text-vyr-wine-light font-medium bg-vyr-wine/10 px-3 py-1 rounded border border-vyr-wine/20">
