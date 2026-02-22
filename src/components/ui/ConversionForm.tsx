@@ -78,13 +78,14 @@ export function ConversionForm() {
                     </ul>
                 </div>
 
-                {/* Form Container */}
-                <div className="lg:w-1/2 bg-vyr-surface border border-white/5 p-8 md:p-12 rounded-3xl relative overflow-hidden shadow-2xl">
+                {/* Form Container - Tech Neon Glassmorphism */}
+                <div className="lg:w-1/2 bg-[#0A0508]/90 backdrop-blur-xl border border-[#6D2749]/30 p-8 md:p-12 rounded-3xl relative overflow-hidden shadow-[0_0_40px_rgba(109,39,73,0.15)] group transition-all duration-500 hover:border-[#6D2749]/60 hover:shadow-[0_0_50px_rgba(109,39,73,0.3)]">
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#6D2749]/10 via-transparent to-transparent opacity-50 pointer-events-none" />
                     {/* Progress Bar */}
                     {!isSuccess && (
-                        <div className="w-full bg-vyr-darker h-2 rounded-full mb-8 overflow-hidden">
+                        <div className="w-full bg-[#050204]/60 border border-white/5 h-2 rounded-full mb-8 overflow-hidden relative">
                             <div
-                                className="bg-vyr-wine h-full transition-all duration-500 rounded-full"
+                                className="bg-gradient-to-r from-[#6D2749] to-[#9E2A4A] h-full transition-all duration-500 rounded-full shadow-[0_0_10px_rgba(158,42,74,0.8)]"
                                 style={{ width: `${(step / 3) * 100}%` }}
                             />
                         </div>
@@ -117,7 +118,7 @@ export function ConversionForm() {
                                                 name="name"
                                                 value={formData.name}
                                                 onChange={handleChange}
-                                                className="w-full bg-vyr-dark border border-white/10 rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:border-vyr-wine-light transition-colors"
+                                                className="w-full bg-[#1A0A13]/40 border border-[#6D2749]/30 rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:border-[#9E2A4A] focus:shadow-[0_0_15px_rgba(158,42,74,0.3)] transition-all duration-300 backdrop-blur-md"
                                                 placeholder="João Silva"
                                             />
                                         </div>
@@ -132,7 +133,7 @@ export function ConversionForm() {
                                                 name="company"
                                                 value={formData.company}
                                                 onChange={handleChange}
-                                                className="w-full bg-vyr-dark border border-white/10 rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:border-vyr-wine-light transition-colors"
+                                                className="w-full bg-[#1A0A13]/40 border border-[#6D2749]/30 rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:border-[#9E2A4A] focus:shadow-[0_0_15px_rgba(158,42,74,0.3)] transition-all duration-300 backdrop-blur-md"
                                                 placeholder="Sua Empresa Ltda"
                                             />
                                         </div>
@@ -154,7 +155,7 @@ export function ConversionForm() {
                                                 name="email"
                                                 value={formData.email}
                                                 onChange={handleChange}
-                                                className="w-full bg-vyr-dark border border-white/10 rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:border-vyr-wine-light transition-colors"
+                                                className="w-full bg-[#1A0A13]/40 border border-[#6D2749]/30 rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:border-[#9E2A4A] focus:shadow-[0_0_15px_rgba(158,42,74,0.3)] transition-all duration-300 backdrop-blur-md"
                                                 placeholder="nome@empresa.com.br"
                                             />
                                         </div>
@@ -169,7 +170,7 @@ export function ConversionForm() {
                                                 name="phone"
                                                 value={formData.phone}
                                                 onChange={handleChange}
-                                                className="w-full bg-vyr-dark border border-white/10 rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:border-vyr-wine-light transition-colors"
+                                                className="w-full bg-[#1A0A13]/40 border border-[#6D2749]/30 rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:border-[#9E2A4A] focus:shadow-[0_0_15px_rgba(158,42,74,0.3)] transition-all duration-300 backdrop-blur-md"
                                                 placeholder="(11) 99999-9999"
                                             />
                                         </div>
@@ -190,7 +191,7 @@ export function ConversionForm() {
                                                 name="revenue"
                                                 value={formData.revenue}
                                                 onChange={handleChange}
-                                                className="w-full bg-vyr-dark border border-white/10 rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:border-vyr-wine-light transition-colors appearance-none"
+                                                className="w-full bg-[#1A0A13]/40 border border-[#6D2749]/30 rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:border-[#9E2A4A] focus:shadow-[0_0_15px_rgba(158,42,74,0.3)] transition-all duration-300 backdrop-blur-md appearance-none"
                                             >
                                                 <option value="" disabled>Selecione uma faixa...</option>
                                                 <option value="Até 30k">Até R$ 30.000</option>
@@ -209,7 +210,7 @@ export function ConversionForm() {
                                                 name="segment"
                                                 value={formData.segment}
                                                 onChange={handleChange}
-                                                className="w-full bg-vyr-dark border border-white/10 rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:border-vyr-wine-light transition-colors appearance-none"
+                                                className="w-full bg-[#1A0A13]/40 border border-[#6D2749]/30 rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:border-[#9E2A4A] focus:shadow-[0_0_15px_rgba(158,42,74,0.3)] transition-all duration-300 backdrop-blur-md appearance-none"
                                             >
                                                 <option value="" disabled>Selecione seu segmento...</option>
                                                 <option value="Tecnologia">Tecnologia & SaaS</option>
@@ -238,7 +239,7 @@ export function ConversionForm() {
                                 <button
                                     type="submit"
                                     disabled={isSubmitting}
-                                    className="px-8 py-3 rounded-lg bg-vyr-wine hover:bg-vyr-wine-light text-white font-medium transition-all shadow-[0_0_15px_rgba(93,36,60,0.4)] flex items-center disabled:opacity-50"
+                                    className="px-8 py-3 rounded-lg bg-gradient-to-r from-[#6D2749] to-[#9E2A4A] hover:to-[#B63358] text-white font-medium transition-all shadow-[0_0_20px_rgba(109,39,73,0.4)] hover:shadow-[0_0_30px_rgba(158,42,74,0.6)] flex items-center disabled:opacity-50"
                                 >
                                     {isSubmitting ? "Enviando..." : step === 3 ? "Finalizar" : "Continuar"}
                                     {!isSubmitting && step < 3 && <ArrowRight className="w-4 h-4 ml-2" />}
