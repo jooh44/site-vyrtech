@@ -81,23 +81,23 @@ export function CasesSection() {
                 {/* Cases Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {placeholders.map((item) => (
-                        <div key={item.id} className="case-card group relative p-px rounded-3xl bg-gradient-to-b from-[#6D2749]/30 via-transparent to-transparent hover:from-[#6D2749] overflow-hidden transition-all duration-500 hover:shadow-[0_0_40px_rgba(109,39,73,0.3)] hover:-translate-y-2">
-                            <div className="absolute inset-0 bg-gradient-to-br from-[#6D2749]/10 via-transparent to-[#4A1731]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                        <div key={item.id} className="case-card group relative p-px rounded-3xl bg-gradient-to-b from-[#2E0B1A]/60 via-transparent to-transparent hover:from-[#3A0F21] overflow-hidden transition-all duration-500 hover:-translate-y-2">
+                            <div className="absolute inset-0 bg-gradient-to-br from-[#1C050F]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
-                            <div className="relative h-full bg-[#0A0508]/95 backdrop-blur-xl rounded-[calc(1.5rem-1px)] p-8 md:p-10 flex flex-col justify-between border border-white/5 group-hover:border-[#6D2749]/50 transition-colors duration-500">
+                            <div className="relative h-full bg-[#070305]/95 backdrop-blur-xl rounded-[calc(1.5rem-1px)] p-8 md:p-10 flex flex-col justify-between border border-white/[0.04] group-hover:border-[#2E0B1A]/60 transition-colors duration-500">
                                 <div className="relative z-10">
                                     <div className="flex justify-between items-start mb-8">
-                                        <div className="w-12 h-12 rounded-xl bg-[#6D2749]/10 flex items-center justify-center border border-[#6D2749]/30 group-hover:shadow-[0_0_20px_rgba(109,39,73,0.6)] group-hover:bg-[#6D2749]/20 transition-all duration-500">
+                                        <div className="w-12 h-12 rounded-xl bg-[#1C050F]/50 flex items-center justify-center border border-[#2E0B1A]/50 group-hover:bg-[#2E0B1A]/40 transition-all duration-500">
                                             {item.icon}
                                         </div>
-                                        <div className="px-3 py-1 rounded-full bg-white/5 text-xs text-vyr-text-muted font-medium border border-white/5 group-hover:border-[#6D2749]/40 group-hover:text-white transition-colors duration-500">
+                                        <div className="px-3 py-1 rounded-full bg-white/[0.02] text-xs text-vyr-text-muted font-medium border border-white/[0.05] group-hover:border-[#2E0B1A]/80 group-hover:text-white transition-colors duration-500">
                                             {item.client}
                                         </div>
                                     </div>
 
                                     <div className="mb-2">
-                                        <div className="text-5xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-300 drop-shadow-[0_0_15px_rgba(255,255,255,0.1)] group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] transition-all duration-500 mb-2">{item.metric}</div>
-                                        <div className="text-sm text-[#9E2A4A] font-bold uppercase tracking-wider group-hover:drop-shadow-[0_0_8px_rgba(158,42,74,0.6)] transition-all duration-500">{item.label}</div>
+                                        <div className="text-5xl font-bold tracking-tighter text-white mb-2">{item.metric}</div>
+                                        <div className="text-sm text-[#4A1731] font-bold uppercase tracking-wider transition-all duration-500">{item.label}</div>
                                     </div>
 
                                     <p className="text-vyr-text-muted mt-6 text-sm leading-relaxed">
