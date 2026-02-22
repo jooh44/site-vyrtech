@@ -109,9 +109,9 @@ export function ConversionForm() {
                                 <h3 className="text-xl font-semibold text-white mb-2">1. Dados Básicos</h3>
                                 <div className="space-y-4">
                                     <div>
-                                        <label className="block text-sm font-medium text-vyr-text-muted mb-1">Seu Nome</label>
+                                        <label className="block text-sm font-medium text-white/70 mb-1">Seu Nome</label>
                                         <div className="relative">
-                                            <User className="absolute left-3 top-3 w-5 h-5 text-vyr-text-muted/50" />
+                                            <User className="absolute left-3 top-3 w-5 h-5 text-white/40" />
                                             <input
                                                 required={step === 1}
                                                 type="text"
@@ -124,9 +124,9 @@ export function ConversionForm() {
                                         </div>
                                     </div>
                                     <div>
-                                        <label className="block text-sm font-medium text-vyr-text-muted mb-1">Empresa</label>
+                                        <label className="block text-sm font-medium text-white/70 mb-1">Empresa</label>
                                         <div className="relative">
-                                            <Building className="absolute left-3 top-3 w-5 h-5 text-vyr-text-muted/50" />
+                                            <Building className="absolute left-3 top-3 w-5 h-5 text-white/40" />
                                             <input
                                                 required={step === 1}
                                                 type="text"
@@ -146,9 +146,9 @@ export function ConversionForm() {
                                 <h3 className="text-xl font-semibold text-white mb-2">2. Contato Profissional</h3>
                                 <div className="space-y-4">
                                     <div>
-                                        <label className="block text-sm font-medium text-vyr-text-muted mb-1">E-mail Corporativo</label>
+                                        <label className="block text-sm font-medium text-white/70 mb-1">E-mail Corporativo</label>
                                         <div className="relative">
-                                            <Mail className="absolute left-3 top-3 w-5 h-5 text-vyr-text-muted/50" />
+                                            <Mail className="absolute left-3 top-3 w-5 h-5 text-white/40" />
                                             <input
                                                 required={step === 2}
                                                 type="email"
@@ -161,9 +161,9 @@ export function ConversionForm() {
                                         </div>
                                     </div>
                                     <div>
-                                        <label className="block text-sm font-medium text-vyr-text-muted mb-1">WhatsApp (com DDD)</label>
+                                        <label className="block text-sm font-medium text-white/70 mb-1">WhatsApp (com DDD)</label>
                                         <div className="relative">
-                                            <Phone className="absolute left-3 top-3 w-5 h-5 text-vyr-text-muted/50" />
+                                            <Phone className="absolute left-3 top-3 w-5 h-5 text-white/40" />
                                             <input
                                                 required={step === 2}
                                                 type="tel"
@@ -183,9 +183,9 @@ export function ConversionForm() {
                                 <h3 className="text-xl font-semibold text-white mb-2">3. Qualificação</h3>
                                 <div className="space-y-4">
                                     <div>
-                                        <label className="block text-sm font-medium text-vyr-text-muted mb-1">Faturamento Mensal</label>
+                                        <label className="block text-sm font-medium text-white/70 mb-1">Faturamento Mensal</label>
                                         <div className="relative">
-                                            <BarChart3 className="absolute left-3 top-3 w-5 h-5 text-vyr-text-muted/50" />
+                                            <BarChart3 className="absolute left-3 top-3 w-5 h-5 text-white/40" />
                                             <select
                                                 required={step === 3}
                                                 name="revenue"
@@ -202,9 +202,9 @@ export function ConversionForm() {
                                         </div>
                                     </div>
                                     <div>
-                                        <label className="block text-sm font-medium text-vyr-text-muted mb-1">Segmento</label>
+                                        <label className="block text-sm font-medium text-white/70 mb-1">Segmento</label>
                                         <div className="relative">
-                                            <Briefcase className="absolute left-3 top-3 w-5 h-5 text-vyr-text-muted/50" />
+                                            <Briefcase className="absolute left-3 top-3 w-5 h-5 text-white/40" />
                                             <select
                                                 required={step === 3}
                                                 name="segment"
@@ -230,7 +230,7 @@ export function ConversionForm() {
                                     <button
                                         type="button"
                                         onClick={handleBack}
-                                        className="px-6 py-3 rounded-lg text-vyr-text-muted hover:text-white transition-colors"
+                                        className="px-6 py-3 rounded-lg text-white/60 hover:text-white transition-colors"
                                     >
                                         Voltar
                                     </button>
