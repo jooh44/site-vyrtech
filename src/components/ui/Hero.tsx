@@ -39,7 +39,7 @@ export function Hero() {
                 <div ref={textRef} className="w-full max-w-6xl flex flex-col items-center gap-6 sm:gap-8">
 
                     {/* User's Vyrtech Grape Logo with Animated Gradient Overlay */}
-                    <div className="hero-element flex justify-center hover:scale-105 transition-transform duration-500 order-1">
+                    <div className="hero-element flex justify-center hover:scale-105 transition-transform duration-500">
                         <div className="relative w-16 h-20 md:w-24 md:h-28 drop-shadow-[0_0_15px_rgba(93,36,60,0.4)]">
                             {/* Base Image */}
                             <Image
@@ -67,7 +67,7 @@ export function Hero() {
                     </div>
 
                     {/* Playground Concept: Glowing Gradient Headline */}
-                    <h1 className="hero-element text-4xl sm:text-5xl md:text-5xl lg:text-[4.2rem] xl:text-[4.8rem] font-bold tracking-tight text-vyr-text leading-[1.2] md:leading-[1.1] relative w-full order-2 mb-2 sm:mb-0">
+                    <h1 className="hero-element text-4xl sm:text-5xl md:text-5xl lg:text-[4.2rem] xl:text-[4.8rem] font-bold tracking-tight text-vyr-text leading-[1.2] md:leading-[1.1] relative w-full mb-2 sm:mb-0">
                         <div className="absolute inset-0 blur-3xl bg-vyr-wine/10 rounded-full -z-10 transform scale-150 opacity-40" />
 
                         {/* Mobile Layout: 3 Lines */}
