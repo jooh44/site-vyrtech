@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { TrendingDown, Database, Clock, LineChart, FileBarChart, EyeOff } from "lucide-react";
 
 export function ProblemsSection() {
     const sectionRef = useRef<HTMLElement>(null);
@@ -11,32 +12,38 @@ export function ProblemsSection() {
         {
             id: "ERR_01_MID",
             title: "Desperdício em Mídia",
-            desc: "Investimentos mal direcionados que não geram o retorno esperado em pipeline."
+            desc: "Investimentos mal direcionados que não geram o retorno esperado em pipeline.",
+            icon: <TrendingDown className="w-6 h-6 text-vyr-olive-light" />
         },
         {
             id: "ERR_02_DAT",
             title: "Dados Desorganizados",
-            desc: "Gestão ineficiente de leads corporativos, resultando em oportunidades perdidas."
+            desc: "Gestão ineficiente de leads corporativos, resultando em oportunidades perdidas.",
+            icon: <Database className="w-6 h-6 text-vyr-olive-light" />
         },
         {
             id: "ERR_03_OPR",
             title: "Tempo em Retrabalho",
-            desc: "Informações fragmentadas e tarefas que poderiam ser 100% automatizadas."
+            desc: "Informações fragmentadas e tarefas que poderiam ser 100% automatizadas.",
+            icon: <Clock className="w-6 h-6 text-vyr-olive-light" />
         },
         {
             id: "ERR_04_PRV",
             title: "Falta de Previsibilidade",
-            desc: "Dificuldade em prever resultados estruturais e planejar ações com dados reais."
+            desc: "Dificuldade em prever resultados estruturais e planejar ações com dados reais.",
+            icon: <LineChart className="w-6 h-6 text-vyr-olive-light" />
         },
         {
             id: "ERR_05_REP",
             title: "Ausência de Relatórios",
-            desc: "Falta de métricas exatas que demonstrem o real impacto no seu ROI final."
+            desc: "Falta de métricas exatas que demonstrem o real impacto no seu ROI final.",
+            icon: <FileBarChart className="w-6 h-6 text-vyr-olive-light" />
         },
         {
             id: "ERR_06_VIS",
             title: "Invisibilidade Digital",
-            desc: "Baixa autoridade online que dificulta severamente a conversão de clientes atuantes."
+            desc: "Baixa autoridade online que dificulta severamente a conversão de clientes atuantes.",
+            icon: <EyeOff className="w-6 h-6 text-vyr-olive-light" />
         }
     ];
 
@@ -138,7 +145,7 @@ export function ProblemsSection() {
                     {problems.map((prob, idx) => (
                         <div
                             key={idx}
-                            className="problem-card relative bg-vyr-surface/40 backdrop-blur-md border border-white/5 p-8 rounded-2xl hover:bg-vyr-surface hover:border-vyr-wine/40 transition-all duration-500 group overflow-hidden shadow-lg"
+                            className="problem-card relative bg-transparent backdrop-blur-md border border-[#4A1731]/40 p-8 rounded-2xl hover:bg-transparent hover:border-[#6D2749] transition-all duration-500 group overflow-hidden"
                         >
                             {/* Abstract Tech Grid inside Card */}
                             <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:24px_24px] rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
@@ -147,19 +154,8 @@ export function ProblemsSection() {
                             <div className="absolute top-0 left-0 w-0 h-[3px] bg-gradient-to-r from-vyr-wine to-[#6D2749] group-hover:w-full transition-all duration-700 ease-out" />
 
                             <div className="flex justify-between items-start mb-6 relative z-10 w-full">
-                                <div className="font-mono text-[11px] tracking-widest text-vyr-wine-light font-medium bg-vyr-wine/10 px-3 py-1 rounded border border-vyr-wine/20">
-                                    {prob.id}
-                                </div>
-
-                                {/* Abstract Geometry instead of Generic Icon */}
-                                <div className="text-white/10 group-hover:text-vyr-wine-light/30 transition-colors duration-500">
-                                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" stroke="currentColor" strokeWidth="1" strokeLinejoin="round" />
-                                        <path d="M12 22V12" stroke="currentColor" strokeWidth="1" strokeLinejoin="round" />
-                                        <path d="M12 12L2 7" stroke="currentColor" strokeWidth="1" strokeLinejoin="round" />
-                                        <path d="M12 12L22 7" stroke="currentColor" strokeWidth="1" strokeLinejoin="round" />
-                                        <circle cx="12" cy="12" r="2" fill="currentColor" />
-                                    </svg>
+                                <div className="w-12 h-12 rounded-xl bg-transparent flex items-center justify-center border border-[#4A1731]/50 group-hover:border-[#6D2749] transition-all duration-500">
+                                    {prob.icon}
                                 </div>
                             </div>
 

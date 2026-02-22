@@ -16,7 +16,7 @@ const placeholders = [
         client: "Indústria Global",
         metric: "+215%",
         label: "ROAS em 90 dias",
-        icon: <TrendingUp className="w-6 h-6 text-[#6D2749]" />,
+        icon: <TrendingUp className="w-6 h-6 text-vyr-olive-light" />,
         desc: "Máquina de vendas automatizada substituindo a velha captação orgânica."
     },
     {
@@ -24,7 +24,7 @@ const placeholders = [
         client: "SaaS Enterprise",
         metric: "12k",
         label: "Leads Qualificados M/M",
-        icon: <Users className="w-6 h-6 text-[#6D2749]" />,
+        icon: <Users className="w-6 h-6 text-vyr-olive-light" />,
         desc: "Expansão internacional acelerada com base em análise de dados em tempo real."
     },
     {
@@ -32,7 +32,7 @@ const placeholders = [
         client: "Moda Premium",
         metric: "R$ 4M",
         label: "Faturamento Incremental",
-        icon: <BarChart3 className="w-6 h-6 text-[#6D2749]" />,
+        icon: <BarChart3 className="w-6 h-6 text-vyr-olive-light" />,
         desc: "Ecossistema de alta precisão desenhado para multiplicar o lucro das campanhas."
     }
 ];
