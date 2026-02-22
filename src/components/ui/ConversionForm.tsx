@@ -78,14 +78,14 @@ export function ConversionForm() {
                     </ul>
                 </div>
 
-                {/* Form Container - Subtle Dark Tech Glassmorphism */}
-                <div className="lg:w-1/2 bg-[#070305]/95 backdrop-blur-xl border border-white/[0.04] p-8 md:p-12 rounded-3xl relative overflow-hidden group transition-all duration-500 hover:border-[#2E0B1A]/60">
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#1C050F]/30 via-transparent to-transparent opacity-50 pointer-events-none" />
+                {/* Form Container - Transparent Tech Outline */}
+                <div className="lg:w-1/2 bg-transparent backdrop-blur-md border border-[#4A1731]/50 p-8 md:p-12 rounded-3xl relative overflow-hidden group transition-all duration-500 hover:border-[#6D2749]">
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#1C050F]/20 via-transparent to-transparent opacity-50 pointer-events-none" />
                     {/* Progress Bar */}
                     {!isSuccess && (
-                        <div className="w-full bg-black/40 border border-white/5 h-2 rounded-full mb-8 overflow-hidden relative">
+                        <div className="w-full bg-transparent border border-[#4A1731]/30 h-2 rounded-full mb-8 overflow-hidden relative">
                             <div
-                                className="bg-[#2E0B1A] h-full transition-all duration-500 rounded-full"
+                                className="bg-[#4A1731] h-full transition-all duration-500 rounded-full"
                                 style={{ width: `${(step / 3) * 100}%` }}
                             />
                         </div>
@@ -118,7 +118,7 @@ export function ConversionForm() {
                                                 name="name"
                                                 value={formData.name}
                                                 onChange={handleChange}
-                                                className="w-full bg-[#050204]/60 border border-white/[0.05] rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:border-[#2E0B1A] focus:bg-[#1C050F]/40 transition-all duration-300 backdrop-blur-md"
+                                                className="w-full bg-transparent border border-[#4A1731]/40 rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:border-[#6D2749] focus:bg-transparent transition-all duration-300 backdrop-blur-md"
                                                 placeholder="João Silva"
                                             />
                                         </div>
@@ -133,7 +133,7 @@ export function ConversionForm() {
                                                 name="company"
                                                 value={formData.company}
                                                 onChange={handleChange}
-                                                className="w-full bg-[#050204]/60 border border-white/[0.05] rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:border-[#2E0B1A] focus:bg-[#1C050F]/40 transition-all duration-300 backdrop-blur-md"
+                                                className="w-full bg-transparent border border-[#4A1731]/40 rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:border-[#6D2749] focus:bg-transparent transition-all duration-300 backdrop-blur-md"
                                                 placeholder="Sua Empresa Ltda"
                                             />
                                         </div>
@@ -155,7 +155,7 @@ export function ConversionForm() {
                                                 name="email"
                                                 value={formData.email}
                                                 onChange={handleChange}
-                                                className="w-full bg-[#050204]/60 border border-white/[0.05] rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:border-[#2E0B1A] focus:bg-[#1C050F]/40 transition-all duration-300 backdrop-blur-md"
+                                                className="w-full bg-transparent border border-[#4A1731]/40 rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:border-[#6D2749] focus:bg-transparent transition-all duration-300 backdrop-blur-md"
                                                 placeholder="nome@empresa.com.br"
                                             />
                                         </div>
@@ -170,7 +170,7 @@ export function ConversionForm() {
                                                 name="phone"
                                                 value={formData.phone}
                                                 onChange={handleChange}
-                                                className="w-full bg-[#050204]/60 border border-white/[0.05] rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:border-[#2E0B1A] focus:bg-[#1C050F]/40 transition-all duration-300 backdrop-blur-md"
+                                                className="w-full bg-transparent border border-[#4A1731]/40 rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:border-[#6D2749] focus:bg-transparent transition-all duration-300 backdrop-blur-md"
                                                 placeholder="(11) 99999-9999"
                                             />
                                         </div>
@@ -191,7 +191,7 @@ export function ConversionForm() {
                                                 name="revenue"
                                                 value={formData.revenue}
                                                 onChange={handleChange}
-                                                className="w-full bg-[#050204]/60 border border-white/[0.05] rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:border-[#2E0B1A] focus:bg-[#1C050F]/40 transition-all duration-300 backdrop-blur-md appearance-none"
+                                                className="w-full bg-transparent border border-[#4A1731]/40 rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:border-[#6D2749] focus:bg-transparent transition-all duration-300 backdrop-blur-md appearance-none"
                                             >
                                                 <option value="" disabled>Selecione uma faixa...</option>
                                                 <option value="Até 30k">Até R$ 30.000</option>
@@ -210,7 +210,7 @@ export function ConversionForm() {
                                                 name="segment"
                                                 value={formData.segment}
                                                 onChange={handleChange}
-                                                className="w-full bg-[#050204]/60 border border-white/[0.05] rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:border-[#2E0B1A] focus:bg-[#1C050F]/40 transition-all duration-300 backdrop-blur-md appearance-none"
+                                                className="w-full bg-transparent border border-[#4A1731]/40 rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:border-[#6D2749] focus:bg-transparent transition-all duration-300 backdrop-blur-md appearance-none"
                                             >
                                                 <option value="" disabled>Selecione seu segmento...</option>
                                                 <option value="Tecnologia">Tecnologia & SaaS</option>

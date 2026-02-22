@@ -81,16 +81,16 @@ export function CasesSection() {
                 {/* Cases Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {placeholders.map((item) => (
-                        <div key={item.id} className="case-card group relative p-px rounded-3xl bg-gradient-to-b from-[#2E0B1A]/60 via-transparent to-transparent hover:from-[#3A0F21] overflow-hidden transition-all duration-500 hover:-translate-y-2">
-                            <div className="absolute inset-0 bg-gradient-to-br from-[#1C050F]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                        <div key={item.id} className="case-card group relative p-px rounded-3xl bg-transparent overflow-hidden transition-all duration-500 hover:-translate-y-2">
+                            <div className="absolute inset-0 bg-gradient-to-br from-[#1C050F]/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
-                            <div className="relative h-full bg-[#070305]/95 backdrop-blur-xl rounded-[calc(1.5rem-1px)] p-8 md:p-10 flex flex-col justify-between border border-white/[0.04] group-hover:border-[#2E0B1A]/60 transition-colors duration-500">
+                            <div className="relative h-full bg-transparent backdrop-blur-md rounded-[calc(1.5rem-1px)] p-8 md:p-10 flex flex-col justify-between border border-[#4A1731]/40 group-hover:border-[#6D2749] transition-colors duration-500">
                                 <div className="relative z-10">
                                     <div className="flex justify-between items-start mb-8">
-                                        <div className="w-12 h-12 rounded-xl bg-[#1C050F]/50 flex items-center justify-center border border-[#2E0B1A]/50 group-hover:bg-[#2E0B1A]/40 transition-all duration-500">
+                                        <div className="w-12 h-12 rounded-xl bg-transparent flex items-center justify-center border border-[#4A1731]/50 group-hover:border-[#6D2749] transition-all duration-500">
                                             {item.icon}
                                         </div>
-                                        <div className="px-3 py-1 rounded-full bg-white/[0.02] text-xs text-vyr-text-muted font-medium border border-white/[0.05] group-hover:border-[#2E0B1A]/80 group-hover:text-white transition-colors duration-500">
+                                        <div className="px-3 py-1 rounded-full bg-transparent text-xs text-vyr-text-muted font-medium border border-[#4A1731]/50 group-hover:border-[#6D2749] group-hover:text-white transition-colors duration-500">
                                             {item.client}
                                         </div>
                                     </div>
