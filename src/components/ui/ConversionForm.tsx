@@ -53,9 +53,6 @@ export function ConversionForm() {
 
                 {/* Text Content */}
                 <div className="lg:w-1/2 flex flex-col justify-center">
-                    <div className="inline-block py-1 px-4 w-fit rounded-full border border-vyr-olive/30 bg-vyr-olive/10 backdrop-blur-sm text-sm font-medium text-vyr-olive-light mb-6">
-                        Auditoria Estratégica
-                    </div>
                     <h2 className="text-4xl md:text-5xl font-bold text-vyr-text mb-6 tracking-tight text-balance">
                         Pronto para transformar <span className="text-vyr-wine-light">dados em receita?</span>
                     </h2>
@@ -111,14 +108,14 @@ export function ConversionForm() {
                                     <div>
                                         <label className="block text-sm font-medium text-white/70 mb-1">Seu Nome</label>
                                         <div className="relative">
-                                            <User className="absolute left-3 top-3 w-5 h-5 text-white/40" />
+                                            <User className="absolute left-3 top-3 w-5 h-5 text-white/40 z-10" />
                                             <input
                                                 required={step === 1}
                                                 type="text"
                                                 name="name"
                                                 value={formData.name}
                                                 onChange={handleChange}
-                                                className="w-full bg-transparent border border-[#4A1731]/40 rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:border-[#6D2749] focus:bg-transparent transition-all duration-300 backdrop-blur-md"
+                                                className="w-full bg-transparent border border-[#4A1731]/40 rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:border-[#6D2749] focus:bg-transparent transition-all duration-300 relative z-20"
                                                 placeholder="João Silva"
                                             />
                                         </div>
@@ -126,14 +123,14 @@ export function ConversionForm() {
                                     <div>
                                         <label className="block text-sm font-medium text-white/70 mb-1">Empresa</label>
                                         <div className="relative">
-                                            <Building className="absolute left-3 top-3 w-5 h-5 text-white/40" />
+                                            <Building className="absolute left-3 top-3 w-5 h-5 text-white/40 z-10" />
                                             <input
                                                 required={step === 1}
                                                 type="text"
                                                 name="company"
                                                 value={formData.company}
                                                 onChange={handleChange}
-                                                className="w-full bg-transparent border border-[#4A1731]/40 rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:border-[#6D2749] focus:bg-transparent transition-all duration-300 backdrop-blur-md"
+                                                className="w-full bg-transparent border border-[#4A1731]/40 rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:border-[#6D2749] focus:bg-transparent transition-all duration-300 relative z-20"
                                                 placeholder="Sua Empresa Ltda"
                                             />
                                         </div>
@@ -148,14 +145,14 @@ export function ConversionForm() {
                                     <div>
                                         <label className="block text-sm font-medium text-white/70 mb-1">E-mail Corporativo</label>
                                         <div className="relative">
-                                            <Mail className="absolute left-3 top-3 w-5 h-5 text-white/40" />
+                                            <Mail className="absolute left-3 top-3 w-5 h-5 text-white/40 z-10" />
                                             <input
                                                 required={step === 2}
                                                 type="email"
                                                 name="email"
                                                 value={formData.email}
                                                 onChange={handleChange}
-                                                className="w-full bg-transparent border border-[#4A1731]/40 rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:border-[#6D2749] focus:bg-transparent transition-all duration-300 backdrop-blur-md"
+                                                className="w-full bg-transparent border border-[#4A1731]/40 rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:border-[#6D2749] focus:bg-transparent transition-all duration-300 relative z-20"
                                                 placeholder="nome@empresa.com.br"
                                             />
                                         </div>
@@ -163,14 +160,14 @@ export function ConversionForm() {
                                     <div>
                                         <label className="block text-sm font-medium text-white/70 mb-1">WhatsApp (com DDD)</label>
                                         <div className="relative">
-                                            <Phone className="absolute left-3 top-3 w-5 h-5 text-white/40" />
+                                            <Phone className="absolute left-3 top-3 w-5 h-5 text-white/40 z-10" />
                                             <input
                                                 required={step === 2}
                                                 type="tel"
                                                 name="phone"
                                                 value={formData.phone}
                                                 onChange={handleChange}
-                                                className="w-full bg-transparent border border-[#4A1731]/40 rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:border-[#6D2749] focus:bg-transparent transition-all duration-300 backdrop-blur-md"
+                                                className="w-full bg-transparent border border-[#4A1731]/40 rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:border-[#6D2749] focus:bg-transparent transition-all duration-300 relative z-20"
                                                 placeholder="(11) 99999-9999"
                                             />
                                         </div>
@@ -185,13 +182,13 @@ export function ConversionForm() {
                                     <div>
                                         <label className="block text-sm font-medium text-white/70 mb-1">Faturamento Mensal</label>
                                         <div className="relative">
-                                            <BarChart3 className="absolute left-3 top-3 w-5 h-5 text-white/40" />
+                                            <BarChart3 className="absolute left-3 top-3 w-5 h-5 text-white/40 z-10" />
                                             <select
                                                 required={step === 3}
                                                 name="revenue"
                                                 value={formData.revenue}
                                                 onChange={handleChange}
-                                                className="w-full bg-transparent border border-[#4A1731]/40 rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:border-[#6D2749] focus:bg-transparent transition-all duration-300 backdrop-blur-md appearance-none"
+                                                className="w-full bg-transparent border border-[#4A1731]/40 rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:border-[#6D2749] focus:bg-transparent transition-all duration-300 appearance-none relative z-20"
                                             >
                                                 <option value="" disabled>Selecione uma faixa...</option>
                                                 <option value="Até 30k">Até R$ 30.000</option>
@@ -204,13 +201,13 @@ export function ConversionForm() {
                                     <div>
                                         <label className="block text-sm font-medium text-white/70 mb-1">Segmento</label>
                                         <div className="relative">
-                                            <Briefcase className="absolute left-3 top-3 w-5 h-5 text-white/40" />
+                                            <Briefcase className="absolute left-3 top-3 w-5 h-5 text-white/40 z-10" />
                                             <select
                                                 required={step === 3}
                                                 name="segment"
                                                 value={formData.segment}
                                                 onChange={handleChange}
-                                                className="w-full bg-transparent border border-[#4A1731]/40 rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:border-[#6D2749] focus:bg-transparent transition-all duration-300 backdrop-blur-md appearance-none"
+                                                className="w-full bg-transparent border border-[#4A1731]/40 rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:border-[#6D2749] focus:bg-transparent transition-all duration-300 appearance-none relative z-20"
                                             >
                                                 <option value="" disabled>Selecione seu segmento...</option>
                                                 <option value="Tecnologia">Tecnologia & SaaS</option>
