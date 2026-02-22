@@ -11,7 +11,7 @@ export function PcbLinesBackground() {
                 <defs>
                     <linearGradient id="glow-wine" x1="0" y1="0" x2="1" y2="0">
                         <stop offset="0%" stopColor="#5D243C" stopOpacity="0.2" />
-                        <stop offset="50%" stopColor="#ff1744" stopOpacity="1" />
+                        <stop offset="50%" stopColor="#6D2749" stopOpacity="1" />
                         <stop offset="100%" stopColor="#5D243C" stopOpacity="0.2" />
                     </linearGradient>
                 </defs>
