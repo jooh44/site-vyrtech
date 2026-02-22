@@ -166,23 +166,18 @@ export function SafraSection() {
                                     {step.letter}
                                 </div>
 
-                                <div className="relative z-10 flex flex-col md:flex-row gap-6 md:gap-10 md:items-start">
-                                    {/* The Typographic Highlight replacing the old Icon */}
-                                    <div className="type-letter flex-shrink-0 w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-gradient-to-br from-vyr-wine-dark to-[#08080A] border border-vyr-wine/30 shadow-[0_0_30px_rgba(109,39,73,0.3)] flex items-center justify-center relative overflow-hidden group-hover:border-vyr-wine/60 transition-colors duration-500">
-                                        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay"></div>
-                                        <span className="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-vyr-wine-light drop-shadow-sm font-sans tracking-tighter">
+                                <div className="relative z-10">
+                                    <h3 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight flex items-center gap-4">
+                                        {/* Pure Typographic Highlight without box */}
+                                        <span className="type-letter inline-block text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-vyr-wine-light drop-shadow-[0_0_15px_rgba(255,197,225,0.3)]">
                                             {step.letter}
                                         </span>
-                                    </div>
-
-                                    <div className="flex-1">
-                                        <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 tracking-tight flex items-center gap-3">
-                                            <span className="text-vyr-wine-light text-xl md:text-2xl">{`0${idx + 1}.`}</span> {step.title}
-                                        </h3>
-                                        <p className="text-base md:text-lg text-gray-400 leading-relaxed font-medium max-w-2xl">
-                                            {step.desc}
-                                        </p>
-                                    </div>
+                                        <span className="text-vyr-wine-light text-2xl md:text-3xl">{`0${idx + 1}.`}</span>
+                                        <span>{step.title}</span>
+                                    </h3>
+                                    <p className="text-base md:text-lg text-gray-400 leading-relaxed font-medium max-w-2xl md:pl-[5.5rem]">
+                                        {step.desc}
+                                    </p>
                                 </div>
                             </div>
 
