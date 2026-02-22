@@ -23,6 +23,7 @@ import { EditorialConversionForm } from "@/components/ui/EditorialConversionForm
 import { EditorialFooter } from "@/components/ui/EditorialFooter";
 import { EditorialNavbar } from "@/components/ui/EditorialNavbar";
 import { AnimatedChat } from "@/components/ui/AnimatedChat";
+import { GrowthChart } from "@/components/ui/GrowthChart";
 
 export default function FashionRetailLandingPage() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -351,8 +352,8 @@ export default function FashionRetailLandingPage() {
                                     A consultora recebe a noiva ou formanda sabendo o modelo, tamanho e budget. Tempo de prova cai pela metade. A taxa de conversão dispara. O faturamento escala sistematicamente.
                                 </p>
                             </div>
-                            <div className="md:w-1/2 bg-[#F9F9F9] flex items-center justify-center min-h-[300px] overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200&auto=format&fit=crop" alt="Resultado previsível" className="w-full h-full object-cover grayscale" />
+                            <div className="md:w-1/2 bg-[#F9F9F9] flex items-center justify-center min-h-[300px]">
+                                <GrowthChart />
                             </div>
                         </div>
                     </div>
