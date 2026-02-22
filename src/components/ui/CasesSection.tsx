@@ -68,10 +68,6 @@ export function CasesSection() {
             <div className="max-w-7xl mx-auto px-6 relative z-10" ref={containerRef}>
                 <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-16">
                     <div className="max-w-2xl">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-vyr-wine-light/30 bg-vyr-wine-dark/20 text-vyr-wine-light text-sm font-semibold mb-6">
-                            <span className="w-2 h-2 rounded-full bg-vyr-wine animate-pulse"></span>
-                            Casos de Sucesso
-                        </div>
                         <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight">
                             Arquiteturas que geram <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">Resultados.</span>
                         </h2>
