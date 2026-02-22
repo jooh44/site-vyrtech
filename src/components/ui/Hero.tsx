@@ -36,10 +36,10 @@ export function Hero() {
             <PcbLinesBackground />
 
             <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col items-center text-center">
-                <div ref={textRef} className="w-full max-w-6xl space-y-8 flex flex-col items-center">
+                <div ref={textRef} className="w-full max-w-6xl flex flex-col items-center gap-6 sm:gap-8">
 
                     {/* User's Vyrtech Grape Logo with Animated Gradient Overlay */}
-                    <div className="hero-element mb-6 flex justify-center hover:scale-105 transition-transform duration-500">
+                    <div className="hero-element flex justify-center hover:scale-105 transition-transform duration-500 order-1">
                         <div className="relative w-16 h-20 md:w-24 md:h-28 drop-shadow-[0_0_15px_rgba(93,36,60,0.4)]">
                             {/* Base Image */}
                             <Image
@@ -67,7 +67,7 @@ export function Hero() {
                     </div>
 
                     {/* Playground Concept: Glowing Gradient Headline */}
-                    <h1 className="hero-element text-4xl sm:text-5xl md:text-5xl lg:text-[4.2rem] xl:text-[4.8rem] font-bold tracking-tight text-vyr-text leading-[1.2] md:leading-[1.1] relative w-full">
+                    <h1 className="hero-element text-4xl sm:text-5xl md:text-5xl lg:text-[4.2rem] xl:text-[4.8rem] font-bold tracking-tight text-vyr-text leading-[1.2] md:leading-[1.1] relative w-full order-2 mb-2 sm:mb-0">
                         <div className="absolute inset-0 blur-3xl bg-vyr-wine/10 rounded-full -z-10 transform scale-150 opacity-40" />
 
                         {/* Mobile Layout: 3 Lines */}
@@ -80,7 +80,7 @@ export function Hero() {
                         <span className="hidden sm:inline-block">com&nbsp;</span>
 
                         {/* Dynamic Element (Shares same line as 'com' on Desktop, new line on Mobile) */}
-                        <span className="bg-gradient-to-r from-[#4A1731] via-vyr-wine to-[#4A1731] bg-clip-text text-transparent bg-[length:200%_auto] animate-[gradient-x_6s_ease_infinite] block sm:inline-block relative mt-2 sm:mt-0">
+                        <span className="bg-gradient-to-r from-[#8E2648] via-[#E25A84] to-[#8E2648] bg-clip-text text-transparent bg-[length:200%_auto] animate-[gradient-x_4s_ease_infinite] block sm:inline-block relative mt-2 sm:mt-0 drop-shadow-[0_0_15px_rgba(226,90,132,0.4)]">
                             {/* Animated Typewriter Word */}
                             <motion.span
                                 key={wordIndex}
@@ -108,11 +108,11 @@ export function Hero() {
                         </span>
                     </h1>
 
-                    <p className="hero-element text-lg md:text-xl text-vyr-text-muted max-w-2xl text-balance leading-relaxed">
+                    <p className="hero-element text-lg md:text-xl text-vyr-text-muted max-w-2xl text-balance leading-relaxed order-4 sm:order-3">
                         Abandone métricas de vaidade. Somos arquitetos do seu pipeline através de tráfego ultra qualiﬁcado, automação hiper-direcionada e um ecossistema cíclico de crescimento.
                     </p>
 
-                    <div className="hero-element pt-8 flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center">
+                    <div className="hero-element flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center order-3 sm:order-4 z-20">
                         <button className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#3d4f1c] hover:bg-[#4a5d23] text-white font-medium transition-all shadow-[0_0_20px_rgba(61,79,28,0.5)] hover:shadow-[0_0_30px_rgba(74,93,35,0.8)] hover:scale-[1.02] group flex items-center justify-center border border-[#526a25]/50">
                             Solicitar Diagnóstico
                             <ArrowUpRight className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
