@@ -4,7 +4,7 @@ import { Menu } from "lucide-react";
 
 export function Navbar() {
     return (
-        <div className="fixed w-full z-50 top-6 flex justify-center px-4">
+        <div className="hidden md:flex fixed w-full z-50 top-6 justify-center px-4">
             <nav className="w-full max-w-5xl flex items-center justify-between px-2 md:px-6 py-3 md:rounded-full md:border md:border-white/10 md:bg-[#0C0C0E]/80 md:backdrop-blur-xl md:shadow-2xl transition-all duration-300">
                 <Link href="/" className="flex items-center gap-3 group hover:opacity-80 transition-opacity">
                     {/* Animated Grape Icon */}
