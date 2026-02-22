@@ -51,7 +51,7 @@ export function Hero() {
                             />
                             {/* Animated Gradient Mask Overlay */}
                             <div
-                                className="absolute inset-0 bg-gradient-to-r from-vyr-wine-light via-[#ff1744] to-vyr-wine-light bg-[length:200%_auto] animate-[gradient-x_6s_ease_infinite] mix-blend-overlay opacity-80"
+                                className="absolute inset-0 bg-gradient-to-r from-[#4A1731] via-vyr-wine to-[#4A1731] bg-[length:200%_auto] animate-[gradient-x_6s_ease_infinite] mix-blend-overlay opacity-90"
                                 style={{
                                     WebkitMaskImage: `url(/vyrtech-uva.png)`,
                                     WebkitMaskSize: "contain",
@@ -73,7 +73,7 @@ export function Hero() {
 
                         <span className="inline-block whitespace-nowrap">Crescimento Empresarial</span> <br className="hidden sm:block" />
                         <span className="inline-block">com&nbsp;</span>
-                        <span className="bg-gradient-to-r from-vyr-wine-light via-[#ff1744] to-vyr-wine-light bg-clip-text text-transparent bg-[length:200%_auto] animate-[gradient-x_6s_ease_infinite] block mt-1 sm:mt-0 sm:inline relative">
+                        <span className="bg-gradient-to-r from-[#4A1731] via-vyr-wine to-[#4A1731] bg-clip-text text-transparent bg-[length:200%_auto] animate-[gradient-x_6s_ease_infinite] block mt-1 sm:mt-0 sm:inline relative">
                             {/* Animated Typewriter Word */}
                             <motion.span
                                 key={wordIndex}

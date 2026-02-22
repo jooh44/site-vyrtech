@@ -39,13 +39,13 @@ export function Navbar() {
                 <div className="hidden md:flex items-center gap-10 text-sm font-medium text-vyr-text-muted">
                     <Link href="/#metodologia" className="hover:text-white transition-colors">A Metodologia</Link>
                     <Link href="/locacao-de-roupas" className="hover:text-white transition-colors">Moda & Locação</Link>
-                    <a href="/#diagnostico" className="px-6 py-2.5 rounded-full bg-gradient-to-r from-[#7A3351] to-[#D4477A] hover:opacity-90 text-white transition-all shadow-lg font-semibold hover:scale-[1.05] active:scale-[0.98]">
+                    <a href="/#diagnostico" className="px-6 py-2.5 rounded-full bg-gradient-to-r from-vyr-wine to-[#4A1731] hover:opacity-90 text-white transition-all shadow-lg font-semibold hover:scale-[1.05] active:scale-[0.98]">
                         Diagnóstico Gratuito
                     </a>
                 </div>
 
                 <div className="md:hidden flex items-center gap-4">
-                    <a href="/#diagnostico" className="px-4 py-2 text-xs rounded-full bg-gradient-to-r from-[#7A3351] to-[#D4477A] text-white font-bold shadow-md">
+                    <a href="/#diagnostico" className="px-4 py-2 text-xs rounded-full bg-gradient-to-r from-vyr-wine to-[#4A1731] text-white font-bold shadow-md">
                         Diagnóstico
                     </a>
                     <button className="text-vyr-text-muted hover:text-white transition-colors" aria-label="Menu">
