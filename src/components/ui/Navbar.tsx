@@ -5,7 +5,7 @@ import { Menu } from "lucide-react";
 export function Navbar() {
     return (
         <div className="fixed w-full z-50 top-6 flex justify-center px-4">
-            <nav className="w-full max-w-5xl flex items-center justify-between px-6 py-3 rounded-full border border-white/10 bg-[#0C0C0E]/80 backdrop-blur-xl shadow-2xl transition-all duration-300">
+            <nav className="w-full max-w-5xl flex items-center justify-between px-2 md:px-6 py-3 md:rounded-full md:border md:border-white/10 md:bg-[#0C0C0E]/80 md:backdrop-blur-xl md:shadow-2xl transition-all duration-300">
                 <Link href="/" className="flex items-center gap-3 group hover:opacity-80 transition-opacity">
                     {/* Animated Grape Icon */}
                     <div className="relative w-7 h-9 drop-shadow-[0_0_8px_rgba(93,36,60,0.4)] flex-shrink-0">
@@ -44,12 +44,9 @@ export function Navbar() {
                     </a>
                 </div>
 
-                <div className="md:hidden flex items-center gap-4">
-                    <a href="/#diagnostico" className="px-4 py-2 text-xs rounded-full bg-gradient-to-r from-vyr-wine to-[#4A1731] text-white font-bold shadow-md">
-                        Diagnóstico
-                    </a>
-                    <button className="text-vyr-text-muted hover:text-white transition-colors" aria-label="Menu">
-                        <Menu className="w-6 h-6" />
+                <div className="md:hidden flex items-center">
+                    <button className="text-vyr-text-muted hover:text-white transition-colors p-2" aria-label="Menu">
+                        <Menu className="w-8 h-8" />
                     </button>
                 </div>
             </nav>
