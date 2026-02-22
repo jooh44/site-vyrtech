@@ -68,14 +68,19 @@ export function Hero() {
 
                     {/* Playground Concept: Glowing Gradient Headline */}
                     <h1 className="hero-element text-4xl sm:text-5xl md:text-5xl lg:text-[4.2rem] xl:text-[4.8rem] font-bold tracking-tight text-vyr-text leading-[1.2] md:leading-[1.1] relative w-full">
-                        {/* Efeito de brilho de fundo similar ao playground */}
                         <div className="absolute inset-0 blur-3xl bg-vyr-wine/10 rounded-full -z-10 transform scale-150 opacity-40" />
 
-                        <span className="inline-block whitespace-normal break-words sm:whitespace-nowrap">
-                            Crescimento <br className="block sm:hidden" /> Empresarial
-                        </span> <br className="hidden sm:block" />
-                        <span className="inline-block">com&nbsp;</span>
-                        <span className="bg-gradient-to-r from-[#4A1731] via-vyr-wine to-[#4A1731] bg-clip-text text-transparent bg-[length:200%_auto] animate-[gradient-x_6s_ease_infinite] block mt-1 sm:mt-0 sm:inline relative">
+                        {/* Mobile Layout: 3 Lines */}
+                        <span className="block sm:hidden">Crescimento</span>
+                        <span className="block sm:hidden">Empresarial com</span>
+
+                        {/* Desktop Layout: 2 Lines */}
+                        <span className="hidden sm:inline-block whitespace-nowrap">Crescimento Empresarial</span>
+                        <br className="hidden sm:block" />
+                        <span className="hidden sm:inline-block">com&nbsp;</span>
+
+                        {/* Dynamic Element (Shares same line as 'com' on Desktop, new line on Mobile) */}
+                        <span className="bg-gradient-to-r from-[#4A1731] via-vyr-wine to-[#4A1731] bg-clip-text text-transparent bg-[length:200%_auto] animate-[gradient-x_6s_ease_infinite] block sm:inline-block relative mt-2 sm:mt-0">
                             {/* Animated Typewriter Word */}
                             <motion.span
                                 key={wordIndex}
