@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@theme {
+  /* Typography */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  /* Colors */
+  --color-vyr-dark: #08080A;
+  --color-vyr-darker: #050506;
+  --color-vyr-surface: #121214;
+  --color-vyr-surface-light: #1A1A1E;
+
+  /* Official Palette */
+  --color-vyr-wine: #6D2749;
+  /* primária */
+  --color-vyr-wine-light: #FFC5E1;
+  /* secundária */
+  --color-vyr-wine-dark: #2D111E;
+  /* quase escuro */
+
+  --color-vyr-olive: #87C388;
+  /* terciária */
+  --color-vyr-olive-light: #A5DCA6;
+  /* hover state for tertiary if needed */
+
+  --color-vyr-text: #FFEBF4;
+  /* quase branco */
+  --color-vyr-text-muted: #FFC5E1;
+  /* muted uses secondary or darker */
+
+
+  /* Animations */
+  --animate-gradient-x: gradient-x 6s ease infinite;
+
+  @keyframes gradient-x {
+
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+}
+
+:root {
+  --background: var(--color-vyr-dark);
+  --foreground: var(--color-vyr-text);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Base Utility Classes */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .bg-vyr-gradient {
+    background: radial-gradient(circle at top center, #111111 0%, transparent 70%);
+  }
+
+  /* Browser Autofill Fix */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    -webkit-text-fill-color: #FFEBF4 !important;
+    -webkit-box-shadow: 0 0 0px 1000px #050506 inset !important;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+}
