@@ -65,7 +65,7 @@ export function Hero() {
                             />
                         </div>
                         {/* Grotesk Font Text */}
-                        <span className="text-xl md:text-2xl font-bold tracking-[0.2em] text-vyr-text-muted transition-colors uppercase mt-4 hover:text-white" style={{ fontFamily: '"Space Grotesk", "Clash Display", "Inter", "Helvetica Neue", Arial, sans-serif' }}>
+                        <span className="md:hidden text-xl font-bold tracking-[0.2em] text-vyr-text-muted transition-colors uppercase mt-4 hover:text-white" style={{ fontFamily: '"Space Grotesk", "Clash Display", "Inter", "Helvetica Neue", Arial, sans-serif' }}>
                             Vyrtech
                         </span>
                     </div>
