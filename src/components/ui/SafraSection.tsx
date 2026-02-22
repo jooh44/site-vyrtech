@@ -161,11 +161,6 @@ export function SafraSection() {
 
                             {/* Timeline Card - Using lighter dark-wine background as requested */}
                             <div className="timeline-card flex-1 relative py-8 px-8 md:py-10 md:px-10 rounded-3xl bg-vyr-wine-dark/40 border border-vyr-wine-light/10 group-hover:-translate-y-1 transition-transform duration-500 overflow-hidden">
-                                {/* Giant faded background letter */}
-                                <div className="absolute -left-4 -top-8 text-[12rem] md:text-[15rem] font-black text-white/[0.02] select-none pointer-events-none group-hover:text-vyr-wine/[0.06] transition-colors duration-500 leading-none">
-                                    {step.letter}
-                                </div>
-
                                 <div className="relative z-10">
                                     <h3 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight flex items-center gap-4">
                                         {/* Pure Typographic Highlight without box */}
