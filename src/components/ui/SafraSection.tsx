@@ -127,11 +127,11 @@ export function SafraSection() {
                     <h2 className="text-4xl md:text-5xl font-bold text-vyr-text tracking-tight mb-4">
                         A Metodologia{" "}
                         <span className="inline-flex gap-1">
-                            <span className="text-transparent bg-clip-text bg-gradient-to-br from-white to-vyr-wine-light">S.</span>
-                            <span className="text-transparent bg-clip-text bg-gradient-to-br from-white to-vyr-wine-light">A.</span>
-                            <span className="text-transparent bg-clip-text bg-gradient-to-br from-white to-vyr-wine-light">F.</span>
-                            <span className="text-transparent bg-clip-text bg-gradient-to-br from-white to-vyr-wine-light">R.</span>
-                            <span className="text-transparent bg-clip-text bg-gradient-to-br from-white to-vyr-wine-light">A.</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-br from-white to-[#6D2749]">S.</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-br from-white to-[#6D2749]">A.</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-br from-white to-[#6D2749]">F.</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-br from-white to-[#6D2749]">R.</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-br from-white to-[#6D2749]">A.</span>
                         </span>
                     </h2>
                     <p className="text-vyr-text-muted mt-2 text-lg md:text-xl max-w-2xl mx-auto">
@@ -148,7 +148,7 @@ export function SafraSection() {
                     {/* Glowing active line */}
                     <div
                         ref={lineRef}
-                        className="absolute left-[27px] md:left-12 top-0 w-[2px] bg-gradient-to-b from-vyr-wine-light to-[#ff1744] rounded-full shadow-[0_0_15px_rgba(255,23,68,0.5)] origin-top z-10"
+                        className="absolute left-[27px] md:left-12 top-0 w-[2px] bg-gradient-to-b from-[#4A1731] to-[#6D2749] rounded-full shadow-[0_0_15px_rgba(109,39,73,0.5)] origin-top z-10"
                     />
 
                     {steps.map((step, idx) => (
@@ -164,10 +164,10 @@ export function SafraSection() {
                                 <div className="relative z-10">
                                     <h3 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight flex items-center gap-4">
                                         {/* Pure Typographic Highlight without box */}
-                                        <span className="type-letter inline-block text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-vyr-wine-light drop-shadow-[0_0_15px_rgba(255,197,225,0.3)]">
+                                        <span className="type-letter inline-block text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-[#6D2749] drop-shadow-[0_0_15px_rgba(109,39,73,0.3)]">
                                             {step.letter}
                                         </span>
-                                        <span className="text-vyr-wine-light text-2xl md:text-3xl">{`0${idx + 1}.`}</span>
+                                        <span className="text-[#6D2749] text-2xl md:text-3xl">{`0${idx + 1}.`}</span>
                                         <span>{step.title}</span>
                                     </h3>
                                     <p className="text-base md:text-lg text-gray-400 leading-relaxed font-medium max-w-2xl md:pl-[5.5rem]">
