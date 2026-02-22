@@ -162,13 +162,13 @@ export function SafraSection() {
                             {/* Timeline Item - Clean visual without background box */}
                             <div className="timeline-card flex-1 relative py-6 md:py-8 group-hover:-translate-y-1 transition-transform duration-500">
                                 <div className="relative z-10">
-                                    <h3 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight flex items-center gap-4">
+                                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight flex flex-wrap items-baseline gap-3 md:gap-4">
                                         {/* Pure Typographic Highlight without box */}
-                                        <span className="type-letter inline-block text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-[#6D2749] drop-shadow-[0_0_15px_rgba(109,39,73,0.3)]">
+                                        <span className="type-letter inline-block text-4xl sm:text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-[#6D2749] drop-shadow-[0_0_15px_rgba(109,39,73,0.3)]">
                                             {step.letter}
                                         </span>
-                                        <span className="text-[#6D2749] text-2xl md:text-3xl">{`0${idx + 1}.`}</span>
-                                        <span>{step.title}</span>
+                                        <span className="text-[#6D2749] text-xl sm:text-2xl md:text-3xl">{`0${idx + 1}.`}</span>
+                                        <span className="break-words">{step.title}</span>
                                     </h3>
                                     <p className="text-base md:text-lg text-gray-400 leading-relaxed font-medium max-w-2xl md:pl-[5.5rem]">
                                         {step.desc}
