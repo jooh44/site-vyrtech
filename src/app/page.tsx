@@ -3,6 +3,7 @@ import { ProblemsSection } from "@/components/ui/ProblemsSection";
 import { SafraSection } from "@/components/ui/SafraSection";
 import { CasesSection } from "@/components/ui/CasesSection";
 import { ConversionForm } from "@/components/ui/ConversionForm";
+import { TestimonialsSection } from "@/components/ui/TestimonialsSection";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <SafraSection />
       <CasesSection />
       <ConversionForm />
+      <TestimonialsSection />
     </main>
   );
 }

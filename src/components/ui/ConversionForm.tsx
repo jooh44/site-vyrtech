@@ -82,7 +82,7 @@ export function ConversionForm() {
                     {!isSuccess && (
                         <div className="w-full bg-transparent border border-[#4A1731]/30 h-2 rounded-full mb-8 overflow-hidden relative">
                             <div
-                                className="bg-[#4A1731] h-full transition-all duration-500 rounded-full"
+                                className="bg-[#D5E8B3] h-full transition-all duration-500 rounded-full shadow-[0_0_10px_rgba(213,232,179,0.3)]"
                                 style={{ width: `${(step / 3) * 100}%` }}
                             />
                         </div>

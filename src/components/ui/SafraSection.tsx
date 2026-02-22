@@ -148,7 +148,7 @@ export function SafraSection() {
                     {/* Glowing active line */}
                     <div
                         ref={lineRef}
-                        className="absolute left-[27px] md:left-12 top-0 w-[2px] bg-gradient-to-b from-[#4A1731] to-[#6D2749] rounded-full shadow-[0_0_15px_rgba(109,39,73,0.5)] origin-top z-10"
+                        className="absolute left-[27px] md:left-12 top-0 w-[2px] bg-gradient-to-b from-[#6D9344] to-[#D5E8B3] rounded-full shadow-[0_0_15px_rgba(213,232,179,0.5)] origin-top z-10"
                     />
 
                     {steps.map((step, idx) => (

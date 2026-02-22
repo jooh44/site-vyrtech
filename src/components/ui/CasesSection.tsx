@@ -93,7 +93,7 @@ export function CasesSection() {
 
                                     <div className="mb-2">
                                         <div className="text-5xl font-bold tracking-tighter text-white mb-2">{item.metric}</div>
-                                        <div className="text-sm text-[#4A1731] font-bold uppercase tracking-wider transition-all duration-500">{item.label}</div>
+                                        <div className="text-sm text-white/60 font-bold uppercase tracking-wider transition-all duration-500">{item.label}</div>
                                     </div>
 
                                     <p className="text-vyr-text-muted mt-6 text-sm leading-relaxed">
@@ -102,7 +102,7 @@ export function CasesSection() {
                                 </div>
 
                                 <div className="mt-8 pt-6 border-t border-white/5 flex items-center justify-between text-white/50 group-hover:text-white transition-colors cursor-not-allowed">
-                                    <span className="text-sm font-medium">Ler estudo de caso completo</span>
+                                    <span className="text-sm font-medium">Quero construir meu case</span>
                                     <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
                                 </div>
                             </div>
