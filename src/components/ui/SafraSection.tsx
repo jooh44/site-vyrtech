@@ -78,7 +78,7 @@ export function SafraSection() {
                 const node = card.parentElement?.querySelector('.timeline-node');
                 if (node) {
                     gsap.fromTo(node,
-                        { scale: 0, backgroundColor: "#3F1728" },
+                        { scale: 0, backgroundColor: "#0C0C0E" },
                         {
                             scale: 1,
                             backgroundColor: "#D5E8B3", // Olive green instead of wine
