@@ -224,8 +224,102 @@ export default function FashionRetailLandingPage() {
                                     Mostramos seus melhores vestidos apenas para mulheres que pesquisam ativamente por locação num raio exato de atuação, cruzando intenção térmica do Google com a estética do Meta Ads.
                                 </p>
                             </div>
-                            <div className="md:w-1/2 bg-[#F9F9F9] flex items-center justify-center min-h-[300px] overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1577086664693-894d8f9f5f7b?q=80&w=1200&auto=format&fit=crop" alt="Mapa de segmentação local" className="w-full h-full object-cover grayscale" />
+                            <div className="md:w-1/2 bg-[#F9F9F9] flex items-center justify-center min-h-[300px] overflow-hidden relative">
+                                {/* Animated SVG Map */}
+                                <svg className="w-full h-full" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <linearGradient id="map-glow" x1="0" y1="0" x2="1" y2="0">
+                                            <stop offset="0%" stopColor="#6D2749" stopOpacity="0" />
+                                            <stop offset="50%" stopColor="#6D2749" stopOpacity="1" />
+                                            <stop offset="100%" stopColor="#6D2749" stopOpacity="0" />
+                                        </linearGradient>
+                                        <radialGradient id="pin-glow" cx="50%" cy="50%" r="50%">
+                                            <stop offset="0%" stopColor="#6D2749" stopOpacity="0.3" />
+                                            <stop offset="100%" stopColor="#6D2749" stopOpacity="0" />
+                                        </radialGradient>
+                                    </defs>
+
+                                    {/* Street Grid - Horizontal */}
+                                    <path d="M 0 80 L 500 80" stroke="#E0E0E0" strokeWidth="1" />
+                                    <path d="M 0 160 L 500 160" stroke="#E0E0E0" strokeWidth="1" />
+                                    <path d="M 0 240 L 500 240" stroke="#E0E0E0" strokeWidth="1" />
+                                    <path d="M 0 320 L 500 320" stroke="#E0E0E0" strokeWidth="1" />
+
+                                    {/* Street Grid - Vertical */}
+                                    <path d="M 100 0 L 100 400" stroke="#E0E0E0" strokeWidth="1" />
+                                    <path d="M 200 0 L 200 400" stroke="#E0E0E0" strokeWidth="1" />
+                                    <path d="M 300 0 L 300 400" stroke="#E0E0E0" strokeWidth="1" />
+                                    <path d="M 400 0 L 400 400" stroke="#E0E0E0" strokeWidth="1" />
+
+                                    {/* Animated Route Trail 1 */}
+                                    <path d="M 50 320 L 100 320 L 100 240 L 200 240 L 200 160 L 300 160 L 300 80 L 400 80" stroke="#D4D4D4" strokeWidth="2" strokeLinecap="round" />
+                                    <path d="M 50 320 L 100 320 L 100 240 L 200 240 L 200 160 L 300 160 L 300 80 L 400 80" stroke="url(#map-glow)" strokeWidth="3" strokeLinecap="round" className="map-pulse" style={{ animationDelay: '0s' }} />
+
+                                    {/* Animated Route Trail 2 */}
+                                    <path d="M 450 350 L 400 350 L 400 240 L 300 240 L 300 160 L 200 160" stroke="#D4D4D4" strokeWidth="2" strokeLinecap="round" />
+                                    <path d="M 450 350 L 400 350 L 400 240 L 300 240 L 300 160 L 200 160" stroke="url(#map-glow)" strokeWidth="3" strokeLinecap="round" className="map-pulse" style={{ animationDelay: '2.5s' }} />
+
+                                    {/* Radius Circle (animated) */}
+                                    <circle cx="250" cy="200" r="90" fill="url(#pin-glow)" className="map-radius" />
+                                    <circle cx="250" cy="200" r="90" stroke="#FFC5E1" strokeWidth="1.5" fill="none" strokeDasharray="6 6" className="map-radius" />
+
+                                    {/* Location Pins */}
+                                    <g className="map-pin" style={{ animationDelay: '0s' }}>
+                                        <circle cx="200" cy="160" r="8" fill="#6D2749" />
+                                        <circle cx="200" cy="160" r="4" fill="#FFC5E1" />
+                                    </g>
+                                    <g className="map-pin" style={{ animationDelay: '0.5s' }}>
+                                        <circle cx="300" cy="240" r="8" fill="#6D2749" />
+                                        <circle cx="300" cy="240" r="4" fill="#FFC5E1" />
+                                    </g>
+                                    <g className="map-pin" style={{ animationDelay: '1s' }}>
+                                        <circle cx="250" cy="200" r="10" fill="#6D2749" />
+                                        <circle cx="250" cy="200" r="5" fill="white" />
+                                    </g>
+
+                                    {/* Intersection Dots */}
+                                    <circle cx="100" cy="80" r="2.5" fill="#D4D4D4" />
+                                    <circle cx="200" cy="80" r="2.5" fill="#D4D4D4" />
+                                    <circle cx="300" cy="80" r="2.5" fill="#D4D4D4" />
+                                    <circle cx="400" cy="80" r="2.5" fill="#D4D4D4" />
+                                    <circle cx="100" cy="160" r="2.5" fill="#D4D4D4" />
+                                    <circle cx="400" cy="160" r="2.5" fill="#D4D4D4" />
+                                    <circle cx="100" cy="240" r="2.5" fill="#D4D4D4" />
+                                    <circle cx="400" cy="240" r="2.5" fill="#D4D4D4" />
+                                    <circle cx="100" cy="320" r="2.5" fill="#D4D4D4" />
+                                    <circle cx="200" cy="320" r="2.5" fill="#D4D4D4" />
+                                    <circle cx="300" cy="320" r="2.5" fill="#D4D4D4" />
+                                    <circle cx="400" cy="320" r="2.5" fill="#D4D4D4" />
+                                </svg>
+
+                                <style dangerouslySetInnerHTML={{
+                                    __html: `
+                                    .map-pulse {
+                                        stroke-dasharray: 80 600;
+                                        stroke-dashoffset: 600;
+                                        animation: map-flow 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+                                    }
+                                    @keyframes map-flow {
+                                        0% { stroke-dashoffset: 600; opacity: 0; }
+                                        10% { opacity: 1; }
+                                        90% { opacity: 1; }
+                                        100% { stroke-dashoffset: -80; opacity: 0; }
+                                    }
+                                    .map-radius {
+                                        animation: radius-breathe 4s ease-in-out infinite;
+                                    }
+                                    @keyframes radius-breathe {
+                                        0%, 100% { opacity: 0.4; transform-origin: center; }
+                                        50% { opacity: 0.8; }
+                                    }
+                                    .map-pin {
+                                        animation: pin-pulse 2s ease-in-out infinite;
+                                    }
+                                    @keyframes pin-pulse {
+                                        0%, 100% { opacity: 0.7; }
+                                        50% { opacity: 1; }
+                                    }
+                                `}} />
                             </div>
                         </div>
 
