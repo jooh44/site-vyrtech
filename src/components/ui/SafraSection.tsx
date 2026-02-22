@@ -159,11 +159,10 @@ export function SafraSection() {
                                 <div className="w-2 h-2 rounded-full bg-white/80" />
                             </div>
 
-                            {/* Timeline Item - Subtle Tech Glassmorphism Card */}
-                            <div className="timeline-card flex-1 relative p-6 md:p-8 rounded-2xl bg-[#120710]/40 backdrop-blur-md border border-white/5 hover:border-vyr-wine/30 transition-all duration-500 shadow-xl group-hover:-translate-y-1">
+                            {/* Timeline Item - Pure Typography Layout */}
+                            <div className="timeline-card flex-1 relative py-6 md:py-8 transition-transform duration-500 hover:-translate-y-1">
                                 <div className="relative z-10">
                                     <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight flex flex-wrap items-baseline gap-3 md:gap-4">
-                                        {/* Pure Typographic Highlight without box */}
                                         <span className="type-letter inline-block text-4xl sm:text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-[#6D2749] drop-shadow-[0_0_15px_rgba(109,39,73,0.3)]">
                                             {step.letter}
                                         </span>
