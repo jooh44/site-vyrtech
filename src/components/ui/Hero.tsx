@@ -108,11 +108,11 @@ export function Hero() {
                         </span>
                     </h1>
 
-                    <p className="hero-element text-lg md:text-xl text-vyr-text-muted max-w-2xl text-balance leading-relaxed order-4 sm:order-3">
+                    <p className="hero-element text-lg md:text-xl text-vyr-text-muted max-w-2xl text-balance leading-relaxed">
                         Abandone métricas de vaidade. Somos arquitetos do seu pipeline através de tráfego ultra qualiﬁcado, automação hiper-direcionada e um ecossistema cíclico de crescimento.
                     </p>
 
-                    <div className="hero-element flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center order-3 sm:order-4 z-20">
+                    <div className="hero-element flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center z-20">
                         <button className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#3d4f1c] hover:bg-[#4a5d23] text-white font-medium transition-all shadow-[0_0_20px_rgba(61,79,28,0.5)] hover:shadow-[0_0_30px_rgba(74,93,35,0.8)] hover:scale-[1.02] group flex items-center justify-center border border-[#526a25]/50">
                             Solicitar Diagnóstico
                             <ArrowUpRight className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
