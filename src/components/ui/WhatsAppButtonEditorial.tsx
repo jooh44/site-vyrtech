@@ -1,10 +1,19 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 const WHATSAPP_NUMBER = "5500000000000";
 const WHATSAPP_MESSAGE = "Olá! Vim pelo site da Vyrtech e gostaria de saber mais sobre locação de roupas.";
 
 export function WhatsAppButtonEditorial() {
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+    const [visible, setVisible] = useState(false);
+
+    useEffect(() => {
+        const onScroll = () => setVisible(window.scrollY > window.innerHeight * 2);
+        window.addEventListener("scroll", onScroll, { passive: true });
+        return () => window.removeEventListener("scroll", onScroll);
+    }, []);
 
     return (
         <a
@@ -12,7 +21,10 @@ export function WhatsAppButtonEditorial() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Falar no WhatsApp"
-            className="fixed bottom-6 right-6 z-50 hover:scale-110 active:scale-95 transition-transform duration-200"
+            className={`fixed bottom-6 right-6 z-50 hover:scale-110 active:scale-95 transition-all duration-300
+                md:opacity-100 md:pointer-events-auto
+                ${visible ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none md:opacity-100 md:pointer-events-auto"}
+            `}
         >
             <WhatsAppIcon className="w-12 h-12 text-[#6D2749] hover:text-[#521c35] transition-colors" />
         </a>
