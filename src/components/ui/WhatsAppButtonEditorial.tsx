@@ -1,7 +1,5 @@
 "use client";
 
-// Editorial/wine style for Locação de Roupas page
-// Replace WHATSAPP_NUMBER with the actual number (with country code, no symbols)
 const WHATSAPP_NUMBER = "5500000000000";
 const WHATSAPP_MESSAGE = "Olá! Vim pelo site da Vyrtech e gostaria de saber mais sobre locação de roupas.";
 
@@ -14,33 +12,9 @@ export function WhatsAppButtonEditorial() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Falar no WhatsApp"
-            className="fixed bottom-6 right-6 z-50 group flex items-center gap-3"
+            className="fixed bottom-6 right-6 z-50 hover:scale-110 active:scale-95 transition-transform duration-200"
         >
-            {/* Tooltip label */}
-            <span className="
-                opacity-0 group-hover:opacity-100
-                translate-x-2 group-hover:translate-x-0
-                transition-all duration-300 ease-out
-                bg-white border-2 border-[#6D2749]
-                text-[#6D2749] text-xs font-bold tracking-widest uppercase
-                px-4 py-2 whitespace-nowrap
-            ">
-                Falar no WhatsApp
-            </span>
-
-            {/* Button */}
-            <div className="
-                w-14 h-14
-                bg-[#6D2749]
-                border-2 border-[#6D2749]
-                flex items-center justify-center
-                hover:bg-[#FFC5E1]
-                transition-all duration-300
-                hover:scale-110 active:scale-95
-                shadow-lg
-            ">
-                <WhatsAppIcon className="w-6 h-6 text-white group-hover:[color:#6D2749]" />
-            </div>
+            <WhatsAppIcon className="w-12 h-12 text-[#6D2749] hover:text-[#521c35] transition-colors" />
         </a>
     );
 }
