@@ -16,24 +16,24 @@ const placeholders = [
         client: "Indústria Global",
         metric: "+215%",
         label: "ROAS em 90 dias",
-        icon: <TrendingUp className="w-6 h-6 text-vyr-wine-light" />,
-        desc: "Arquitetura Full-Funnel B2B substituindo captação orgânica ineficiente."
+        icon: <TrendingUp className="w-6 h-6 text-[#6D2749]" />,
+        desc: "Máquina de vendas automatizada substituindo a velha captação orgânica."
     },
     {
         id: 2,
         client: "SaaS Enterprise",
         metric: "12k",
         label: "Leads Qualificados M/M",
-        icon: <Users className="w-6 h-6 text-vyr-wine-light" />,
-        desc: "Escala agressiva na América Latina com automação Make."
+        icon: <Users className="w-6 h-6 text-[#6D2749]" />,
+        desc: "Expansão internacional acelerada com base em análise de dados em tempo real."
     },
     {
         id: 3,
         client: "Moda Premium",
         metric: "R$ 4M",
         label: "Faturamento Incremental",
-        icon: <BarChart3 className="w-6 h-6 text-vyr-olive-light" />,
-        desc: "Metodologia SAFRA aplicada na reestruturação de tráfego."
+        icon: <BarChart3 className="w-6 h-6 text-[#6D2749]" />,
+        desc: "Ecossistema de alta precisão desenhado para multiplicar o lucro das campanhas."
     }
 ];
 
