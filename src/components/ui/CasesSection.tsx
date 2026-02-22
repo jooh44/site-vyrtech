@@ -84,7 +84,7 @@ export function CasesSection() {
                         <div key={item.id} className="case-card group relative p-px rounded-3xl bg-gradient-to-b from-white/10 to-transparent overflow-hidden">
                             <div className="absolute inset-0 bg-gradient-to-br from-vyr-wine-dark/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
-                            <div className="relative h-full bg-[#0A0A0C] rounded-[calc(1.5rem-1px)] p-8 md:p-10 flex flex-col justify-between">
+                            <div className="relative h-full bg-vyr-wine-dark/60 backdrop-blur-sm border border-vyr-wine-light/10 rounded-[calc(1.5rem-1px)] p-8 md:p-10 flex flex-col justify-between">
                                 <div>
                                     <div className="flex justify-between items-start mb-8">
                                         <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/5">

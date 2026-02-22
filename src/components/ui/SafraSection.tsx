@@ -131,7 +131,14 @@ export function SafraSection() {
 
                 <div className="text-center mb-16 md:mb-24">
                     <h2 className="text-4xl md:text-5xl font-bold text-vyr-text tracking-tight mb-4">
-                        A Metodologia <span className="text-transparent bg-clip-text bg-gradient-to-r from-vyr-wine-light to-[#ff1744]">S.A.F.R.A.</span>
+                        A Metodologia{" "}
+                        <span className="inline-flex gap-1">
+                            <span className="text-transparent bg-clip-text bg-gradient-to-br from-white to-vyr-wine-light">S.</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-br from-white to-vyr-wine-light">A.</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-br from-white to-vyr-wine-light">F.</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-br from-white to-vyr-wine-light">R.</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-br from-white to-vyr-wine-light">A.</span>
+                        </span>
                     </h2>
                     <p className="text-vyr-text-muted mt-2 text-lg md:text-xl max-w-2xl mx-auto">
                         Engenharia de conversão documentada em 5 etapas cíclicas, focada na construção de ecossistemas previsíveis.
@@ -158,8 +165,8 @@ export function SafraSection() {
                                 <div className="w-2 h-2 rounded-full bg-white/80" />
                             </div>
 
-                            {/* Timeline Card - No longer a gray box, strictly typography and animated icon */}
-                            <div className="timeline-card flex-1 relative py-8 md:py-10 group-hover:-translate-y-1 transition-transform duration-500">
+                            {/* Timeline Card - Using lighter dark-wine background as requested */}
+                            <div className="timeline-card flex-1 relative py-8 px-8 md:py-10 md:px-10 rounded-3xl bg-vyr-wine-dark/40 border border-vyr-wine-light/10 group-hover:-translate-y-1 transition-transform duration-500 overflow-hidden">
                                 {/* Giant faded background letter */}
                                 <div className="absolute -left-4 -top-8 text-[12rem] md:text-[15rem] font-black text-white/[0.02] select-none pointer-events-none group-hover:text-vyr-wine/[0.06] transition-colors duration-500 leading-none">
                                     {step.letter}

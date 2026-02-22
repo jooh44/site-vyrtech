@@ -10,15 +10,24 @@
   --color-vyr-surface: #121214;
   --color-vyr-surface-light: #1A1A1E;
 
-  --color-vyr-wine: #5D243C;
-  --color-vyr-wine-light: #7A3351;
-  --color-vyr-wine-dark: #3F1728;
+  /* Official Palette */
+  --color-vyr-wine: #6D2749;
+  /* primária */
+  --color-vyr-wine-light: #FFC5E1;
+  /* secundária */
+  --color-vyr-wine-dark: #2D111E;
+  /* quase escuro */
 
-  --color-vyr-olive: #7C8C56;
-  --color-vyr-olive-light: #9AAE6B;
+  --color-vyr-olive: #87C388;
+  /* terciária */
+  --color-vyr-olive-light: #A5DCA6;
+  /* hover state for tertiary if needed */
 
-  --color-vyr-text: #EDEDED;
-  --color-vyr-text-muted: #A1A1AA;
+  --color-vyr-text: #FFEBF4;
+  /* quase branco */
+  --color-vyr-text-muted: #FFC5E1;
+  /* muted uses secondary or darker */
+
 
   /* Animations */
   --animate-gradient-x: gradient-x 6s ease infinite;
