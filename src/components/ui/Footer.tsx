@@ -10,7 +10,7 @@ export function Footer() {
                         {/* Animated Grape Icon */}
                         <div className="relative w-8 h-10 drop-shadow-[0_0_8px_rgba(93,36,60,0.4)] flex-shrink-0">
                             <Image
-                                src="/vyrtech-uva.png"
+                                src="/vyrtech-uva.svg"
                                 alt="Vyrtech Icon"
                                 fill
                                 className="object-contain"
@@ -19,11 +19,11 @@ export function Footer() {
                             <div
                                 className="absolute inset-0 bg-gradient-to-r from-[#4A1731] via-vyr-wine to-[#4A1731] bg-[length:200%_auto] animate-[gradient-x_6s_ease_infinite] mix-blend-overlay opacity-90"
                                 style={{
-                                    WebkitMaskImage: `url(/vyrtech-uva.png)`,
+                                    WebkitMaskImage: `url(/vyrtech-uva.svg)`,
                                     WebkitMaskSize: "contain",
                                     WebkitMaskRepeat: "no-repeat",
                                     WebkitMaskPosition: "center",
-                                    maskImage: `url(/vyrtech-uva.png)`,
+                                    maskImage: `url(/vyrtech-uva.svg)`,
                                     maskSize: "contain",
                                     maskRepeat: "no-repeat",
                                     maskPosition: "center"

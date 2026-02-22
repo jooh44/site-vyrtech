@@ -23,7 +23,7 @@ export function TestimonialsSection() {
     ];
 
     return (
-        <section className="py-24 bg-[#050506] border-t border-white/5 relative overflow-hidden">
+        <section className="py-24 bg-transparent relative overflow-hidden">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-vyr-wine-dark blur-[150px] rounded-full opacity-10 pointer-events-none" />
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -39,7 +39,7 @@ export function TestimonialsSection() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {testimonials.map((testimonial, idx) => (
                         <div key={idx} className="bg-transparent backdrop-blur-md border border-[#4A1731]/40 hover:border-vyr-olive-light transition-all duration-500 rounded-3xl p-8 flex flex-col relative group">
-                            
+
                             <div className="flex gap-1 mb-6">
                                 {[...Array(5)].map((_, i) => (
                                     <Star key={i} className="w-4 h-4 text-vyr-olive-light fill-vyr-olive-light" />
