@@ -3,7 +3,6 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Sprout, Target, Droplets, Radar, Leaf } from "lucide-react";
 
 export function SafraSection() {
     const sectionRef = useRef<HTMLElement>(null);
@@ -14,32 +13,27 @@ export function SafraSection() {
         {
             letter: "S",
             title: "Solo",
-            desc: "Diagnóstico profundo e análise de mercado corporativo. Entendemos o seu terreno de negócios antes de plantar qualquer investimento.",
-            icon: <Sprout className="safra-icon w-10 h-10 text-vyr-wine-light mb-4" />
+            desc: "Diagnóstico profundo e análise de mercado corporativo. Entendemos o seu terreno de negócios antes de plantar qualquer investimento."
         },
         {
             letter: "A",
             title: "Alvo",
-            desc: "Definição de metas SMART. KPIs claros e alinhados com a receita estrutural.",
-            icon: <Target className="safra-icon w-10 h-10 text-vyr-wine-light mb-4" />
+            desc: "Definição de metas SMART. KPIs claros e alinhados com a receita estrutural."
         },
         {
             letter: "F",
             title: "Fertilização",
-            desc: "Execução estratégica e arquitetura de dados via automações precisas.",
-            icon: <Droplets className="safra-icon w-10 h-10 text-vyr-wine-light mb-4" />
+            desc: "Execução estratégica e arquitetura de dados via automações precisas."
         },
         {
             letter: "R",
             title: "Rastreamento",
-            desc: "Monitoramento analítico em tempo real. Visibilidade total ponta a ponta.",
-            icon: <Radar className="safra-icon w-10 h-10 text-vyr-wine-light mb-4" />
+            desc: "Monitoramento analítico em tempo real. Visibilidade total ponta a ponta."
         },
         {
             letter: "A",
             title: "Aprimoramento",
-            desc: "Testes iterativos e evolução usando metodologias CRO avançadas. Escalamos através de dados.",
-            icon: <Leaf className="safra-icon w-10 h-10 text-vyr-wine-light mb-4" />
+            desc: "Testes iterativos e evolução usando metodologias CRO avançadas. Escalamos através de dados."
         }
     ];
 
@@ -99,17 +93,17 @@ export function SafraSection() {
                     );
                 }
 
-                // Animate the agricultural icon scale/fade
-                const icon = card.querySelector('.safra-icon');
-                if (icon) {
-                    gsap.fromTo(icon,
-                        { scale: 0, opacity: 0, rotation: -30 },
+                // Animate the large typographic letter
+                const typeLetter = card.querySelector('.type-letter');
+                if (typeLetter) {
+                    gsap.fromTo(typeLetter,
+                        { y: 20, opacity: 0, scale: 0.8 },
                         {
-                            scale: 1,
+                            y: 0,
                             opacity: 1,
-                            rotation: 0,
-                            duration: 0.7,
-                            ease: "back.out(1.5)",
+                            scale: 1,
+                            duration: 0.8,
+                            ease: "elastic.out(1, 0.5)",
                             scrollTrigger: {
                                 trigger: card,
                                 start: "top 60%",
@@ -172,14 +166,23 @@ export function SafraSection() {
                                     {step.letter}
                                 </div>
 
-                                <div className="relative z-10">
-                                    {step.icon}
-                                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 tracking-tight flex items-center gap-4">
-                                        <span className="text-vyr-wine-light">{`0${idx + 1}.`}</span> {step.title}
-                                    </h3>
-                                    <p className="text-base md:text-lg text-gray-400 leading-relaxed font-medium max-w-2xl">
-                                        {step.desc}
-                                    </p>
+                                <div className="relative z-10 flex flex-col md:flex-row gap-6 md:gap-10 md:items-start">
+                                    {/* The Typographic Highlight replacing the old Icon */}
+                                    <div className="type-letter flex-shrink-0 w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-gradient-to-br from-vyr-wine-dark to-[#08080A] border border-vyr-wine/30 shadow-[0_0_30px_rgba(109,39,73,0.3)] flex items-center justify-center relative overflow-hidden group-hover:border-vyr-wine/60 transition-colors duration-500">
+                                        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay"></div>
+                                        <span className="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-vyr-wine-light drop-shadow-sm font-sans tracking-tighter">
+                                            {step.letter}
+                                        </span>
+                                    </div>
+
+                                    <div className="flex-1">
+                                        <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 tracking-tight flex items-center gap-3">
+                                            <span className="text-vyr-wine-light text-xl md:text-2xl">{`0${idx + 1}.`}</span> {step.title}
+                                        </h3>
+                                        <p className="text-base md:text-lg text-gray-400 leading-relaxed font-medium max-w-2xl">
+                                            {step.desc}
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
 
