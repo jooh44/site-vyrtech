@@ -24,6 +24,7 @@ import { EditorialFooter } from "@/components/ui/EditorialFooter";
 import { EditorialNavbar } from "@/components/ui/EditorialNavbar";
 import { AnimatedChat } from "@/components/ui/AnimatedChat";
 import { GrowthChart } from "@/components/ui/GrowthChart";
+import { WhatsAppButtonEditorial } from "@/components/ui/WhatsAppButtonEditorial";
 
 export default function FashionRetailLandingPage() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -417,6 +418,7 @@ export default function FashionRetailLandingPage() {
             </section>
 
             <EditorialFooter />
+            <WhatsAppButtonEditorial />
         </main>
     );
 }

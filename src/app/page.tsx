@@ -6,6 +6,7 @@ import { ConversionForm } from "@/components/ui/ConversionForm";
 import { TestimonialsSection } from "@/components/ui/TestimonialsSection";
 import { Navbar } from "@/components/ui/Navbar";
 import { Footer } from "@/components/ui/Footer";
+import { WhatsAppButtonDark } from "@/components/ui/WhatsAppButtonDark";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <TestimonialsSection />
       </main>
       <Footer />
+      <WhatsAppButtonDark />
     </>
   );
 }
