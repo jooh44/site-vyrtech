@@ -31,7 +31,7 @@ export function Hero() {
     }, []);
 
     return (
-        <section className="relative w-full min-h-[90vh] flex items-center justify-center pt-24 pb-16 overflow-hidden bg-transparent">
+        <section className="relative w-full min-h-[100svh] md:min-h-[90vh] flex items-center justify-center pt-10 md:pt-24 pb-10 md:pb-16 overflow-hidden bg-transparent">
             {/* Background strictly confined to Hero solving the global parallax issue */}
             <PcbLinesBackground />
 
@@ -40,7 +40,7 @@ export function Hero() {
 
                     {/* User's Vyrtech Grape Logo with Animated Gradient Overlay */}
                     <div className="hero-element flex flex-col items-center justify-center hover:scale-105 transition-transform duration-500">
-                        <div className="relative w-16 h-20 md:w-24 md:h-28 drop-shadow-[0_0_15px_rgba(93,36,60,0.4)]">
+                        <div className="relative w-24 h-28 sm:w-28 sm:h-32 md:w-32 md:h-36 drop-shadow-[0_0_15px_rgba(93,36,60,0.4)]">
                             {/* Base Image */}
                             <Image
                                 src="/vyrtech-uva.png"
@@ -65,7 +65,7 @@ export function Hero() {
                             />
                         </div>
                         {/* Grotesk Font Text */}
-                        <span className="text-xl md:text-2xl font-bold tracking-[0.2em] text-vyr-text-muted transition-colors uppercase mt-3 hover:text-white" style={{ fontFamily: '"Space Grotesk", "Clash Display", "Inter", "Helvetica Neue", Arial, sans-serif' }}>
+                        <span className="text-3xl md:text-4xl font-bold tracking-[0.2em] text-vyr-text-muted transition-colors uppercase mt-4 hover:text-white" style={{ fontFamily: '"Space Grotesk", "Clash Display", "Inter", "Helvetica Neue", Arial, sans-serif' }}>
                             Vyrtech
                         </span>
                     </div>
