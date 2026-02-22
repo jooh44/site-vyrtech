@@ -54,7 +54,7 @@ export function ConversionForm() {
                 {/* Text Content */}
                 <div className="lg:w-1/2 flex flex-col justify-center">
                     <h2 className="text-4xl md:text-5xl font-bold text-vyr-text mb-6 tracking-tight text-balance">
-                        Pronto para transformar <span className="text-vyr-wine-light">dados em receita?</span>
+                        Pronto para transformar <span className="text-[#D5E8B3]">dados em receita?</span>
                     </h2>
                     <p className="text-lg text-vyr-text-muted mb-8 leading-relaxed text-balance">
                         Não somos uma agência comum. Operamos como seu braço direito de Growth.

@@ -69,7 +69,7 @@ export function CasesSection() {
                 <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-16">
                     <div className="max-w-2xl">
                         <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight">
-                            Arquiteturas que geram <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">Resultados.</span>
+                            Arquiteturas que geram <span className="text-[#D5E8B3]">Resultados.</span>
                         </h2>
                     </div>
                 </div>

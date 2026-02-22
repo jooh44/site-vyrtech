@@ -126,12 +126,12 @@ export function SafraSection() {
                 <div className="text-center mb-16 md:mb-24">
                     <h2 className="text-4xl md:text-5xl font-bold text-vyr-text tracking-tight mb-4">
                         A Metodologia{" "}
-                        <span className="inline-flex gap-1">
-                            <span className="text-transparent bg-clip-text bg-gradient-to-br from-white to-[#6D2749]">S.</span>
-                            <span className="text-transparent bg-clip-text bg-gradient-to-br from-white to-[#6D2749]">A.</span>
-                            <span className="text-transparent bg-clip-text bg-gradient-to-br from-white to-[#6D2749]">F.</span>
-                            <span className="text-transparent bg-clip-text bg-gradient-to-br from-white to-[#6D2749]">R.</span>
-                            <span className="text-transparent bg-clip-text bg-gradient-to-br from-white to-[#6D2749]">A.</span>
+                        <span className="inline-flex gap-1 text-[#D5E8B3]">
+                            <span>S.</span>
+                            <span>A.</span>
+                            <span>F.</span>
+                            <span>R.</span>
+                            <span>A.</span>
                         </span>
                     </h2>
                     <p className="text-vyr-text-muted mt-2 text-lg md:text-xl max-w-2xl mx-auto">

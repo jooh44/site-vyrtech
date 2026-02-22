@@ -72,8 +72,6 @@ export function Hero() {
 
                     {/* Playground Concept: Glowing Gradient Headline */}
                     <h1 className="hero-element text-4xl sm:text-5xl md:text-5xl lg:text-[4.2rem] xl:text-[4.8rem] font-bold tracking-tight text-vyr-text leading-[1.2] md:leading-[1.1] relative w-full mb-2 sm:mb-0">
-                        <div className="absolute inset-0 blur-3xl bg-vyr-wine/10 rounded-full -z-10 transform scale-150 opacity-40" />
-
                         {/* Mobile Layout: 3 Lines */}
                         <span className="block sm:hidden">Crescimento</span>
                         <span className="block sm:hidden">Empresarial com</span>
@@ -84,7 +82,7 @@ export function Hero() {
                         <span className="hidden sm:inline-block">com&nbsp;</span>
 
                         {/* Dynamic Element (Shares same line as 'com' on Desktop, new line on Mobile) */}
-                        <span className="bg-gradient-to-r from-[#8E2648] via-[#E25A84] to-[#8E2648] bg-clip-text text-transparent bg-[length:200%_auto] animate-[gradient-x_4s_ease_infinite] block sm:inline-block relative mt-2 sm:mt-0 drop-shadow-[0_0_15px_rgba(226,90,132,0.4)]">
+                        <span className="bg-gradient-to-r from-[#8E2648] via-[#E25A84] to-[#8E2648] bg-clip-text text-transparent bg-[length:200%_auto] animate-[gradient-x_4s_ease_infinite] block sm:inline-block relative mt-2 sm:mt-0">
                             {/* Animated Typewriter Word */}
                             <motion.span
                                 key={wordIndex}
