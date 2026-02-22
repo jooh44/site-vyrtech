@@ -39,7 +39,7 @@ export function Navbar() {
                 <div className="hidden md:flex items-center gap-10 text-sm font-medium text-vyr-text-muted">
                     <Link href="/#metodologia" className="hover:text-white transition-colors">A Metodologia</Link>
                     <Link href="/locacao-de-roupas" className="hover:text-white transition-colors">Moda & Locação</Link>
-                    <a href="/#diagnostico" className="px-6 py-2.5 rounded-full bg-gradient-to-r from-vyr-wine to-[#4A1731] hover:opacity-90 text-white transition-all shadow-lg font-semibold hover:scale-[1.05] active:scale-[0.98]">
+                    <a href="/#diagnostico" className="px-6 py-2.5 rounded-full bg-[#D5E8B3] hover:bg-[#C4DB9B] text-[#050506] transition-all shadow-[0_0_15px_rgba(213,232,179,0.3)] font-bold hover:scale-[1.05] active:scale-[0.98]">
                         Diagnóstico Gratuito
                     </a>
                 </div>

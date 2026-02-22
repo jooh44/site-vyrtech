@@ -93,7 +93,7 @@ export function CasesSection() {
 
                                     <div className="mb-2">
                                         <div className="text-5xl font-bold tracking-tighter text-white mb-2">{item.metric}</div>
-                                        <div className="text-sm text-white/60 font-bold uppercase tracking-wider transition-all duration-500">{item.label}</div>
+                                        <div className="text-sm text-white font-bold uppercase tracking-wider transition-all duration-500">{item.label}</div>
                                     </div>
 
                                     <p className="text-vyr-text-muted mt-6 text-sm leading-relaxed">

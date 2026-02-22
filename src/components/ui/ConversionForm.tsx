@@ -236,7 +236,7 @@ export function ConversionForm() {
                                 <button
                                     type="submit"
                                     disabled={isSubmitting}
-                                    className="px-8 py-3 rounded-lg bg-[#1C050F] hover:bg-[#2E0B1A] border border-[#2E0B1A]/50 hover:border-[#4A1731]/60 text-white font-medium transition-all flex items-center disabled:opacity-50"
+                                    className="px-8 py-3 rounded-lg bg-[#D5E8B3] hover:bg-[#C4DB9B] text-[#050506] font-bold shadow-[0_0_15px_rgba(213,232,179,0.2)] transition-all flex items-center disabled:opacity-50"
                                 >
                                     {isSubmitting ? "Enviando..." : step === 3 ? "Finalizar" : "Continuar"}
                                     {!isSubmitting && step < 3 && <ArrowRight className="w-4 h-4 ml-2" />}
