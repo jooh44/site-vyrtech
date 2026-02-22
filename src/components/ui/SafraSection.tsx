@@ -81,7 +81,7 @@ export function SafraSection() {
                         { scale: 0, backgroundColor: "#3F1728" },
                         {
                             scale: 1,
-                            backgroundColor: "#9E2A4A", // Darker wine red instead of #ff1744 neon pink
+                            backgroundColor: "#D5E8B3", // Olive green instead of wine
                             duration: 0.5,
                             ease: "back.out(2)",
                             scrollTrigger: {
@@ -155,7 +155,7 @@ export function SafraSection() {
                         <div key={idx} className="relative flex items-start gap-8 md:gap-16 pl-14 md:pl-32 group">
 
                             {/* Timeline Node - Adjusted exactly perfectly to the 2px line */}
-                            <div className="absolute left-[12px] md:left-[33px] top-6 w-8 h-8 rounded-full border-4 border-[#050506] bg-vyr-wine-dark z-20 timeline-node flex items-center justify-center shadow-[0_0_15px_rgba(122,51,81,0.5)]">
+                            <div className="absolute left-[12px] md:left-[33px] top-6 w-8 h-8 rounded-full border-4 border-[#050506] bg-[#0C0C0E] z-20 timeline-node flex items-center justify-center shadow-[0_0_15px_rgba(213,232,179,0.15)]">
                                 <div className="w-2 h-2 rounded-full bg-white/80" />
                             </div>
 
