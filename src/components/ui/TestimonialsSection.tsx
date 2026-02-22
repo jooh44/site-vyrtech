@@ -29,7 +29,7 @@ export function TestimonialsSection() {
             <div className="max-w-7xl mx-auto px-6 relative z-10">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
-                        Quem já construiu <span className="text-vyr-olive-light">receita conosco</span>
+                        Quem já está <span className="text-vyr-olive-light">colhendo os frutos</span>
                     </h2>
                     <p className="text-vyr-text-muted text-lg max-w-2xl mx-auto">
                         O que líderes de mercado dizem sobre nossa engenharia de aquisição e Growth.
