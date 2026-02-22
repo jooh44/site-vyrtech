@@ -17,7 +17,7 @@ export function Navbar() {
                             priority
                         />
                         <div
-                            className="absolute inset-0 bg-gradient-to-r from-vyr-wine-light via-[#ff1744] to-vyr-wine-light bg-[length:200%_auto] animate-[gradient-x_6s_ease_infinite] mix-blend-overlay opacity-80"
+                            className="absolute inset-0 bg-gradient-to-r from-[#4A1731] via-vyr-wine to-[#4A1731] bg-[length:200%_auto] animate-[gradient-x_6s_ease_infinite] mix-blend-overlay opacity-90"
                             style={{
                                 WebkitMaskImage: `url(/vyrtech-uva.png)`,
                                 WebkitMaskSize: "contain",
