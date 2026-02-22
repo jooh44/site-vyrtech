@@ -71,7 +71,9 @@ export function Hero() {
                         {/* Efeito de brilho de fundo similar ao playground */}
                         <div className="absolute inset-0 blur-3xl bg-vyr-wine/10 rounded-full -z-10 transform scale-150 opacity-40" />
 
-                        <span className="inline-block whitespace-nowrap">Crescimento Empresarial</span> <br className="hidden sm:block" />
+                        <span className="inline-block whitespace-normal break-words sm:whitespace-nowrap">
+                            Crescimento <br className="block sm:hidden" /> Empresarial
+                        </span> <br className="hidden sm:block" />
                         <span className="inline-block">com&nbsp;</span>
                         <span className="bg-gradient-to-r from-[#4A1731] via-vyr-wine to-[#4A1731] bg-clip-text text-transparent bg-[length:200%_auto] animate-[gradient-x_6s_ease_infinite] block mt-1 sm:mt-0 sm:inline relative">
                             {/* Animated Typewriter Word */}
