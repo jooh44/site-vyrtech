@@ -22,6 +22,7 @@ import { EditorialSafraSection } from "@/components/ui/EditorialSafraSection";
 import { EditorialConversionForm } from "@/components/ui/EditorialConversionForm";
 import { EditorialFooter } from "@/components/ui/EditorialFooter";
 import { EditorialNavbar } from "@/components/ui/EditorialNavbar";
+import { AnimatedChat } from "@/components/ui/AnimatedChat";
 
 export default function FashionRetailLandingPage() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -136,7 +137,7 @@ export default function FashionRetailLandingPage() {
 
                         {/* Huge Editorial Typography */}
                         <h1 className="hero-elem text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter text-[#050506] leading-[0.9] text-balance uppercase mt-2">
-                            DIAS DE CHUVA EM <br />
+                            DIAS DE CHUVA COM <br />
                             <span className="italic font-light text-[#6D2749]">AGENDA LOTADA.</span>
                         </h1>
 
@@ -335,14 +336,7 @@ export default function FashionRetailLandingPage() {
                                 </p>
                             </div>
                             <div className="md:w-1/2 p-12 bg-[#F9F9F9] flex items-center justify-center min-h-[300px]">
-                                <div className="space-y-4 w-full max-w-sm">
-                                    <div className="bg-[#FFEBF4] border border-[#FFC5E1] p-4 text-sm font-medium text-[#6D2749] tracking-wide">
-                                        &gt; &quot;Tem esse rosa pro dia 15?&quot;
-                                    </div>
-                                    <div className="bg-[#6D2749] text-white p-4 text-sm font-light tracking-wide text-right">
-                                        Perfeito. Qual sua numeração? Confirmando disponibilidade na arara agora.
-                                    </div>
-                                </div>
+                                <AnimatedChat />
                             </div>
                         </div>
 
