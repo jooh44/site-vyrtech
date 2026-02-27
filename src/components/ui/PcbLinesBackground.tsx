@@ -9,10 +9,10 @@ export function PcbLinesBackground() {
             {/* Discrete Top Right Corner PCB Track */}
             <svg className="absolute top-0 right-0 w-[500px] h-[500px] opacity-80" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <defs>
-                    <linearGradient id="glow-wine" x1="0" y1="0" x2="1" y2="0">
-                        <stop offset="0%" stopColor="#5D243C" stopOpacity="0.2" />
-                        <stop offset="50%" stopColor="#6D2749" stopOpacity="1" />
-                        <stop offset="100%" stopColor="#5D243C" stopOpacity="0.2" />
+                    <linearGradient id="glow-green" x1="0" y1="0" x2="1" y2="0">
+                        <stop offset="0%" stopColor="#9DB479" stopOpacity="0.2" />
+                        <stop offset="50%" stopColor="#D5E8B3" stopOpacity="1" />
+                        <stop offset="100%" stopColor="#9DB479" stopOpacity="0.2" />
                     </linearGradient>
                 </defs>
 
@@ -22,7 +22,7 @@ export function PcbLinesBackground() {
                 <circle cx="280" cy="150" r="3" fill="#2A2A2D" />
 
                 {/* Animated Light Pulse 1 */}
-                <path d="M 500 80 L 350 80 L 280 150 L 0 150" stroke="url(#glow-wine)" strokeWidth="2.5" className="pulse-path" style={{ animationDelay: '0s' }} />
+                <path d="M 500 80 L 350 80 L 280 150 L 0 150" stroke="url(#glow-green)" strokeWidth="2.5" className="pulse-path" style={{ animationDelay: '0s' }} />
 
                 {/* Track 2 */}
                 <path d="M 500 180 L 400 180 L 350 230 L 50 230" stroke="#2A2A2D" strokeWidth="1.5" />
@@ -30,7 +30,7 @@ export function PcbLinesBackground() {
                 <circle cx="350" cy="230" r="3" fill="#2A2A2D" />
 
                 {/* Animated Light Pulse 2 */}
-                <path d="M 500 180 L 400 180 L 350 230 L 50 230" stroke="url(#glow-wine)" strokeWidth="2.5" className="pulse-path" style={{ animationDelay: '2s' }} />
+                <path d="M 500 180 L 400 180 L 350 230 L 50 230" stroke="url(#glow-green)" strokeWidth="2.5" className="pulse-path" style={{ animationDelay: '2s' }} />
 
                 {/* Track 3 */}
                 <path d="M 500 300 L 450 300 L 420 330 L 150 330" stroke="#2A2A2D" strokeWidth="1.5" />
@@ -38,7 +38,7 @@ export function PcbLinesBackground() {
                 <circle cx="420" cy="330" r="3" fill="#2A2A2D" />
 
                 {/* Animated Light Pulse 3 */}
-                <path d="M 500 300 L 450 300 L 420 330 L 150 330" stroke="url(#glow-wine)" strokeWidth="2.5" className="pulse-path" style={{ animationDelay: '1s' }} />
+                <path d="M 500 300 L 450 300 L 420 330 L 150 330" stroke="url(#glow-green)" strokeWidth="2.5" className="pulse-path" style={{ animationDelay: '1s' }} />
             </svg>
 
             {/* Discrete Bottom Left Corner PCB Track */}
@@ -47,13 +47,13 @@ export function PcbLinesBackground() {
                 <path d="M 500 80 L 350 80 L 280 150 L 0 150" stroke="#2A2A2D" strokeWidth="1.5" />
                 <circle cx="350" cy="80" r="3" fill="#2A2A2D" />
                 <circle cx="280" cy="150" r="3" fill="#2A2A2D" />
-                <path d="M 500 80 L 350 80 L 280 150 L 0 150" stroke="url(#glow-wine)" strokeWidth="2.5" className="pulse-path" style={{ animationDelay: '1.5s' }} />
+                <path d="M 500 80 L 350 80 L 280 150 L 0 150" stroke="url(#glow-green)" strokeWidth="2.5" className="pulse-path" style={{ animationDelay: '1.5s' }} />
 
                 {/* Track 2 */}
                 <path d="M 500 180 L 400 180 L 350 230 L 50 230" stroke="#2A2A2D" strokeWidth="1.5" />
                 <circle cx="400" cy="180" r="3" fill="#2A2A2D" />
                 <circle cx="350" cy="230" r="3" fill="#2A2A2D" />
-                <path d="M 500 180 L 400 180 L 350 230 L 50 230" stroke="url(#glow-wine)" strokeWidth="2.5" className="pulse-path" style={{ animationDelay: '3s' }} />
+                <path d="M 500 180 L 400 180 L 350 230 L 50 230" stroke="url(#glow-green)" strokeWidth="2.5" className="pulse-path" style={{ animationDelay: '3s' }} />
             </svg>
 
             <style dangerouslySetInnerHTML={{
