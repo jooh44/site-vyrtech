@@ -73,6 +73,24 @@ export function LeadForm({ formId, theme = "tech" }: LeadFormProps) {
         );
     }
 
+    const techOptions = [
+        { value: "Tecnologia", label: "Tecnologia & SaaS" },
+        { value: "Industria", label: "Indústria Corporativa" },
+        { value: "Servicos", label: "Serviços B2B" },
+        { value: "Locacao", label: "Locação & Varejo Premium" },
+        { value: "Outros", label: "Outros" }
+    ];
+
+    const editorialOptions = [
+        { value: "Noivas", label: "Ateliê de Noivas" },
+        { value: "Masculino", label: "Trajes Masculinos & Gala" },
+        { value: "Festa", label: "Locação de Festa / 15 Anos" },
+        { value: "Varejo", label: "Varejo de Moda Premium" },
+        { value: "Outros", label: "Outros" }
+    ];
+
+    const options = isTech ? techOptions : editorialOptions;
+
     return (
         <form onSubmit={handleSubmit} className="space-y-5" id={formId}>
             {/* Honeypot field - Hidden from users */}
@@ -151,11 +169,11 @@ export function LeadForm({ formId, theme = "tech" }: LeadFormProps) {
                         )}
                     >
                         <option value="" disabled>Selecione seu segmento...</option>
-                        <option value="Tecnologia">Tecnologia & SaaS</option>
-                        <option value="Industria">Indústria Corporativa</option>
-                        <option value="Servicos">Serviços B2B</option>
-                        <option value="Locacao">Locação & Varejo Premium</option>
-                        <option value="Outros">Outros</option>
+                        {options.map(option => (
+                            <option key={option.value} value={option.value}>
+                                {option.label}
+                            </option>
+                        ))}
                     </select>
                 </div>
             </div>
