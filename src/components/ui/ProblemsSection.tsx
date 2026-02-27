@@ -67,6 +67,20 @@ export function ProblemsSection() {
                 }
             );
 
+            gsap.fromTo(".graph-svg-container",
+                { y: 80, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1.5,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: sectionRef.current,
+                        start: "top 70%",
+                    }
+                }
+            );
+
             gsap.fromTo(".section-header",
                 { y: 40, opacity: 0 },
                 {
@@ -90,7 +104,7 @@ export function ProblemsSection() {
             <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#6D2749] to-transparent opacity-30 shadow-[0_0_20px_rgba(109,39,73,1)] z-20" />
 
             {/* Area/Line Graph SVG Background for Entrepreneurial Growth */}
-            <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+            <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden graph-svg-container">
                 <svg className="w-full h-full opacity-40 mix-blend-screen" preserveAspectRatio="none" viewBox="0 0 1440 800" xmlns="http://www.w3.org/2000/svg">
                     <defs>
                         <linearGradient id="graph-gradient-1" x1="0" y1="0" x2="1" y2="0">
