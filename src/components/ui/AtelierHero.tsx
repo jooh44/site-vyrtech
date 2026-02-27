@@ -84,14 +84,14 @@ export function AtelierHero() {
                     <div className="editorial-reveal pt-6 flex flex-col sm:flex-row gap-4">
                         <a
                             href="#diagnostico"
-                            className="px-10 py-5 bg-vyr-wine text-white font-bold uppercase tracking-widest text-sm rounded-vyr-fluid hover:bg-vyr-wine-dark transition-all duration-300 shadow-xl shadow-vyr-wine/20 flex items-center justify-center group"
+                            className="px-10 py-5 bg-vyr-wine text-white font-bold uppercase tracking-widest text-sm rounded-3xl hover:bg-vyr-wine-dark transition-all duration-300 shadow-xl shadow-vyr-wine/20 flex items-center justify-center group"
                         >
                             Agendar Diagnóstico
                             <ChevronRight className="w-5 h-5 ml-3 group-hover:translate-x-2 transition-transform" />
                         </a>
                         <a
                             href="#como-funciona"
-                            className="px-10 py-5 border-2 border-vyr-wine/30 text-vyr-wine font-bold uppercase tracking-widest text-sm rounded-vyr-fluid hover:bg-vyr-wine/5 transition-all duration-300 flex items-center justify-center"
+                            className="px-10 py-5 border-2 border-vyr-wine/30 text-vyr-wine font-bold uppercase tracking-widest text-sm rounded-3xl hover:bg-vyr-wine/5 transition-all duration-300 flex items-center justify-center"
                         >
                             O Sistema
                         </a>

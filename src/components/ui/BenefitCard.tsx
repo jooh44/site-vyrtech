@@ -23,7 +23,7 @@ export function BenefitCard({
     return (
         <div
             className={cn(
-                "relative group w-full p-8 flex flex-col justify-start rounded-vyr-fluid transition-all duration-500 overflow-hidden",
+                "relative group w-full p-8 flex flex-col justify-start rounded-3xl transition-all duration-500 overflow-hidden",
                 isTech
                     ? "bg-transparent border border-white/10 [&.is-active]:border-[#FFC5E1]/40 [&.is-active]:shadow-[0_0_30px_rgba(109,39,73,0.3)] transition-all duration-500"
                     : "bg-[#F9F9F9] border border-black [&.is-active]:bg-[#FFEBF4]",

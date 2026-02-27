@@ -146,7 +146,7 @@ export function ProblemsSection() {
                     {problems.map((prob, idx) => (
                         <div
                             key={idx}
-                            className="problem-card relative bg-transparent backdrop-blur-md border border-[#4A1731]/40 p-8 rounded-vyr-fluid hover:bg-transparent hover:border-vyr-wine transition-all duration-500 group overflow-hidden"
+                            className="problem-card relative bg-transparent backdrop-blur-md border border-[#4A1731]/40 p-8 rounded-3xl hover:bg-transparent hover:border-vyr-wine transition-all duration-500 group overflow-hidden"
                         >
                             {/* Abstract Tech Grid inside Card */}
                             <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:24px_24px] rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />

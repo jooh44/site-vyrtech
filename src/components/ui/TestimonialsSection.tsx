@@ -79,7 +79,7 @@ export function TestimonialsSection() {
                 */}
                 <div className="flex w-max gap-8 px-4 animate-scroll-x">
                     {scrollingTestimonials.map((testimonial, idx) => (
-                        <div key={idx} className="w-[350px] md:w-[450px] shrink-0 bg-[#0C0C0E]/60 backdrop-blur-md border border-[#4A1731]/40 hover:border-vyr-olive-light transition-all duration-500 rounded-vyr-fluid p-8 flex flex-col relative group">
+                        <div key={idx} className="w-[350px] md:w-[450px] shrink-0 bg-[#0C0C0E]/60 backdrop-blur-md border border-[#4A1731]/40 hover:border-vyr-olive-light transition-all duration-500 rounded-3xl p-8 flex flex-col relative group">
 
                             <div className="flex gap-1 mb-6">
                                 {[...Array(5)].map((_, i) => (

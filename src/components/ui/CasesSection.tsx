@@ -78,10 +78,10 @@ export function CasesSection() {
                 {/* Cases Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {placeholders.map((item) => (
-                        <div key={item.id} className="case-card group relative p-px rounded-vyr-fluid bg-transparent overflow-hidden transition-all duration-500 hover:-translate-y-2">
+                        <div key={item.id} className="case-card group relative p-px rounded-3xl bg-transparent overflow-hidden transition-all duration-500 hover:-translate-y-2">
                             <div className="absolute inset-0 bg-gradient-to-br from-[#1C050F]/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
-                            <div className="relative h-full glass-panel rounded-vyr-fluid p-8 md:p-10 flex flex-col justify-between group-hover:bg-[#6D2749]/10 group-hover:border-[#6D2749] overflow-hidden">
+                            <div className="relative h-full glass-panel rounded-3xl p-8 md:p-10 flex flex-col justify-between group-hover:bg-[#6D2749]/10 group-hover:border-[#6D2749] overflow-hidden">
                                 <div className="relative z-10">
                                     <div className="flex justify-between items-start mb-8">
                                         <div className="w-12 h-12 rounded-xl bg-transparent flex items-center justify-center border border-[#4A1731]/50 group-hover:border-[#6D2749] transition-all duration-500">

@@ -33,7 +33,7 @@ export function EditorialConversionForm() {
                 </div>
 
                 {/* Form Container - Editorial Style */}
-                <div className="lg:w-1/2 bg-white border border-black p-8 md:p-12 rounded-vyr-fluid relative overflow-hidden group transition-all duration-500 hover:border-vyr-wine shadow-sm">
+                <div className="lg:w-1/2 bg-white border border-black p-8 md:p-12 rounded-3xl relative overflow-hidden group transition-all duration-500 hover:border-vyr-wine shadow-sm">
                     <div className="relative z-10 w-full">
                         <LeadForm theme="editorial" formId="bottom_lead_form_editorial" />
                     </div>

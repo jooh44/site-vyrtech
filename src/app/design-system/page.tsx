@@ -24,7 +24,7 @@ export default function DesignSystemPage() {
                     {colors.map((color) => (
                         <div key={color.name} className="flex flex-col items-center">
                             <div
-                                className={`h-24 w-full ${color.class} rounded-vyr-fluid border border-vyr-charcoal mb-2 shadow-lg`}
+                                className={`h-24 w-full ${color.class} rounded-3xl border border-vyr-charcoal mb-2 shadow-lg`}
                             />
                             <span className="text-sm font-medium">{color.name}</span>
                             <span className="text-xs text-vyr-text-muted uppercase">{color.hex}</span>
@@ -36,8 +36,8 @@ export default function DesignSystemPage() {
             <section className="mb-16">
                 <h2 className="mb-6 text-2xl font-semibold">Fluid Geometry (24px / 1.5rem)</h2>
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-                    <div className="bg-vyr-surface p-8 rounded-vyr-fluid border border-vyr-charcoal">
-                        <h3 className="mb-4 text-xl font-medium">Container with rounded-vyr-fluid</h3>
+                    <div className="bg-vyr-surface p-8 rounded-3xl border border-vyr-charcoal">
+                        <h3 className="mb-4 text-xl font-medium">Container with rounded-3xl</h3>
                         <p className="text-vyr-text-muted leading-relaxed">
                             This container uses the standardized 24px border radius. It should look fluid and
                             sophisticated, typical of high-end editorial designs.

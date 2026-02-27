@@ -55,7 +55,7 @@ export function TechCategoryCard({ title, description, Icon, delay = 0 }: TechCa
     return (
         <div
             ref={cardRef}
-            className="glass-panel rounded-vyr-fluid p-8 group flex flex-col h-full cursor-pointer"
+            className="glass-panel rounded-3xl p-8 group flex flex-col h-full cursor-pointer"
             style={{ animationDelay: `${delay}ms` }}
         >
             {/* GSAP controlled interactive glow */}

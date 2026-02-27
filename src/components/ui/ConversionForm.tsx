@@ -33,7 +33,7 @@ export function ConversionForm() {
                 </div>
 
                 {/* Form Container - Transparent Tech Outline */}
-                <div className="lg:w-1/2 bg-transparent backdrop-blur-md border border-[#4A1731]/50 p-8 md:p-12 rounded-vyr-fluid relative overflow-hidden group transition-all duration-500 hover:border-vyr-wine">
+                <div className="lg:w-1/2 bg-transparent backdrop-blur-md border border-[#4A1731]/50 p-8 md:p-12 rounded-3xl relative overflow-hidden group transition-all duration-500 hover:border-vyr-wine">
                     <div className="absolute inset-0 bg-gradient-to-br from-[#1C050F]/20 via-transparent to-transparent opacity-50 pointer-events-none" />
                     <div className="relative z-10">
                         <LeadForm theme="tech" formId="bottom_lead_form_tech" />

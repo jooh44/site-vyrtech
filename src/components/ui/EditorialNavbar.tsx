@@ -31,7 +31,7 @@ export function EditorialNavbar() {
                     <Link href="#servicos" className="hover:text-black transition-colors">Serviços</Link>
                     <Link href="#como-funciona" className="hover:text-black transition-colors">O Sistema</Link>
                     <Link href="#metodologia" className="hover:text-black transition-colors">A Metodologia</Link>
-                    <a href="#solicitar" className="px-6 py-2.5 bg-[#6D2749] hover:bg-[#FFC5E1] hover:text-[#6D2749] text-white transition-colors border border-transparent font-bold rounded-vyr-fluid">
+                    <a href="#solicitar" className="px-6 py-2.5 bg-[#6D2749] hover:bg-[#FFC5E1] hover:text-[#6D2749] text-white transition-colors border border-transparent font-bold rounded-3xl">
                         Diagnóstico Gratuito
                     </a>
                 </div>
@@ -76,7 +76,7 @@ export function EditorialNavbar() {
 
                         <a
                             href="#solicitar"
-                            className="px-6 py-3 bg-[#6D2749] hover:bg-[#FFC5E1] hover:text-[#6D2749] text-white transition-colors text-center border border-transparent mt-4 rounded-vyr-fluid"
+                            className="px-6 py-3 bg-[#6D2749] hover:bg-[#FFC5E1] hover:text-[#6D2749] text-white transition-colors text-center border border-transparent mt-4 rounded-3xl"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Diagnóstico Gratuito
