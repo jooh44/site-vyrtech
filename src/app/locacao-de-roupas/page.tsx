@@ -23,7 +23,7 @@ import { EditorialSafraSection } from "@/components/ui/EditorialSafraSection";
 import { EditorialConversionForm } from "@/components/ui/EditorialConversionForm";
 import { EditorialFooter } from "@/components/ui/EditorialFooter";
 import { EditorialNavbar } from "@/components/ui/EditorialNavbar";
-import { TestimonialsSection } from "@/components/ui/TestimonialsSection";
+import { EditorialTestimonialsSection } from "@/components/ui/EditorialTestimonialsSection";
 import { AnimatedChat } from "@/components/ui/AnimatedChat";
 import { GrowthChart } from "@/components/ui/GrowthChart";
 import { WhatsAppButtonEditorial } from "@/components/ui/WhatsAppButtonEditorial";
@@ -262,7 +262,7 @@ export default function FashionRetailLandingPage() {
             </section>
 
             {/* Scrolling Testimonials Ticker */}
-            <TestimonialsSection />
+            <EditorialTestimonialsSection />
 
             {/* Injected Global Conversion Form */}
             <EditorialConversionForm />
