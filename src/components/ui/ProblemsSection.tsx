@@ -94,19 +94,19 @@ export function ProblemsSection() {
                 <svg className="w-full h-full opacity-40 mix-blend-screen" preserveAspectRatio="none" viewBox="0 0 1440 800" xmlns="http://www.w3.org/2000/svg">
                     <defs>
                         <linearGradient id="graph-gradient-1" x1="0" y1="0" x2="1" y2="0">
-                            <stop offset="0%" stopColor="#2D111E" stopOpacity="0" />
-                            <stop offset="30%" stopColor="#4A1731" stopOpacity="0.8" />
-                            <stop offset="70%" stopColor="#6D2749" stopOpacity="1" />
-                            <stop offset="100%" stopColor="#6D2749" stopOpacity="0" />
+                            <stop offset="0%" stopColor="#1A240A" stopOpacity="0" />
+                            <stop offset="30%" stopColor="#9DB479" stopOpacity="0.8" />
+                            <stop offset="70%" stopColor="#D5E8B3" stopOpacity="1" />
+                            <stop offset="100%" stopColor="#D5E8B3" stopOpacity="0" />
                         </linearGradient>
                         <linearGradient id="graph-gradient-2" x1="0" y1="0" x2="1" y2="0">
-                            <stop offset="0%" stopColor="#6D2749" stopOpacity="0" />
-                            <stop offset="40%" stopColor="#6D2749" stopOpacity="0.5" />
-                            <stop offset="80%" stopColor="#4A1731" stopOpacity="0.8" />
-                            <stop offset="100%" stopColor="#2D111E" stopOpacity="0" />
+                            <stop offset="0%" stopColor="#D5E8B3" stopOpacity="0" />
+                            <stop offset="40%" stopColor="#D5E8B3" stopOpacity="0.5" />
+                            <stop offset="80%" stopColor="#9DB479" stopOpacity="0.8" />
+                            <stop offset="100%" stopColor="#1A240A" stopOpacity="0" />
                         </linearGradient>
                         <linearGradient id="fill-gradient" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="0%" stopColor="#6D2749" stopOpacity="0.08" />
+                            <stop offset="0%" stopColor="#D5E8B3" stopOpacity="0.08" />
                             <stop offset="100%" stopColor="#0C0C0E" stopOpacity="0" />
                         </linearGradient>
                     </defs>
@@ -123,12 +123,12 @@ export function ProblemsSection() {
                     <path d="M 0 750 C 400 700, 500 550, 800 450 C 1100 350, 1200 250, 1440 200" fill="none" stroke="url(#graph-gradient-2)" strokeWidth="1.5" strokeDasharray="6 6" />
 
                     {/* Data Points / Nodes */}
-                    <circle cx="700" cy="400" r="4" fill="#0C0C0E" stroke="#6D2749" strokeWidth="2" />
-                    <circle cx="1100" cy="150" r="5" fill="#0C0C0E" stroke="#6D2749" strokeWidth="2" />
+                    <circle cx="700" cy="400" r="4" fill="#0C0C0E" stroke="#D5E8B3" strokeWidth="2" />
+                    <circle cx="1100" cy="150" r="5" fill="#0C0C0E" stroke="#D5E8B3" strokeWidth="2" />
                 </svg>
 
                 {/* Subtle Glows */}
-                <div className="absolute top-[20%] right-[10%] w-[400px] h-[400px] bg-[#6D2749]/10 rounded-full blur-[120px]" />
+                <div className="absolute top-[20%] right-[10%] w-[400px] h-[400px] bg-[#D5E8B3]/10 rounded-full blur-[120px]" />
                 <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-vyr-dark to-transparent" />
             </div>
 
