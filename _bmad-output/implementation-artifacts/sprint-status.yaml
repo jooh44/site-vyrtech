@@ -40,29 +40,30 @@ tracking_system: file-system
 story_location: _bmad-output/implementation-artifacts
 
 development_status:
-  epic-1: in-progress
-  1-1-refactoring-global-geometry-responsive-base: ready-for-dev
-  1-2-editorial-hero-typography-setup: ready-for-dev
-  1-3-color-palette-exact-copy-atelier: ready-for-dev
-  1-4-masculine-suits-showcase-4th-fold: ready-for-dev
+  epic-1: done
+  1-1-refactoring-global-geometry-responsive-base: done
+  1-2-editorial-hero-typography-setup: done
+  1-3-color-palette-exact-copy-atelier: done
+  1-4-masculine-suits-showcase-4th-fold: done
+  1-4-masculine-suits-showcase: done
   epic-1-retrospective: optional
 
-  epic-2: in-progress
-  2-1-premium-dark-theme-layout-structure: ready-for-dev
-  2-2-tech-focused-typography-visual-hierarchy: ready-for-dev
-  2-3-interactive-depth-layering-glassmorphism: ready-for-dev
+  epic-2: done
+  2-1-premium-dark-theme-layout-structure: done
+  2-2-tech-focused-typography-visual-hierarchy: done
+  2-3-interactive-depth-layering-glassmorphism: done
   epic-2-retrospective: optional
 
-  epic-3: in-progress
-  3-1-gsap-scroller-architecture-smooth-scroll: ready-for-dev
-  3-2-dynamic-benefit-card-component: ready-for-dev
-  3-3-scroll-triggered-state-reveals: ready-for-dev
+  epic-3: done
+  3-1-gsap-scroller-architecture-smooth-scroll: done
+  3-2-dynamic-benefit-card-component: done
+  3-3-scroll-triggered-state-reveals: done
   epic-3-retrospective: optional
 
-  epic-4: in-progress
-  4-1-high-conversion-lead-capture-form-section-7: ready-for-dev
-  4-2-smooth-internal-navigation-cta-ancora: ready-for-dev
-  4-3-visual-submission-feedback-confirmation: ready-for-dev
+  epic-4: done
+  4-1-high-conversion-lead-capture-form-section-7: done
+  4-2-smooth-internal-navigation-cta-ancora: done
+  4-3-visual-submission-feedback-confirmation: done
   epic-4-retrospective: optional
 
   epic-5: in-progress

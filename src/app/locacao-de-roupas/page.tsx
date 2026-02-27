@@ -16,8 +16,9 @@ import {
     DollarSign,
     Bot
 } from "lucide-react";
+import { AtelierSection2 } from "@/components/ui/AtelierSection2";
+import { AtelierHero } from "@/components/ui/AtelierHero";
 import Link from "next/link";
-import Image from "next/image";
 import { EditorialSafraSection } from "@/components/ui/EditorialSafraSection";
 import { EditorialConversionForm } from "@/components/ui/EditorialConversionForm";
 import { EditorialFooter } from "@/components/ui/EditorialFooter";
@@ -28,41 +29,12 @@ import { WhatsAppButtonEditorial } from "@/components/ui/WhatsAppButtonEditorial
 
 export default function FashionRetailLandingPage() {
     const containerRef = useRef<HTMLDivElement>(null);
-    const [currentBg, setCurrentBg] = useState(0);
-    const backgrounds = [
-        '/bg-fashion-3.jpg',
-        '/bg-fashion-4.jpg',
-        '/bg-fashion-6.jpg'
-    ];
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentBg((prev) => (prev + 1) % backgrounds.length);
-        }, 5000);
-        return () => clearInterval(interval);
-    }, []);
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
 
         const ctx = gsap.context(() => {
-            // Hero Animation
-            gsap.fromTo(".hero-elem",
-                { y: 50, opacity: 0 },
-                { y: 0, opacity: 1, duration: 1, stagger: 0.2, ease: "power3.out", delay: 0.2 }
-            );
 
-            // Agitation Cards Animation
-            gsap.fromTo(".agitation-card",
-                { y: 40, opacity: 0 },
-                {
-                    y: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: "power2.out",
-                    scrollTrigger: {
-                        trigger: ".agitation-section",
-                        start: "top 75%",
-                    }
-                }
-            );
 
             // System Steps Animation
             const steps = gsap.utils.toArray(".system-step");
@@ -106,130 +78,53 @@ export default function FashionRetailLandingPage() {
     return (
         <main ref={containerRef} className="min-h-screen bg-[#F9F9F9] text-[#111111] font-sans selection:bg-black selection:text-white">
             <EditorialNavbar />
+            <AtelierHero />
 
-            {/* 1. Hero Section: Editorial & Minimalist */}
-            <section className="relative w-full min-h-screen flex items-start md:items-center pt-6 md:pt-16 pb-12 bg-white overflow-hidden">
-                {/* Dynamic Image Background Slider (Ken Burns Effect) */}
-                {backgrounds.map((bg, index) => (
-                    <div
-                        key={bg}
-                        className={`absolute inset-0 z-0 transition-opacity duration-[2000ms] ease-in-out pointer-events-none grayscale ${index === currentBg ? 'opacity-100' : 'opacity-0'}`}
-                        style={{
-                            backgroundImage: `url(${bg})`,
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                            transform: index === currentBg ? 'scale(1.05)' : 'scale(1)',
-                            transition: 'opacity 2000ms ease-in-out, transform 8000ms ease-out'
-                        }}
-                    />
-                ))}
-
-                {/* Overlay gradient to ensure text remains perfectly readable */}
-                <div className="absolute inset-0 z-0 bg-gradient-to-r from-white/95 via-white/85 to-white/40 md:to-transparent pointer-events-none" />
-
-                <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full pt-0 md:pt-10">
-                    <div className="max-w-4xl space-y-6">
-                        {/* Logo / Tag */}
-                        <div className="hero-elem flex flex-col items-start pb-4 border-b-2 border-[#6D2749]/20 space-y-3">
-                            <img src="/logo.png" alt="Vyrtech" className="h-14 md:h-12 object-contain" />
-                            <p className="text-[10px] sm:text-xs md:text-sm font-bold tracking-[0.2em] uppercase text-black leading-relaxed mt-2">
-                                Estratégia B2B & Varejo High-Ticket
-                            </p>
-                        </div>
-
-                        {/* Huge Editorial Typography */}
-                        <h1 className="hero-elem text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter text-[#050506] leading-[0.9] text-balance uppercase mt-2">
-                            DIAS DE CHUVA COM <br />
-                            <span className="italic font-light text-[#6D2749]">AGENDA LOTADA.</span>
-                        </h1>
-
-                        <p className="hero-elem text-[17px] sm:text-lg md:text-xl text-gray-800 max-w-2xl text-balance leading-relaxed font-normal md:font-light mt-4">
-                            Deixe de depender do tráfego orgânico de pedestres. Garantimos uma demanda ativa e previsível para negócios de moda de alto padrão com <strong>tráfego hiperdirecionado</strong> e foco implacável em conversão.
-                        </p>
-
-                        {/* Calls to Action: Sharp corners, solid colors */}
-                        <div className="hero-elem pt-4 flex flex-col sm:flex-row gap-0 border-t border-gray-200 mt-6 md:mt-8 py-4">
-                            <a href="#solicitar" className="px-6 md:px-10 py-5 sm:py-6 bg-[#6D2749] hover:bg-[#FFC5E1] hover:text-[#6D2749] text-white font-bold uppercase tracking-widest text-xs sm:text-sm flex items-center justify-center transition-colors group">
-                                Agendar Diagnóstico <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2 sm:ml-4 flex-shrink-0 group-hover:translate-x-2 transition-transform" />
-                            </a>
-                            <a href="#como-funciona" className="px-6 md:px-10 py-5 sm:py-6 border border-[#6D2749] bg-transparent hover:bg-[#FFEBF4] hover:text-[#6D2749] text-[#6D2749] font-bold uppercase tracking-widest text-xs sm:text-sm transition-all flex items-center justify-center">
-                                O Sistema
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* 2. Dores / Agitation Section */}
-            <section className="agitation-section py-24 relative border-t-2 border-black bg-white">
-                <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-                    <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
-                        <h2 className="text-4xl md:text-5xl font-black text-[#050506] uppercase tracking-tight">
-                            A CHUVA NÃO PODE DITAR <br className="hidden md:block" /> O SEU <span className="italic font-light text-[#6D2749]">FATURAMENTO.</span>
-                        </h2>
-                        <p className="text-lg text-gray-500 font-light mt-4">
-                            Ficar esperando a cliente entrar na sua loja é o modelo mais amador de vendas em pleno {new Date().getFullYear()}.
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border-t border-l border-[#6D2749]/20">
-                        {[
-                            {
-                                icon: Droplets,
-                                title: "DEPENDÊNCIA FÍSICA",
-                                desc: "Fins de semana chuvosos ou calmarias sazonais esvaziam seu showroom. Sua receita fica completamente à mercê do acaso."
-                            },
-                            {
-                                icon: Users,
-                                title: "CAOS DE ATENDIMENTO",
-                                desc: "Sua equipe se divide entre ajudar quem já está na loja e responder centenas de \"qual o valor?\" no Instagram, torrando leads reais."
-                            },
-                            {
-                                icon: TrendingDown,
-                                title: "AGÊNCIAS INEFICAZES",
-                                desc: "Agências que prometem alcance, entregam curtidas, mas fogem quando o assunto é o complexo CAC de agendamentos reais."
-                            }
-                        ].map((pain, idx) => (
-                            <div key={idx} className="agitation-card bg-white border-r border-b border-[#6D2749]/20 p-10 hover:bg-[#FFEBF4] transition-colors group">
-                                <pain.icon className="w-10 h-10 text-[#6D2749] mb-8 group-hover:-translate-y-2 transition-transform" strokeWidth={1.5} />
-                                <h3 className="text-xl font-bold text-black mb-4 uppercase tracking-widest">{pain.title}</h3>
-                                <p className="text-gray-600 leading-relaxed font-light">
-                                    {pain.desc}
-                                </p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+            <AtelierSection2 />
 
             {/* Injected Global Component (Editorial Themed) */}
             <EditorialSafraSection />
 
-            {/* 3. The Methodology Application (Solution) */}
-            <section id="como-funciona" className="py-24 md:py-32 bg-[#F9F9F9] relative border-t-2 border-black">
+            {/* 4. The Methodology Application (Solution) - NOW COMBINED WITH SUITS SHOWCASE BG */}
+            <section id="como-funciona" className="pt-32 pb-24 md:pt-40 md:pb-32 relative border-t-2 border-black overflow-hidden bg-[#050506]">
+                {/* Background Image - Fixed Parallax Effect */}
+                <div
+                    className="absolute inset-0 z-0 bg-center bg-cover bg-no-repeat bg-fixed grayscale-[0.2] opacity-70"
+                    style={{
+                        backgroundImage: "url('/suit-tuxedo.png')",
+                    }}
+                />
+
+                {/* Wine Overlay */}
+                <div className="absolute inset-0 z-0 bg-vyr-wine/60 mix-blend-multiply pointer-events-none" />
+                <div className="absolute inset-0 z-0 bg-gradient-to-t from-[#050506] via-transparent to-[#050506]/50 pointer-events-none" />
+
                 <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-                    <div className="text-center max-w-4xl mx-auto mb-24 space-y-6">
-                        <p className="text-sm font-bold tracking-[0.2em] uppercase text-[#6D2749]">A Aplicação Prática</p>
-                        <h2 className="text-5xl sm:text-6xl font-black text-black tracking-tight uppercase">
-                            COMO O <span className="text-[#6D2749]" style={{ fontFamily: '"Space Grotesk", "Clash Display", "Inter", "Helvetica Neue", Arial, sans-serif' }}>S.A.F.R.A.</span> LOTA <br />O SEU <span className="italic font-light text-[#6D2749]">PROVADOR.</span>
+                    <div className="text-center max-w-4xl mx-auto mb-6 md:mb-12 space-y-3 md:space-y-6">
+                        <p className="text-sm font-bold tracking-[0.2em] uppercase text-white/80 drop-shadow-sm">A Aplicação Prática</p>
+                        <h2 className="text-5xl sm:text-6xl font-black text-white tracking-tight uppercase drop-shadow-lg">
+                            COMO O <span className="text-[#FFC5E1]" style={{ fontFamily: '"Space Grotesk", "Clash Display", "Inter", "Helvetica Neue", Arial, sans-serif' }}>S.A.F.R.A.</span> LOTA <br />O SEU <span className="italic font-light text-[#FFC5E1]">PROVADOR.</span>
                         </h2>
                     </div>
+                </div>
 
-                    <div className="space-y-0 border border-black">
+                <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 pb-24 md:pb-32">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 border border-white/20 bg-[#050506]/60 backdrop-blur-xl rounded-xl overflow-hidden shadow-2xl">
+
                         {/* Step 1 */}
-                        <div className="system-step flex flex-col md:flex-row items-stretch bg-white border-b border-black">
-                            <div className="md:w-1/2 p-12 lg:p-16 border-b md:border-b-0 md:border-r border-black flex flex-col justify-center">
+                        <div className="system-step flex flex-col border-b lg:border-b-0 lg:border-r border-white/10 relative group hover:bg-white/5 transition-colors duration-500">
+                            <div className="p-8 lg:p-10 border-b border-white/10 flex flex-col justify-start flex-1 relative z-10">
                                 <div className="step-symbol mb-6">
-                                    <MapPin className="w-16 h-16 text-[#FFC5E1]" strokeWidth={1} />
+                                    <MapPin className="w-10 h-10 text-[#FFC5E1]" strokeWidth={1.5} />
                                 </div>
-                                <h3 className="text-2xl font-bold text-black mb-4 uppercase tracking-wider">Tráfego Hiperlocalizado</h3>
-                                <p className="text-lg text-gray-600 font-light leading-relaxed">
+                                <h3 className="text-xl font-bold text-white mb-3 uppercase tracking-wider">Tráfego Hiperlocalizado</h3>
+                                <p className="text-sm text-gray-300 font-light leading-relaxed">
                                     Mostramos seus melhores vestidos apenas para mulheres que pesquisam ativamente por locação num raio exato de atuação, cruzando intenção térmica do Google com a estética do Meta Ads.
                                 </p>
                             </div>
-                            <div className="md:w-1/2 bg-[#F9F9F9] flex items-center justify-center min-h-[300px] overflow-hidden relative">
+                            <div className="bg-transparent h-[300px] flex items-center justify-center p-4 relative overflow-hidden transition-colors duration-500">
                                 {/* Animated SVG Map */}
-                                <svg className="w-full h-full" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg className="w-full h-full max-h-full" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <defs>
                                         <linearGradient id="map-glow" x1="0" y1="0" x2="1" y2="0">
                                             <stop offset="0%" stopColor="#6D2749" stopOpacity="0" />
@@ -243,16 +138,16 @@ export default function FashionRetailLandingPage() {
                                     </defs>
 
                                     {/* Street Grid - Horizontal */}
-                                    <path d="M 0 80 L 500 80" stroke="#E0E0E0" strokeWidth="1" />
-                                    <path d="M 0 160 L 500 160" stroke="#E0E0E0" strokeWidth="1" />
-                                    <path d="M 0 240 L 500 240" stroke="#E0E0E0" strokeWidth="1" />
-                                    <path d="M 0 320 L 500 320" stroke="#E0E0E0" strokeWidth="1" />
+                                    <path d="M 0 80 L 500 80" stroke="#FFFFFF" strokeOpacity="0.1" strokeWidth="1" />
+                                    <path d="M 0 160 L 500 160" stroke="#FFFFFF" strokeOpacity="0.1" strokeWidth="1" />
+                                    <path d="M 0 240 L 500 240" stroke="#FFFFFF" strokeOpacity="0.1" strokeWidth="1" />
+                                    <path d="M 0 320 L 500 320" stroke="#FFFFFF" strokeOpacity="0.1" strokeWidth="1" />
 
                                     {/* Street Grid - Vertical */}
-                                    <path d="M 100 0 L 100 400" stroke="#E0E0E0" strokeWidth="1" />
-                                    <path d="M 200 0 L 200 400" stroke="#E0E0E0" strokeWidth="1" />
-                                    <path d="M 300 0 L 300 400" stroke="#E0E0E0" strokeWidth="1" />
-                                    <path d="M 400 0 L 400 400" stroke="#E0E0E0" strokeWidth="1" />
+                                    <path d="M 100 0 L 100 400" stroke="#FFFFFF" strokeOpacity="0.1" strokeWidth="1" />
+                                    <path d="M 200 0 L 200 400" stroke="#FFFFFF" strokeOpacity="0.1" strokeWidth="1" />
+                                    <path d="M 300 0 L 300 400" stroke="#FFFFFF" strokeOpacity="0.1" strokeWidth="1" />
+                                    <path d="M 400 0 L 400 400" stroke="#FFFFFF" strokeOpacity="0.1" strokeWidth="1" />
 
                                     {/* Animated Route Trail 1 */}
                                     <path d="M 50 320 L 100 320 L 100 240 L 200 240 L 200 160 L 300 160 L 300 80 L 400 80" stroke="#D4D4D4" strokeWidth="2" strokeLinecap="round" />
@@ -281,18 +176,18 @@ export default function FashionRetailLandingPage() {
                                     </g>
 
                                     {/* Intersection Dots */}
-                                    <circle cx="100" cy="80" r="2.5" fill="#D4D4D4" />
-                                    <circle cx="200" cy="80" r="2.5" fill="#D4D4D4" />
-                                    <circle cx="300" cy="80" r="2.5" fill="#D4D4D4" />
-                                    <circle cx="400" cy="80" r="2.5" fill="#D4D4D4" />
-                                    <circle cx="100" cy="160" r="2.5" fill="#D4D4D4" />
-                                    <circle cx="400" cy="160" r="2.5" fill="#D4D4D4" />
-                                    <circle cx="100" cy="240" r="2.5" fill="#D4D4D4" />
-                                    <circle cx="400" cy="240" r="2.5" fill="#D4D4D4" />
-                                    <circle cx="100" cy="320" r="2.5" fill="#D4D4D4" />
-                                    <circle cx="200" cy="320" r="2.5" fill="#D4D4D4" />
-                                    <circle cx="300" cy="320" r="2.5" fill="#D4D4D4" />
-                                    <circle cx="400" cy="320" r="2.5" fill="#D4D4D4" />
+                                    <circle cx="100" cy="80" r="2.5" fill="#FFFFFF" fillOpacity="0.2" />
+                                    <circle cx="200" cy="80" r="2.5" fill="#FFFFFF" fillOpacity="0.2" />
+                                    <circle cx="300" cy="80" r="2.5" fill="#FFFFFF" fillOpacity="0.2" />
+                                    <circle cx="400" cy="80" r="2.5" fill="#FFFFFF" fillOpacity="0.2" />
+                                    <circle cx="100" cy="160" r="2.5" fill="#FFFFFF" fillOpacity="0.2" />
+                                    <circle cx="400" cy="160" r="2.5" fill="#FFFFFF" fillOpacity="0.2" />
+                                    <circle cx="100" cy="240" r="2.5" fill="#FFFFFF" fillOpacity="0.2" />
+                                    <circle cx="400" cy="240" r="2.5" fill="#FFFFFF" fillOpacity="0.2" />
+                                    <circle cx="100" cy="320" r="2.5" fill="#FFFFFF" fillOpacity="0.2" />
+                                    <circle cx="200" cy="320" r="2.5" fill="#FFFFFF" fillOpacity="0.2" />
+                                    <circle cx="300" cy="320" r="2.5" fill="#FFFFFF" fillOpacity="0.2" />
+                                    <circle cx="400" cy="320" r="2.5" fill="#FFFFFF" fillOpacity="0.2" />
                                 </svg>
 
                                 <style dangerouslySetInnerHTML={{
@@ -327,34 +222,38 @@ export default function FashionRetailLandingPage() {
                         </div>
 
                         {/* Step 2 */}
-                        <div className="system-step flex flex-col md:flex-row-reverse items-stretch bg-white border-b border-black">
-                            <div className="md:w-1/2 p-12 lg:p-16 border-b md:border-b-0 md:border-l border-black flex flex-col justify-center">
+                        <div className="system-step flex flex-col border-b lg:border-b-0 lg:border-r border-white/10 relative group hover:bg-white/5 transition-colors duration-500">
+                            <div className="p-8 lg:p-10 border-b border-white/10 flex flex-col justify-start flex-1 relative z-10">
                                 <div className="step-symbol mb-6">
-                                    <Bot className="w-16 h-16 text-[#FFC5E1]" strokeWidth={1} />
+                                    <Bot className="w-10 h-10 text-[#FFC5E1]" strokeWidth={1.5} />
                                 </div>
-                                <h3 className="text-2xl font-bold text-black mb-4 uppercase tracking-wider">Filtro de Inteligência</h3>
-                                <p className="text-lg text-gray-600 font-light leading-relaxed">
+                                <h3 className="text-xl font-bold text-white mb-3 uppercase tracking-wider">Filtro de Inteligência</h3>
+                                <p className="text-sm text-gray-300 font-light leading-relaxed">
                                     No instante do clique, nossa I.A. assume. Extrai a data do evento, numeração e estilo antes de envolver humanos, travando curiosas e blindando o tempo da sua equipe de loja.
                                 </p>
                             </div>
-                            <div className="md:w-1/2 p-12 bg-[#F9F9F9] flex items-center justify-center min-h-[300px]">
-                                <AnimatedChat />
+                            <div className="bg-transparent h-[300px] flex items-center justify-center overflow-hidden transition-colors duration-500">
+                                <div className="scale-75 origin-center w-full max-w-sm pl-4">
+                                    <AnimatedChat />
+                                </div>
                             </div>
                         </div>
 
                         {/* Step 3 */}
-                        <div className="system-step flex flex-col md:flex-row items-stretch bg-white">
-                            <div className="md:w-1/2 p-12 lg:p-16 border-b md:border-b-0 md:border-r border-black flex flex-col justify-center">
+                        <div className="system-step flex flex-col relative group hover:bg-white/5 transition-colors duration-500">
+                            <div className="p-8 lg:p-10 border-b border-white/10 flex flex-col justify-start flex-1 relative z-10">
                                 <div className="step-symbol mb-6">
-                                    <DollarSign className="w-16 h-16 text-[#FFC5E1]" strokeWidth={1} />
+                                    <DollarSign className="w-10 h-10 text-[#FFC5E1]" strokeWidth={1.5} />
                                 </div>
-                                <h3 className="text-2xl font-bold text-black mb-4 uppercase tracking-wider">Caixa Previsível</h3>
-                                <p className="text-lg text-gray-600 font-light leading-relaxed">
+                                <h3 className="text-xl font-bold text-white mb-3 uppercase tracking-wider">Caixa Previsível</h3>
+                                <p className="text-sm text-gray-300 font-light leading-relaxed">
                                     A consultora recebe a noiva ou formanda sabendo o modelo, tamanho e budget. Tempo de prova cai pela metade. A taxa de conversão dispara. O faturamento escala sistematicamente.
                                 </p>
                             </div>
-                            <div className="md:w-1/2 bg-[#F9F9F9] flex items-center justify-center min-h-[300px]">
-                                <GrowthChart />
+                            <div className="bg-transparent h-[300px] flex items-center justify-center overflow-hidden transition-colors duration-500 p-6 pt-12">
+                                <div className="scale-[0.85] origin-center w-full">
+                                    <GrowthChart />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -405,14 +304,14 @@ export default function FashionRetailLandingPage() {
                     </p>
                     <div className="pt-10 flex flex-col sm:flex-row justify-center items-center gap-6">
                         <Link
-                            href="/#diagnostico"
-                            className="px-12 py-6 bg-[#6D2749] hover:bg-[#FFC5E1] hover:text-[#6D2749] text-white font-bold uppercase tracking-widest text-sm transition-colors flex items-center group"
+                            href="#diagnostico"
+                            className="px-12 py-6 bg-[#6D2749] hover:bg-[#FFC5E1] hover:text-[#6D2749] text-white font-bold uppercase tracking-widest text-sm transition-colors flex items-center group rounded-vyr-fluid"
                         >
                             Solicitar Diagnóstico <ChevronRight className="w-5 h-5 ml-4 group-hover:translate-x-2 transition-transform" />
                         </Link>
                     </div>
                     <p className="text-xs text-[#FFC5E1]/70 font-bold uppercase tracking-widest pt-8 flex items-center justify-center gap-3">
-                        <Lock className="w-3 h-3" /> VAGAS LIMITADAS POR RAIO DE ATUAÇÃO (EVITAMOS CANIBALIZAÇÃO)
+                        <Lock className="w-5 h-5 md:w-6 md:h-6 flex-shrink-0 mb-1 md:mb-0" strokeWidth={2.5} /> VAGAS LIMITADAS POR RAIO DE ATUAÇÃO (EVITAMOS CANIBALIZAÇÃO)
                     </p>
                 </div>
             </section>

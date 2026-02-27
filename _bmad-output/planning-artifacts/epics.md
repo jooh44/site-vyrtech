@@ -119,32 +119,32 @@ So that I immediately feel the luxury and authority of the brand.
 **Then** the hero section should reflect an asymmetrical "Magazine" layout
 **And** PP Editorial New typography should be used for headers
 
-### Story 1.3: Color Palette & Exact Copy (Atelier)
+### Story 1.3: Color Palette & Whitespace Reduction (Atelier)
 
 As a User,
-I want the Atelier page to have a sophisticated color palette and exact messaging,
-So that the high-ticket positioning is clear, legible, and highly persuasive.
+I want the Atelier page to have a sophisticated color palette with high contrast,
+So that the high-ticket positioning is clear, legible, and visually striking without feeling empty.
 
 **Acceptance Criteria:**
 
 **Given** the design tokens and PRD copy
 **When** the Atelier theme is active
-**Then** the primary wine color (`#6D2749`) should be used on light backgrounds
+**Then** the primary wine color (`#6D2749`) should be applied as the main background for at least 1-2 major sections to drastically reduce plain whitespace
 **And** the contrast ratio must meet WCAG AA standards
 **And** the exact copy for Hero ("8 Noivas por dia...") and constraints ("O tráfego da rua não pode ditar...") must be strictly applied as per the PRD.
 
-### Story 1.4: Masculine Suits Showcase (4th Fold)
+### Story 1.4: Masculine Suits Showcase (Background Integration)
 
 As a User interested in male gala attire,
-I want to see dedicated imagery for suits,
-So that I know the atelier also caters to masculine needs.
+I want to see masculine imagery integrated seamlessly into the design flow,
+So that I know the atelier also caters to masculine needs with the same level of sophistication.
 
 **Acceptance Criteria:**
 
-**Given** the 4th fold of the Atelier page
+**Given** the 3rd or 4th fold of the Atelier page
 **When** I scroll to this section
-**Then** I should see high-quality images of men's suits
-**And** the presentation should match the editorial aesthetic of the rest of the page
+**Then** high-quality images of men's suits must be applied as **background elements** with a dark/wine overlay
+**And** the presentation must mimic the sophisticated "Hero section" style, avoiding generic boxed images.
 
 ## Detail - Epic 2: Premium Dark Landing Page (Tech)
 

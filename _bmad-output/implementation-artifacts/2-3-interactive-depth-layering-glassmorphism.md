@@ -1,6 +1,6 @@
 # Story 2.3: Interactive Depth Layering Glassmorphism
 
-Status: ready-for-dev
+Status: done
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -19,15 +19,15 @@ so that the product categories are clearly differentiated and visually appealing
 
 ## Tasks / Subtasks
 
-- [ ] Implement Glassmorphism Utility (AC: #1)
-  - [ ] Create a reusable Tailwind class for glass-blur (e.g., `bg-white/10 backdrop-blur-md`)
-- [ ] Build Category Cards (AC: #1, #2, #4)
-  - [ ] Create `TechCategoryCard.tsx` in `src/components/ui`
-  - [ ] Apply `rounded-vyr-fluid` and glass effects
-- [ ] Add Gsap Interactivity (AC: #3)
-  - [ ] Implement hover listeners that trigger a subtle GSAP "pulse" or "glow" reveal
-- [ ] Polish Accent Borders (AC: #2)
-  - [ ] Use 1px purple borders for glassmorphic elements to define boundaries in a dark environment
+- [x] Implement Glassmorphism Utility (AC: #1)
+  - [x] Create a reusable Tailwind class for glass-blur (e.g., `bg-white/10 backdrop-blur-md`)
+- [x] Build Category Cards (AC: #1, #2, #4)
+  - [x] Create `TechCategoryCard.tsx` in `src/components/ui`
+  - [x] Apply `rounded-vyr-fluid` and glass effects
+- [x] Add Gsap Interactivity (AC: #3)
+  - [x] Implement hover listeners that trigger a subtle GSAP "pulse" or "glow" reveal
+- [x] Polish Accent Borders (AC: #2)
+  - [x] Use 1px purple borders for glassmorphic elements to define boundaries in a dark environment
 
 ## Dev Notes
 
@@ -59,4 +59,12 @@ so that the product categories are clearly differentiated and visually appealing
 
 ### Completion Notes List
 
+- Implemented reusable `.glass-panel` utility within `globals.css` with Tailwind 4.0 compatible variables and borders.
+- Created `<TechCategoryCard />` component utilizing GSAP hover triggers and glassmorphic base layering.
+- Updated `CasesSection.tsx` existing cards to use the `.glass-panel` layout, increasing depth and hover interaction fidelity.
+
 ### File List
+
+- `src/app/globals.css`
+- `src/components/ui/TechCategoryCard.tsx`
+- `src/components/ui/CasesSection.tsx`

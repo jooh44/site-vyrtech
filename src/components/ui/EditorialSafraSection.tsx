@@ -1,9 +1,13 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 import { Search, Target, Sprout, Activity, TrendingUp } from "lucide-react";
+import { BenefitCard } from "@/components/ui/BenefitCard";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export function EditorialSafraSection() {
     const sectionRef = useRef<HTMLElement>(null);
@@ -21,130 +25,102 @@ export function EditorialSafraSection() {
             letter: "A",
             title: "Alvo",
             icon: Target,
-            desc: "Definição de metas SMART. KPIs claros e alinhados com a receita estrutural."
+            desc: "Definição de objetivos claros e alinhados com a realidade atual da empresa"
         },
         {
             letter: "F",
             title: "Fertilização",
             icon: Sprout,
-            desc: "Execução estratégica e arquitetura de dados via automações precisas."
+            desc: "Execução estratégica com foco em alcançar os objetivos financeiros da empresa"
         },
         {
             letter: "R",
             title: "Rastreamento",
             icon: Activity,
-            desc: "Monitoramento analítico em tempo real. Visibilidade total ponta a ponta."
+            desc: "Monitoramento analítico e acompanhamento constante das métricas que movem o ponteiro"
         },
         {
             letter: "A",
             title: "Aprimoramento",
             icon: TrendingUp,
-            desc: "Testes iterativos e evolução usando metodologias CRO avançadas. Escalamos através de dados."
+            desc: "Análise dos resultados e melhoria contínua visando maximizar resultados e escalando através de ações guiadas"
         }
     ];
 
-    useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
+    useGSAP(() => {
+        // Animate the vertical line drawing down
+        gsap.fromTo(lineRef.current,
+            { height: "0%" },
+            {
+                height: "100%",
+                ease: "none",
+                lazy: true,
+                scrollTrigger: {
+                    trigger: containerRef.current,
+                    start: "top center",
+                    end: "bottom center",
+                    scrub: 1, // Smooth scrubbing
+                }
+            }
+        );
 
-        const ctx = gsap.context(() => {
-            // Animate the vertical line drawing down
-            gsap.fromTo(lineRef.current,
-                { height: "0%" },
+        // Animate each timeline text entry with staggered children
+        const cards = gsap.utils.toArray<HTMLElement>('.timeline-card');
+
+        cards.forEach((card) => {
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: card,
+                    start: "top 80%",
+                    toggleActions: "play none none reverse"
+                },
+                defaults: { lazy: true }
+            });
+
+            // 1. Reveal the card container itself
+            tl.fromTo(card,
+                { x: 30, opacity: 0 },
                 {
-                    height: "100%",
-                    ease: "none",
-                    scrollTrigger: {
-                        trigger: containerRef.current,
-                        start: "top center",
-                        end: "bottom center",
-                        scrub: 1, // Smooth scrubbing
-                    }
+                    x: 0,
+                    opacity: 1,
+                    duration: 0.8,
+                    ease: "power2.out"
                 }
             );
 
-            // Animate each timeline text entry as it comes into view
-            const cards = gsap.utils.toArray<HTMLElement>('.timeline-card');
-            cards.forEach((card, i) => {
-                gsap.fromTo(card,
-                    { x: 30, opacity: 0 },
+            // 2. Animate the node ping simultaneously
+            const node = card.parentElement?.querySelector('.timeline-node');
+            if (node) {
+                tl.fromTo(node,
+                    { scale: 0, backgroundColor: "#FFF" },
                     {
-                        x: 0,
-                        opacity: 1,
-                        duration: 0.8,
-                        ease: "power3.out",
-                        scrollTrigger: {
-                            trigger: card,
-                            start: "top 80%",
-                            toggleActions: "play none none reverse"
-                        }
-                    }
+                        scale: 1,
+                        backgroundColor: "#FFC5E1", // Pink active state
+                        duration: 0.5,
+                        ease: "back.out(2)"
+                    },
+                    "<0.2" // Start slightly after the card begins revealing
                 );
+            }
 
-                // Animate the node ping (less pink, more wine/cerise)
-                const node = card.parentElement?.querySelector('.timeline-node');
-                if (node) {
-                    gsap.fromTo(node,
-                        { scale: 0, backgroundColor: "#FFF" },
-                        {
-                            scale: 1,
-                            backgroundColor: "#FFC5E1", // Pink active state
-                            duration: 0.5,
-                            ease: "back.out(2)",
-                            scrollTrigger: {
-                                trigger: card,
-                                start: "top 60%",
-                                toggleActions: "play none none reverse"
-                            }
-                        }
-                    );
-                }
+            // 3. Stagger reveal the internal content elements (High-Fidelity organic reveal)
+            const internalElements = card.querySelectorAll('.benefit-letter, .benefit-icon, .benefit-title, .benefit-desc');
+            if (internalElements.length > 0) {
+                tl.fromTo(internalElements,
+                    { y: 20, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.6,
+                        stagger: 0.1,
+                        ease: "power2.out"
+                    },
+                    "<0.1" // Overlap with previous animations
+                );
+            }
+        });
 
-                // Animate the large typographic letter
-                const typeLetter = card.querySelector('.type-letter');
-                if (typeLetter) {
-                    gsap.fromTo(typeLetter,
-                        { y: 20, opacity: 0, scale: 0.8 },
-                        {
-                            y: 0,
-                            opacity: 1,
-                            scale: 1,
-                            duration: 0.8,
-                            ease: "elastic.out(1, 0.5)",
-                            scrollTrigger: {
-                                trigger: card,
-                                start: "top 60%",
-                                toggleActions: "play none none reverse"
-                            }
-                        }
-                    );
-                }
-
-                // Animate the step icon pop-in
-                const stepIcon = card.querySelector('.step-icon');
-                if (stepIcon) {
-                    gsap.fromTo(stepIcon,
-                        { scale: 0, opacity: 0, rotate: -15 },
-                        {
-                            scale: 1,
-                            opacity: 1,
-                            rotate: 0,
-                            duration: 0.7,
-                            delay: 0.2,
-                            ease: "back.out(2)",
-                            scrollTrigger: {
-                                trigger: card,
-                                start: "top 60%",
-                                toggleActions: "play none none reverse"
-                            }
-                        }
-                    );
-                }
-            });
-
-        }, sectionRef);
-
-        return () => ctx.revert();
-    }, []);
+    }, { scope: sectionRef });
 
     return (
         <section id="metodologia" ref={sectionRef} className="py-24 bg-white relative z-10 overflow-hidden border-t-2 border-black">
@@ -182,26 +158,19 @@ export function EditorialSafraSection() {
                         <div key={idx} className="relative flex items-start gap-8 md:gap-16 pl-14 md:pl-32 group">
 
                             {/* Timeline Node - Adjusted exactly perfectly to the 2px line */}
-                            <div className="absolute left-[12px] md:left-[33px] top-6 w-8 h-8 border-4 border-[#6D2749] bg-white z-20 timeline-node flex items-center justify-center">
+                            <div className="absolute left-[12px] md:left-[33px] top-[56px] -translate-y-1/2 w-8 h-8 border-4 border-[#6D2749] bg-white z-20 timeline-node flex items-center justify-center">
                                 <div className="w-2 h-2 bg-[#6D2749]" />
                             </div>
 
-                            {/* Timeline Item - Pure Typography Layout */}
-                            <div className="timeline-card flex-1 relative py-6 md:py-8 transition-transform duration-500 hover:-translate-y-1">
-                                <div className="relative z-10 bg-[#F9F9F9] p-8 border border-black group-hover:bg-[#FFEBF4] transition-colors">
-                                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4 tracking-tight flex flex-wrap items-baseline gap-3 md:gap-4 uppercase">
-                                        <span className="type-letter inline-block text-4xl sm:text-5xl md:text-6xl font-black text-[#6D2749]">
-                                            {step.letter}
-                                        </span>
-                                        <span className="step-icon text-[#FFC5E1] p-1.5 flex items-center justify-center">
-                                            <step.icon className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10" strokeWidth={1.5} />
-                                        </span>
-                                        <span className="break-words">{step.title}</span>
-                                    </h3>
-                                    <p className="text-base md:text-lg text-gray-700 leading-relaxed font-light mt-4">
-                                        {step.desc}
-                                    </p>
-                                </div>
+                            {/* Timeline Item - Using BenefitCard */}
+                            <div className="timeline-card flex-1 relative transition-transform duration-500 hover:-translate-y-1">
+                                <BenefitCard
+                                    theme="editorial"
+                                    letter={step.letter}
+                                    title={step.title}
+                                    description={step.desc}
+                                    icon={<step.icon className="w-6 h-6 text-[#6D2749]" strokeWidth={1.5} />}
+                                />
                             </div>
 
                         </div>

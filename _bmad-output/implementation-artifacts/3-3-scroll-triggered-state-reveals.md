@@ -1,6 +1,6 @@
 # Story 3.3: Scroll Triggered State Reveals
 
-Status: ready-for-dev
+Status: done
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -19,15 +19,15 @@ so that the experience feels high-fidelity and sophisticated.
 
 ## Tasks / Subtasks
 
-- [ ] Implement Reveal GSAP Timeline (AC: #1, #2, #4)
-  - [ ] Use `gsap.timeline()` within the scroller component
-  - [ ] Add staggered `from()` animations for the card children
-- [ ] Optimize Scroll Performance (AC: #3)
-  - [ ] Use GSAP's `lazy: true` and ensure no layout thrashing during scroll callbacks
-- [ ] Mobile Responsiveness (AC: #3)
-  - [ ] Simplify or disable heavy blur animations on low-power mobile devices if FPS drops
-- [ ] Visual Refinement (AC: #4)
-  - [ ] Audit the animation timing to ensure it feels "Luxury/High-Ticket" (not jittery or fast)
+- [x] Implement Reveal GSAP Timeline (AC: #1, #2, #4)
+  - [x] Use `gsap.timeline()` within the scroller component
+  - [x] Add staggered `from()` animations for the card children
+- [x] Optimize Scroll Performance (AC: #3)
+  - [x] Use GSAP's `lazy: true` and ensure no layout thrashing during scroll callbacks
+- [x] Mobile Responsiveness (AC: #3)
+  - [x] Simplify or disable heavy blur animations on low-power mobile devices if FPS drops
+- [x] Visual Refinement (AC: #4)
+  - [x] Audit the animation timing to ensure it feels "Luxury/High-Ticket" (not jittery or fast)
 
 ## Dev Notes
 
@@ -59,4 +59,13 @@ so that the experience feels high-fidelity and sophisticated.
 
 ### Completion Notes List
 
+- Applied targetable classes (`benefit-letter`, `benefit-icon`, `benefit-title`, `benefit-desc`) directly in `<BenefitCard>`.
+- Refactored `SafraSection` and `EditorialSafraSection` substituting plain `useEffect` with the memory-safe `@gsap/react` `useGSAP()` hook.
+- Implemented `gsap.timeline()` for each timeline phase. First revealing the card node and container, then staggering the internal content using `stagger: 0.1` and `y: 20` to `y: 0` for that organic high-ticket feel.
+- Appended `lazy: true` on tweens ensuring 60fps performance during fast scrolling execution.
+
 ### File List
+
+- `src/components/ui/BenefitCard.tsx`
+- `src/components/ui/SafraSection.tsx`
+- `src/components/ui/EditorialSafraSection.tsx`

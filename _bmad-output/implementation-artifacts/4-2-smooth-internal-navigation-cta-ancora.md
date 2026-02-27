@@ -1,6 +1,6 @@
 # Story 4.2: Smooth Internal Navigation Cta Ancora
 
-Status: ready-for-dev
+Status: done
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 

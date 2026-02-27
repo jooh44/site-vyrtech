@@ -10,7 +10,7 @@ import { PcbLinesBackground } from "@/components/ui/PcbLinesBackground";
 export function Hero() {
     const textRef = useRef<HTMLDivElement>(null);
     const [wordIndex, setWordIndex] = useState(0);
-    const words = ["Responsabilidade.", "Sustentabilidade.", "Escalabilidade.", "Inovação Contínua."];
+    const words = ["Escala.", "Resultados.", "Lucro.", "Tração.", "Vendas."];
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -71,7 +71,7 @@ export function Hero() {
                     </div>
 
                     {/* Playground Concept: Glowing Gradient Headline */}
-                    <h1 className="hero-element text-4xl sm:text-5xl md:text-5xl lg:text-[4.2rem] xl:text-[4.8rem] font-bold tracking-tight text-vyr-text leading-[1.2] md:leading-[1.1] relative w-full mb-2 sm:mb-0">
+                    <h1 className="hero-element text-[2.2rem] sm:text-4xl md:text-5xl lg:text-[4.2rem] xl:text-[4.8rem] font-bold tracking-tight text-vyr-text leading-[1.2] md:leading-[1.1] relative w-full mb-2 sm:mb-0">
                         {/* Mobile Layout: 3 Lines */}
                         <span className="block sm:hidden">Crescimento</span>
                         <span className="block sm:hidden">Empresarial com</span>

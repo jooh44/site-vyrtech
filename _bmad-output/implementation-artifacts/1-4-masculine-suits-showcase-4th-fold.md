@@ -1,6 +1,6 @@
 # Story 1.4: Masculine Suits Showcase 4th Fold
 
-Status: ready-for-dev
+Status: done
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -19,16 +19,16 @@ so that I know the atelier also caters to masculine needs.
 
 ## Tasks / Subtasks
 
-- [ ] Identify/Generate Assets (AC: #1)
-  - [ ] Use `generate_image` tool to create High-End masculine suit imagery if not provided
-- [ ] Implement Suits Section Component (AC: #1, #2)
-  - [ ] Create `SuitsShowcase.tsx` in `src/components/ui`
-  - [ ] Layout the section to appear precisely in the 4th scroll fold
-- [ ] Apply Styling & Animations (AC: #3, #4)
-  - [ ] Wrap images in `rounded-vyr-fluid` containers
-  - [ ] Setup `ScrollTrigger` for a subtle reveal animation
-- [ ] Verify Mobile Display (AC: #2)
-  - [ ] Ensure the showcase remains elegant and readable on mobile screens
+- [x] Identify/Generate Assets (AC: #1)
+  - [x] Use `generate_image` tool to create High-End masculine suit imagery if not provided
+- [x] Implement Suits Section Component (AC: #1, #2)
+  - [x] Create `SuitsShowcase.tsx` in `src/components/ui`
+  - [x] Layout the section to appear precisely in the 4th scroll fold
+- [x] Apply Styling & Animations (AC: #3, #4)
+  - [x] Wrap images in `rounded-vyr-fluid` containers
+  - [x] Setup `ScrollTrigger` for a subtle reveal animation
+- [x] Verify Mobile Display (AC: #2)
+  - [x] Ensure the showcase remains elegant and readable on mobile screens
 
 ## Dev Notes
 
@@ -60,4 +60,15 @@ so that I know the atelier also caters to masculine needs.
 
 ### Completion Notes List
 
+- Generated two high-end masculine suit images (`suit-elegant.png` and `suit-tuxedo.png`).
+- Created `SuitsShowcase.tsx` with asymmetrical double image layout, matching the editorial aesthetic.
+- Applied fluid geometry `rounded-vyr-fluid` to image holders.
+- Utilized `useGSAP` with `ScrollTrigger` for a sophisticated one-off reveal effect (simultaneously sliding text and scaling images)
+- Handled mobile scaling and stacked layout, inserting the section precisely into the 4th fold.
+
 ### File List
+
+- `src/components/ui/SuitsShowcase.tsx` (NEW)
+- `src/app/locacao-de-roupas/page.tsx`
+- `public/suit-elegant.png` (NEW)
+- `public/suit-tuxedo.png` (NEW)

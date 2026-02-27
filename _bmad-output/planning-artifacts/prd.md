@@ -74,10 +74,12 @@ A Vyrtech não entrega apenas design; entrega **previsibilidade**. O diferencial
   - **Seção 2:** Title: "O TRÁFEGO DA RUA NÃO PODE DITAR O SEU FATURAMENTO" / Desc: "A rua está cada vez menos movimentada..." / Card 3 Title: "Receita Imprevisível" / Card 3 Desc: "Depender de clientes da rua e indicação torna a sua receita cada vez mais imprevisível..."
   - **Seção 3:** Títulos e descrições exatos: "Alvo em Safra", "Fertilização", "Rastreamento", "Aprimoramento".
   - **Seção 6 (Tech):** Trocar "Growth" por "crescimento" no copy; e trocar de "Projeção de Melhorias de CRO" para "Projeção de aumento de vendas".
-- **Visual Refresh Elevado:** Troca de imagens de fundo, incluindo imagens de homens de terno (4ª dobra) para alinhamento com trajes masculinos.
+- **Visual Refresh Elevado:** Inclusão de imagens de homens de terno aplicadas como **plano de fundo (background)** na 3ª ou 4ª dobra, seguindo o mesmo padrão estético da primeira dobra (Hero), para remeter a trajes masculinos de forma sofisticada e integrada ao texto.
 - **Refatoração Gramatical do Design:** Transição de divs angulares/quadradas para bordas arredondadas (fluidez/sofisticação).
 - **Contraste e Legibilidade:** Ajuste de cores para reduzir o excesso de branco e aumentar o impacto visual.
 - **Re-layout da Seção 3:** Compactação da seção, transformando o layout vertical em horizontal para reduzir o scroll excessivo.
+- **Nova Seção "Scopes/6 Pilares" (Tech):** Criação de uma seção extra na página raiz replicando a fluidez visual do "AtelierSection2", contendo os 6 serviços base (Ambientes Digitais, Tráfego de Performance, Inteligência Artificial, CRM e Dados, Identidade Visual, Consultoria Estratégica).
+- **Fricção Zero no Formulário:** Os grandes formulários 'multistep' da Seção 7 devem ser destituídos em favor de um `<LeadForm />` enxuto com exatamente 3 campos (Nome, E-mail, Nicho).
 - **Correção técnica do CTA da Seção 7** (âncora interna no formulário).
 - **Setup e validação do GTM** (`GTM-KZGXGTPD`) com os Form IDs `bottom_lead_form_id` e `hero_lead_form_id`.
 
@@ -180,13 +182,14 @@ A Vyrtech não entrega apenas design; entrega **previsibilidade**. O diferencial
 
 - **FR1:** O site deve apresentar duas landing pages distintas com identidades visuais separadas (Locação: Estilo High-End Editorial/Magazine; Tech: Estilo Premium Dark com camadas Onyx/Charcoal).
 - **FR2:** O sistema deve aplicar `border-radius` consistentes (mínimo 24px) em todos os cards e containers principais para transmitir fluidez.
-- **FR3:** O sistema deve exibir imagens de trajes masculinos (Suits) na 4ª dobra da página de Locação com tratamento visual sofisticado.
+- **FR3:** O sistema deve aplicar imagens de trajes masculinos como **image de fundo (background com overlay)** na 3ª ou 4ª dobra da página de Locação, replicando a técnica visual utilizada na seção Hero.
 - **FR4:** O sistema deve utilizar uma paleta de cores de alto contraste, integrando o Roxo Vyrtech como acento (Locação) ou base de profundidade (Tech).
 - **FR5:** O sistema deve implementar a Seção 3 em layout horizontal compacto (grid/carousel), permitindo leitura rápida sem scroll excessivo.
+- **FR5.1 (New):** O sistema deve hospedar uma seção "Os 6 Pilares da Assessoria" na página Tech principal simulando a estrutura responsiva UX do Atelier.
 
 ### Interação & Conversão (UX)
 
-- **FR6:** O usuário pode clicar no CTA da Seção 7 e ser movido suavemente (âncora interna) para o formulário na mesma página.
+- **FR6:** O usuário pode clicar no CTA da Seção 7 e ser movido suavemente (âncora interna) para um formulário de fricção zero contendo estritamente 3 campos (Nome, E-mail, Nicho) e um honeypot invisível para bots.
 - **FR7:** O sistema deve executar animações GSAP sutis focadas em transições orgânicas e reforço de autoridade no scroll.
 - **FR8:** O sistema deve fornecer feedback visual instantâneo ao usuário após o preenchimento bem-sucedido do formulário.
 
@@ -215,3 +218,35 @@ A Vyrtech não entrega apenas design; entrega **previsibilidade**. O diferencial
 ### Security
 
 - **Data Integrity:** Proteção básica contra spam no formulário da Seção 7 (honeypot/validação server-side).
+
+## Appendix: Raw Client Feedback (WhatsApp - Feb 2026)
+
+*This section preserves the exact client requests that drove the divergence into the distinct "Atelier" and "Tech" Landing Pages.*
+
+### 1. Design & Estrutura
+
+- "Colocar uma imagem/imagens de um homem de terno na quarta dobra pra remeter a trajes masculinos."
+- "A página como um todo está muito branca, com pouco contraste."
+- "As divs estão bem angulares e quadradas, dar uma arredondada remetendo fluidez e sofisticação, combinando com trajes de festa e casamento por exemplo."
+- "A terça dobra está muito longa, tendo que escrolar muito. Ideal seria deixar mais compacto, tirando da vertical e colocando na horizontal."
+- "As imagens de terno, pode ser de fundo da terceira dobra (que você vai alterar) ou da quarta ... Veja qual faz mais sentido. (Dá pra seguir o padrão da primeira dobra que ficou legal)"
+
+### 2. Copy - Página Locação
+
+- **Badge/H1/Sub:** "MÉTODO VALIDADO PARA LOCAÇÃO DE TRAJES | Coloque 8 Noivas por dia no seu provador e dobre o fechamento de Padrinhos | O sistema de tração que gera agendamentos qualificados diariamente e escalou ateliês de 40 para 80 locações semanais"
+- **Seção 2:** "Título: O TRÁFEGO DA RUA NÃO PODE DITAR O SEU FATURAMENTO | Desc: A rua está cada vez menos movimentada e depender dos clientes entrarem na loja se tornou pouco lucrativo."
+- **Seção 2 (Card 3):** "Título: Receita Imprevisível (ideia) / Desc: Depender de clientes da rua e indicação torna a sua receita cada vez mais imprevisível, sem saber se vai fechar o mês no positivo."
+- **Seção 3:**
+  - "Alvo em Safra: Definição de objetivos claros e alinhados com a realidade atual da empresa"
+  - "Fertilização: execução estratégica com foco em alcançar os objetivos financeiros da empresa"
+  - "Rastreamento: Monitoramento analítico e acompanhamento constante das métricas que movem o ponteiro"
+  - "Aprimoramento: Análise dos resultados e melhoria contínua visando maximizar resultados e escalando através de ações guiadas"
+
+### 3. Copy - Página Tech
+
+- "Operamos como seu braço direito de crescimento (Troquei a palavra Growth por crescimento)"
+- "Terceiro item lá de baixo... 'Projeção de aumento de vendas' (No lugar de projeção de melhorias de cro)"
+
+### 4. Integração (GTM)
+
+- Identificadores de formulário sugeridos pelo cliente nas imagens: `bottom_lead_form_id` e `hero_lead_form_id`.

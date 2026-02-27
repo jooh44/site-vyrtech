@@ -1,6 +1,6 @@
 # Story 1.2: Editorial Hero Typography Setup
 
-Status: ready-for-dev
+Status: done
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -19,15 +19,15 @@ so that I immediately feel the luxury and authority of the brand.
 
 ## Tasks / Subtasks
 
-- [ ] Setup Font Foundation (AC: #2)
-  - [ ] Configure `PP Editorial New` (or designated serum font) in `globals.css` and Tailwind theme
-- [ ] Build Atelier Hero Component (AC: #1, #4)
-  - [ ] Create `AtelierHero.tsx` in `src/components/ui`
-  - [ ] Implement asymmetrical grid/flex layout for editorial feel
-  - [ ] Apply `--vyr-wine` color and large typography scales (4rem H1)
-- [ ] Implement GSAP Entrance Animation (AC: #3)
-  - [ ] Use GSAP `from()` to animate headers with `y: 50`, `autoAlpha: 0`, and `ease: "power3.out"`
-  - [ ] Ensure animation triggers immediately on client-side mount
+- [x] Setup Font Foundation (AC: #2)
+  - [x] Configure `PP Editorial New` (or designated serum font) in `globals.css` and Tailwind theme
+- [x] Build Atelier Hero Component (AC: #1, #4)
+  - [x] Create `AtelierHero.tsx` in `src/components/ui`
+  - [x] Implement asymmetrical grid/flex layout for editorial feel
+  - [x] Apply `--vyr-wine` color and large typography scales (4rem H1)
+- [x] Implement GSAP Entrance Animation (AC: #3)
+  - [x] Use GSAP `from()` to animate headers with `y: 50`, `autoAlpha: 0`, and `ease: "power3.out"`
+  - [x] Ensure animation triggers immediately on client-side mount
 
 ## Dev Notes
 
@@ -54,10 +54,22 @@ so that I immediately feel the luxury and authority of the brand.
 
 ### Agent Model Used
 
-{{agent_model_name_version}}
+Antigravity (Gemini 2.0 Flash Thinking)
 
 ### Debug Log References
 
+- Fixed import issues in `locacao-de-roupas/page.tsx` during integration.
+
 ### Completion Notes List
 
+- Configured `Inter Tight` and `PP Editorial New` (Serif fallback) tokens in `globals.css`.
+- Implemented `AtelierHero` with asymmetrical magazine layout.
+- Added organic Y-axis GSAP reveal animations to hero typography.
+- Integrated `AtelierHero` into the official Locação page.
+
 ### File List
+
+- [src/app/layout.tsx](file:///home/johny/Documentos/projetos/vyrtech/src/app/layout.tsx)
+- [src/app/globals.css](file:///home/johny/Documentos/projetos/vyrtech/src/app/globals.css)
+- [src/components/ui/AtelierHero.tsx](file:///home/johny/Documentos/projetos/vyrtech/src/components/ui/AtelierHero.tsx)
+- [src/app/locacao-de-roupas/page.tsx](file:///home/johny/Documentos/projetos/vyrtech/src/app/locacao-de-roupas/page.tsx)

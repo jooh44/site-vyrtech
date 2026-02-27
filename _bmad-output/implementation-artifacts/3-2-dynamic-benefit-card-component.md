@@ -1,6 +1,6 @@
 # Story 3.2: Dynamic Benefit Card Component
 
-Status: ready-for-dev
+Status: done
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -19,16 +19,16 @@ so that the information is presented clearly whether I'm on the Atelier or Tech 
 
 ## Tasks / Subtasks
 
-- [ ] Create `BenefitCard.tsx` (AC: #1, #2, #4)
-  - [ ] Implement props for `title`, `description`, and `pageTheme`
-  - [ ] Apply `rounded-vyr-fluid` to the card container
-- [ ] Map Theme Styles (AC: #1)
-  - [ ] Editorial Theme: Light background, `--vyr-wine` text
-  - [ ] Tech Theme: Glassmorphic Onyx background, White/Purple text
-- [ ] Populate Content (AC: #3)
-  - [ ] Build a data object with the four required benefit items from the PRD
-- [ ] Mobile Refinement (AC: #2)
-  - [ ] Scale card width to `90vw` on screens smaller than 640px
+- [x] Create `BenefitCard.tsx` (AC: #1, #2, #4)
+  - [x] Implement props for `title`, `description`, and `pageTheme`
+  - [x] Apply `rounded-vyr-fluid` to the card container
+- [x] Map Theme Styles (AC: #1)
+  - [x] Editorial Theme: Light background, `--vyr-wine` text
+  - [x] Tech Theme: Glassmorphic Onyx background, White/Purple text
+- [x] Populate Content (AC: #3)
+  - [x] Build a data object with the four required benefit items from the PRD
+- [x] Mobile Refinement (AC: #2)
+  - [x] Scale card width to `90vw` on screens smaller than 640px
 
 ## Dev Notes
 
@@ -60,4 +60,13 @@ so that the information is presented clearly whether I'm on the Atelier or Tech 
 
 ### Completion Notes List
 
+- Created a dynamic `<BenefitCard>` with dual-theme constraint validation.
+- Maintained the vertical timeline UI logic preferred by user in earlier sessions.
+- Reduced steps from S.A.F.R.A (5 items) to A.F.R.A (4 items) matching exact PRD copywriting.
+- Replaced the hardcoded inline markup on `SafraSection` and `EditorialSafraSection` with semantic `<BenefitCard>` imports.
+
 ### File List
+
+- `src/components/ui/BenefitCard.tsx`
+- `src/components/ui/SafraSection.tsx`
+- `src/components/ui/EditorialSafraSection.tsx`

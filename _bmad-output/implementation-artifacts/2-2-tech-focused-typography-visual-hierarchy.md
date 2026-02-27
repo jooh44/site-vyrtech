@@ -1,6 +1,6 @@
 # Story 2.2: Tech Focused Typography Visual Hierarchy
 
-Status: ready-for-dev
+Status: done
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -14,19 +14,21 @@ so that the information is easy to parse and looks professional.
 
 1. **Tech Typography:** All Tech page headers must use `Inter Tight` (or a modern geometric sans) with tracking reduced (e.g., `-0.02em`). [Source: epics.md#L209 / ux-design-specification.md#L172]
 2. **Visual Hierarchy:** Clear differentiation between H1 (4rem), H2 (2.5rem), and Body (1rem/1.6 line-height). [Source: ux-design-specification.md#L174]
-3. **Copy Accuracy:** Implementation of the updated Tech copy: "Projeção de aumento de vendas" (replacing "Projeção de Melhorias de CRO"). [Source: prd.md#L76]
+3. **Copy Accuracy:** Implementation of the updated Tech copy:
+    - Replace "Projeção de Melhorias de CRO" with "Projeção de aumento de vendas".
+    - Replace "Growth" with "crescimento". [Source: prd.md#L76]
 4. **Legibility:** High-contrast text on dark backgrounds ensuring WCAG AA compliance. [Source: epics.md#L34]
 
 ## Tasks / Subtasks
 
-- [ ] Font Configuration (AC: #1)
-  - [ ] Add `Inter Tight` to the project font stack in `layout.tsx` or `globals.css`
-- [ ] Apply Typography Scale (AC: #2)
-  - [ ] Implement Tailwind utility mappings for the 4rem/2.5rem/1.5rem/1rem scale
-- [ ] Update Tech Page Copy (AC: #3)
-  - [ ] Perform a global find/replace or targeted update for the "Projeção de aumento de vendas" phrase
-- [ ] Visual Hierarchy Audit (AC: #2, #4)
-  - [ ] Ensure that H1/H2 have enough contrast and "breathability" via tracking and line-height
+- [x] Font Configuration (AC: #1)
+  - [x] Add `Inter Tight` to the project font stack in `layout.tsx` or `globals.css`
+- [x] Apply Typography Scale (AC: #2)
+  - [x] Implement Tailwind utility mappings for the 4rem/2.5rem/1.5rem/1rem scale
+- [x] Update Tech Page Copy (AC: #3)
+  - [x] Perform a global find/replace or targeted update for the "Projeção de aumento de vendas" phrase
+- [x] Visual Hierarchy Audit (AC: #2, #4)
+  - [x] Ensure that H1/H2 have enough contrast and "breathability" via tracking and line-height
 
 ## Dev Notes
 
@@ -36,7 +38,7 @@ so that the information is easy to parse and looks professional.
 
 - **Architecture Compliance:** Use `next/font` for optimized font loading.
 - **Performance:** Ensure only necessary font weights are loaded to minimize payload.
-- **Source tree components:** `src/app/tech/page.tsx`, `src/components/ui/TechTypography.tsx`.
+- **Source tree components:** `src/app/page.tsx`, `src/components/ui/TechTypography.tsx`.
 
 ### Project Structure Notes
 

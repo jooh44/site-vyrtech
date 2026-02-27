@@ -3,12 +3,17 @@
 @theme {
   /* Typography */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-editorial: "PP Editorial New", ui-serif, serif;
+  --font-tight: var(--font-inter-tight), ui-sans-serif, sans-serif;
 
   /* Colors */
   --color-vyr-dark: #08080A;
   --color-vyr-darker: #050506;
   --color-vyr-surface: #121214;
   --color-vyr-surface-light: #1A1A1E;
+  --color-vyr-onyx: #111113;
+  --color-vyr-charcoal: #1A1A1C;
+  --color-vyr-lead-white: #F8F8F8;
 
   /* Official Palette */
   --color-vyr-wine: #6D2749;
@@ -28,6 +33,9 @@
   --color-vyr-text-muted: #FFC5E1;
   /* muted uses secondary or darker */
 
+  /* Geometry */
+  --radius-vyr-fluid: 1.5rem;
+  --radius-xl: 1.5rem;
 
   /* Animations */
   --animate-gradient-x: gradient-x 6s ease infinite;
@@ -85,5 +93,13 @@ body {
     -webkit-text-fill-color: #FFEBF4 !important;
     -webkit-box-shadow: 0 0 0px 1000px #050506 inset !important;
     transition: background-color 5000s ease-in-out 0s;
+  }
+
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 transition-all duration-500 overflow-hidden relative;
+  }
+
+  .glass-panel:hover {
+    @apply border-[#6D2749] bg-white/10;
   }
 }

@@ -67,7 +67,7 @@ export function Footer() {
             </div>
 
             <div className="max-w-7xl mx-auto px-6 border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-vyr-text-muted">
-                <p>© 2026 Vyrtech Growth. Todos os direitos reservados. Projeto de Arquitetura UI/UX.</p>
+                <p>© 2026 Vyrtech Growth. Todos os direitos reservados.</p>
                 <div className="flex space-x-6 mt-4 md:mt-0">
                     <a href="#" className="hover:text-white transition-colors">Termos de Uso</a>
                     <a href="#" className="hover:text-white transition-colors">Política de Privacidade</a>

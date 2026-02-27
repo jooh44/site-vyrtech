@@ -1,6 +1,6 @@
 # Story 3.1: Gsap Scroller Architecture Smooth Scroll
 
-Status: ready-for-dev
+Status: done
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -19,16 +19,16 @@ so that I can quickly absorb project value without scroll fatigue.
 
 ## Tasks / Subtasks
 
-- [ ] Initialize Section 3 Component (AC: #1)
-  - [ ] Create `HorizontalScroller.tsx` in `src/components/ui`
-  - [ ] Implement a `sticky` wrapper to pin the section during horizontal transition
-- [ ] Connect GSAP ScrollTrigger (AC: #2, #3)
-  - [ ] Setup `useGSAP` hook with `ScrollTrigger`
-  - [ ] Map vertical scroll delta to horizontal `translateX` of the internal card container
-- [ ] Smooth Scroll Configuration (AC: #2)
-  - [ ] Implement/verify global smooth scroll behavior (Lenis or GSAP ScrollSmoother if available)
-- [ ] Mobile Optimization (AC: #1)
-  - [ ] Ensure horizontal swiping works naturally on touch devices
+- [x] Initialize Section 3 Component (AC: #1)
+  - [x] Create `HorizontalScroller.tsx` in `src/components/ui`
+  - [x] Implement a `sticky` wrapper to pin the section during horizontal transition
+- [x] Connect GSAP ScrollTrigger (AC: #2, #3)
+  - [x] Setup `useGSAP` hook with `ScrollTrigger`
+  - [x] Map vertical scroll delta to horizontal `translateX` of the internal card container
+- [x] Smooth Scroll Configuration (AC: #2)
+  - [x] Implement/verify global smooth scroll behavior (Lenis or GSAP ScrollSmoother if available)
+- [x] Mobile Optimization (AC: #1)
+  - [x] Ensure horizontal swiping works naturally on touch devices
 
 ## Dev Notes
 

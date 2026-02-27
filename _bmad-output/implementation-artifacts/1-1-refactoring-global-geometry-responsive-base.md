@@ -1,6 +1,6 @@
 # Story 1.1: Refactoring Global Geometry Responsive Base
 
-Status: ready-for-dev
+Status: done
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -19,14 +19,14 @@ so that the site has a consistent, sophisticated, and fluid aesthetic.
 
 ## Tasks / Subtasks
 
-- [ ] Define Extended Theme in globals.css (AC: #1, #2, #3)
-  - [ ] Update `src/app/globals.css` with `@theme` variables for colors and radius
-  - [ ] Map `rounded-xl` or custom `rounded-vyr-fluid` to `1.5rem`
-- [ ] Create Design System Preview Page (AC: #4)
-  - [ ] Build a temporary `/design-system` route showing all colors and geometric applications
-  - [ ] Validate contrast ratios using a headless accessibility checker or manual verification
-- [ ] Audit Base UI Components (AC: #3)
-  - [ ] Ensure any newly created components in `src/components/ui` utilize these tokens
+- [x] Define Extended Theme in globals.css (AC: #1, #2, #3)
+  - [x] Update `src/app/globals.css` with `@theme` variables for colors and radius
+  - [x] Map `rounded-xl` or custom `rounded-vyr-fluid` to `1.5rem`
+- [x] Create Design System Preview Page (AC: #4)
+  - [x] Build a temporary `/design-system` route showing all colors and geometric applications
+  - [x] Validate contrast ratios using a headless accessibility checker or manual verification
+- [x] Audit Base UI Components (AC: #3)
+  - [x] Ensure any newly created components in `src/components/ui` utilize these tokens
 
 ## Dev Notes
 
@@ -53,10 +53,29 @@ so that the site has a consistent, sophisticated, and fluid aesthetic.
 
 ### Agent Model Used
 
-{{agent_model_name_version}}
+Antigravity (Gemini 2.0 Flash Thinking)
 
 ### Debug Log References
 
+- No critical bugs found during implementation.
+- Fixed minor lint errors in `TestimonialsSection` and `EditorialSafraSection`.
+
 ### Completion Notes List
 
+- Implemented global design tokens in `globals.css` (Tailwind 4.0).
+- Established fluid geometry base of `1.5rem` (24px).
+- Created `/design-system` preview page for visual verification.
+- Refactored 6 core UI components to use the new `rounded-vyr-fluid` token.
+- Verified implementation via local linting and project build.
+
 ### File List
+
+- [src/app/globals.css](file:///home/johny/Documentos/projetos/vyrtech/src/app/globals.css)
+- [src/app/design-system/page.tsx](file:///home/johny/Documentos/projetos/vyrtech/src/app/design-system/page.tsx)
+- [src/components/ui/ConversionForm.tsx](file:///home/johny/Documentos/projetos/vyrtech/src/components/ui/ConversionForm.tsx)
+- [src/components/ui/EditorialConversionForm.tsx](file:///home/johny/Documentos/projetos/vyrtech/src/components/ui/EditorialConversionForm.tsx)
+- [src/components/ui/EditorialSafraSection.tsx](file:///home/johny/Documentos/projetos/vyrtech/src/components/ui/EditorialSafraSection.tsx)
+- [src/components/ui/ProblemsSection.tsx](file:///home/johny/Documentos/projetos/vyrtech/src/components/ui/ProblemsSection.tsx)
+- [src/components/ui/TestimonialsSection.tsx](file:///home/johny/Documentos/projetos/vyrtech/src/components/ui/TestimonialsSection.tsx)
+- [src/components/ui/CasesSection.tsx](file:///home/johny/Documentos/projetos/vyrtech/src/components/ui/CasesSection.tsx)
+- [_bmad-output/implementation-artifacts/sprint-status.yaml](file:///home/johny/Documentos/projetos/vyrtech/_bmad-output/implementation-artifacts/sprint-status.yaml)
