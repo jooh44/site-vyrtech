@@ -67,61 +67,76 @@ export function ProblemsSection() {
                 }
             );
 
-            // 1. Animate Primary Growth Path (Draw-in effect)
+            // 1. Animate Primary Growth Path (Draw-in effect - Slower)
             gsap.fromTo(".graph-path-primary",
                 { strokeDasharray: 2000, strokeDashoffset: 2000 },
                 {
                     strokeDashoffset: 0,
-                    duration: 2.5,
+                    duration: 4,
                     ease: "power2.inOut",
                     scrollTrigger: {
                         trigger: sectionRef.current,
-                        start: "top 70%",
+                        start: "top 75%",
                     }
                 }
             );
 
-            // 2. Animate Secondary Growth Path (Dashed Draw-in)
+            // 2. Animate Secondary Growth Path (Dashed Draw-in - Slower)
             gsap.fromTo(".graph-path-secondary",
                 { strokeDasharray: "6, 6", strokeDashoffset: 1000, opacity: 0 },
                 {
                     strokeDashoffset: 0,
-                    opacity: 0.6,
-                    duration: 3,
+                    opacity: 0.5,
+                    duration: 4.5,
                     ease: "none",
                     scrollTrigger: {
                         trigger: sectionRef.current,
-                        start: "top 70%",
+                        start: "top 75%",
                     }
                 }
             );
 
-            // 3. Animate Graph Nodes (Pop-up effect)
+            // 3. Subtle Floating Rise Effect (Longer duration, less travel)
+            gsap.fromTo(".graph-floating-container",
+                { y: 40, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 4,
+                    ease: "power1.out",
+                    scrollTrigger: {
+                        trigger: sectionRef.current,
+                        start: "top 80%",
+                    }
+                }
+            );
+
+            // 4. Animate Graph Nodes (Pop-up effect)
             gsap.fromTo(".graph-node",
                 { scale: 0, opacity: 0 },
                 {
                     scale: 1,
                     opacity: 1,
-                    duration: 0.6,
-                    stagger: 0.4,
-                    ease: "back.out(2)",
+                    duration: 0.8,
+                    stagger: 0.5,
+                    ease: "back.out(1.5)",
                     scrollTrigger: {
                         trigger: sectionRef.current,
-                        start: "top 60%",
+                        start: "top 65%",
                     }
                 }
             );
 
-            // 4. Smooth Fade for the Fill Area
+            // 5. Smooth Fade for the Fill Area
             gsap.fromTo(".graph-fill",
                 { opacity: 0 },
                 {
                     opacity: 1,
-                    duration: 2,
+                    duration: 3,
                     ease: "power1.inOut",
                     scrollTrigger: {
                         trigger: sectionRef.current,
-                        start: "top 70%",
+                        start: "top 75%",
                     }
                 }
             );
@@ -129,10 +144,10 @@ export function ProblemsSection() {
             gsap.fromTo(".section-header",
                 { y: 40, opacity: 0 },
                 {
-                    y: 0, opacity: 1, duration: 1, ease: "power3.out",
+                    y: 0, opacity: 1, duration: 1.5, ease: "power3.out",
                     scrollTrigger: {
                         trigger: sectionRef.current,
-                        start: "top 80%",
+                        start: "top 85%",
                     }
                 }
             );
@@ -149,8 +164,8 @@ export function ProblemsSection() {
             <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#6D2749] to-transparent opacity-30 shadow-[0_0_20px_rgba(109,39,73,1)] z-20" />
 
             {/* Area/Line Graph SVG Background for Entrepreneurial Growth */}
-            <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
-                <svg className="w-full h-full opacity-40 mix-blend-screen" preserveAspectRatio="none" viewBox="0 0 1440 800" xmlns="http://www.w3.org/2000/svg">
+            <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden graph-floating-container">
+                <svg className="w-full h-full opacity-30 mix-blend-screen" preserveAspectRatio="none" viewBox="0 0 1440 800" xmlns="http://www.w3.org/2000/svg">
                     <defs>
                         <linearGradient id="graph-gradient-1" x1="0" y1="0" x2="1" y2="0">
                             <stop offset="0%" stopColor="#1A240A" stopOpacity="0" />
@@ -187,7 +202,7 @@ export function ProblemsSection() {
                 </svg>
 
                 {/* Subtle Glows */}
-                <div className="absolute top-[20%] right-[10%] w-[400px] h-[400px] bg-[#D5E8B3]/10 rounded-full blur-[120px]" />
+                <div className="absolute top-[20%] right-[10%] w-[400px] h-[400px] bg-[#D5E8B3]/10 rounded-full blur-[60px]" />
                 <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-vyr-dark to-transparent" />
             </div>
 
