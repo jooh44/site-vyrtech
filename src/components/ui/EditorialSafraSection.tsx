@@ -103,6 +103,22 @@ export function EditorialSafraSection() {
                 );
             }
 
+            // ScrollTrigger for "Active" glowing state
+            const targets: Element[] = [];
+            const groupEl = card.querySelector('.group');
+            if (groupEl) targets.push(groupEl);
+            if (node) targets.push(node);
+
+            ScrollTrigger.create({
+                trigger: card,
+                start: "top 60%",
+                end: "bottom 40%",
+                toggleClass: {
+                    targets: targets,
+                    className: "is-active"
+                }
+            });
+
             // 3. Stagger reveal the internal content elements (High-Fidelity organic reveal)
             const internalElements = card.querySelectorAll('.benefit-letter, .benefit-icon, .benefit-title, .benefit-desc');
             if (internalElements.length > 0) {
@@ -170,6 +186,7 @@ export function EditorialSafraSection() {
                                     title={step.title}
                                     description={step.desc}
                                     icon={<step.icon className="w-6 h-6 text-[#6D2749]" strokeWidth={1.5} />}
+                                    statusIcon={<step.icon className="w-5 h-5" />}
                                 />
                             </div>
 

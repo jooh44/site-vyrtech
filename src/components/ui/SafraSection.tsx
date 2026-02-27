@@ -4,6 +4,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { Search, Target, Sprout, Activity, TrendingUp } from "lucide-react";
 import { TechH2, TechBody } from "@/components/ui/TechTypography";
 import { BenefitCard } from "@/components/ui/BenefitCard";
 
@@ -18,26 +19,31 @@ export function SafraSection() {
         {
             letter: "S",
             title: "Solo",
+            icon: <Search className="w-6 h-6" />,
             desc: "Diagnóstico profundo e análise de mercado corporativo. Entendemos o seu terreno de negócios antes de plantar qualquer investimento."
         },
         {
             letter: "A",
             title: "Alvo",
+            icon: <Target className="w-6 h-6" />,
             desc: "Definição de objetivos claros e alinhados com a realidade atual da empresa"
         },
         {
             letter: "F",
             title: "Fertilização",
+            icon: <Sprout className="w-6 h-6" />,
             desc: "Execução estratégica com foco em alcançar os objetivos financeiros da empresa"
         },
         {
             letter: "R",
             title: "Rastreamento",
+            icon: <Activity className="w-6 h-6" />,
             desc: "Monitoramento analítico e acompanhamento constante das métricas que movem o ponteiro"
         },
         {
             letter: "A",
             title: "Aprimoramento",
+            icon: <TrendingUp className="w-6 h-6" />,
             desc: "Análise dos resultados e melhoria contínua visando maximizar resultados e escalando através de ações guiadas"
         }
     ];
@@ -179,6 +185,7 @@ export function SafraSection() {
                                     letter={step.letter}
                                     title={step.title}
                                     description={step.desc}
+                                    statusIcon={step.icon}
                                 />
                             </div>
 

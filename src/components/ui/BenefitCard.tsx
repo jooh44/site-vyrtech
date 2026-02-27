@@ -6,6 +6,7 @@ interface BenefitCardProps {
     title: string;
     description: string;
     icon?: ReactNode;
+    statusIcon?: ReactNode;
     theme?: "tech" | "editorial";
     className?: string;
 }
@@ -15,6 +16,7 @@ export function BenefitCard({
     title,
     description,
     icon,
+    statusIcon,
     theme = "tech",
     className
 }: BenefitCardProps) {
@@ -33,6 +35,21 @@ export function BenefitCard({
             {/* Background Glow Effect for Tech Theme */}
             {isTech && (
                 <div className="absolute inset-0 bg-gradient-to-br from-[#1C050F]/80 via-transparent to-transparent opacity-0 group-[.is-active]:opacity-100 transition-opacity duration-700 pointer-events-none z-0" />
+            )}
+
+            {/* Animated Context-Specific Status Icon */}
+            {statusIcon && (
+                <div
+                    className={cn(
+                        "absolute top-8 right-8 transition-all duration-700 transform z-20 opacity-0 scale-50",
+                        "group-[.is-active]:opacity-100 group-[.is-active]:scale-100",
+                        isTech
+                            ? "text-[#D5E8B3] drop-shadow-[0_0_8px_rgba(213,232,179,0.8)]"
+                            : "text-[#9DB479] drop-shadow-[0_0_5px_rgba(157,180,121,0.5)]"
+                    )}
+                >
+                    {statusIcon}
+                </div>
             )}
 
             <div className="flex items-center gap-4 mb-6 relative z-10">
