@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TrendingDown, Database, Clock, LineChart, FileBarChart, EyeOff } from "lucide-react";
+import { TechH2, TechBody } from "@/components/ui/TechTypography";
 
 export function ProblemsSection() {
     const sectionRef = useRef<HTMLElement>(null);
@@ -132,20 +133,20 @@ export function ProblemsSection() {
             </div>
 
             <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-                <div className="section-header text-center max-w-3xl mx-auto mb-16 space-y-4">
-                    <h2 className="text-3xl md:text-5xl font-bold text-vyr-text text-balance">
+                <div className="section-header text-left md:text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <TechH2 className="text-balance text-left md:text-center">
                         Você não tem um problema de tráfego. Você tem um problema de <span className="text-vyr-wine-light">Arquitetura</span>.
-                    </h2>
-                    <p className="text-vyr-text-muted text-lg text-balance">
-                        O primeiro passo para o crescimento escalável é eliminar pontos de perda de receita ao longo do funil comercial.
-                    </p>
+                    </TechH2>
+                    <TechBody className="text-lg text-balance text-left md:text-center">
+                        O primeiro passo para o crescimento escalável é eliminar pontos de perda de receita ao longo do funil comercial. E operar como seu braço direito de crescimento.
+                    </TechBody>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {problems.map((prob, idx) => (
                         <div
                             key={idx}
-                            className="problem-card relative bg-transparent backdrop-blur-md border border-[#4A1731]/40 p-8 rounded-2xl hover:bg-transparent hover:border-[#6D2749] transition-all duration-500 group overflow-hidden"
+                            className="problem-card relative bg-transparent backdrop-blur-md border border-[#4A1731]/40 p-8 rounded-vyr-fluid hover:bg-transparent hover:border-vyr-wine transition-all duration-500 group overflow-hidden"
                         >
                             {/* Abstract Tech Grid inside Card */}
                             <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:24px_24px] rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />

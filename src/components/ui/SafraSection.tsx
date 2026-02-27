@@ -1,8 +1,13 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+import { TechH2, TechBody } from "@/components/ui/TechTypography";
+import { BenefitCard } from "@/components/ui/BenefitCard";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export function SafraSection() {
     const sectionRef = useRef<HTMLElement>(null);
@@ -18,113 +23,121 @@ export function SafraSection() {
         {
             letter: "A",
             title: "Alvo",
-            desc: "Definição de metas SMART. KPIs claros e alinhados com a receita estrutural."
+            desc: "Definição de objetivos claros e alinhados com a realidade atual da empresa"
         },
         {
             letter: "F",
             title: "Fertilização",
-            desc: "Execução estratégica e arquitetura de dados via automações precisas."
+            desc: "Execução estratégica com foco em alcançar os objetivos financeiros da empresa"
         },
         {
             letter: "R",
             title: "Rastreamento",
-            desc: "Monitoramento analítico em tempo real. Visibilidade total ponta a ponta."
+            desc: "Monitoramento analítico e acompanhamento constante das métricas que movem o ponteiro"
         },
         {
             letter: "A",
             title: "Aprimoramento",
-            desc: "Testes iterativos e evolução usando metodologias CRO avançadas. Escalamos através de dados."
+            desc: "Análise dos resultados e melhoria contínua visando maximizar resultados e escalando através de ações guiadas"
         }
     ];
 
-    useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
+    useGSAP(() => {
+        // Animate the vertical line drawing down
+        gsap.fromTo(lineRef.current,
+            { height: "0%" },
+            {
+                height: "100%",
+                ease: "none",
+                lazy: true,
+                scrollTrigger: {
+                    trigger: containerRef.current,
+                    start: "top center",
+                    end: "bottom center",
+                    scrub: 1, // Smooth scrubbing
+                }
+            }
+        );
 
-        const ctx = gsap.context(() => {
-            // Animate the vertical line drawing down
-            gsap.fromTo(lineRef.current,
-                { height: "0%" },
+        // Animate each timeline text entry with staggered children
+        const cards = gsap.utils.toArray<HTMLElement>('.timeline-card');
+
+        cards.forEach((card) => {
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: card,
+                    start: "top 80%",
+                    toggleActions: "play none none reverse"
+                },
+                defaults: { lazy: true }
+            });
+
+            // 1. Reveal the card container itself
+            tl.fromTo(card,
+                { x: 30, opacity: 0 },
                 {
-                    height: "100%",
-                    ease: "none",
-                    scrollTrigger: {
-                        trigger: containerRef.current,
-                        start: "top center",
-                        end: "bottom center",
-                        scrub: 1, // Smooth scrubbing
-                    }
+                    x: 0,
+                    opacity: 1,
+                    duration: 0.8,
+                    ease: "power2.out"
                 }
             );
 
-            // Animate each timeline text entry as it comes into view
-            const cards = gsap.utils.toArray<HTMLElement>('.timeline-card');
-            cards.forEach((card, i) => {
-                gsap.fromTo(card,
-                    { x: 30, opacity: 0 },
+            // 2. Animate the node ping simultaneously
+            const node = card.parentElement?.querySelector('.timeline-node');
+            if (node) {
+                tl.fromTo(node,
+                    { scale: 0 },
                     {
-                        x: 0,
-                        opacity: 1,
-                        duration: 0.8,
-                        ease: "power3.out",
-                        scrollTrigger: {
-                            trigger: card,
-                            start: "top 80%",
-                            toggleActions: "play none none reverse"
-                        }
-                    }
+                        scale: 1,
+                        duration: 0.5,
+                        ease: "back.out(2)"
+                    },
+                    "<0.2" // Start slightly after the card begins revealing
                 );
+            }
 
-                // Animate the node ping (less pink, more wine/cerise)
-                const node = card.parentElement?.querySelector('.timeline-node');
-                if (node) {
-                    gsap.fromTo(node,
-                        { scale: 0, backgroundColor: "#0C0C0E" },
-                        {
-                            scale: 1,
-                            backgroundColor: "#D5E8B3", // Olive green instead of wine
-                            duration: 0.5,
-                            ease: "back.out(2)",
-                            scrollTrigger: {
-                                trigger: card,
-                                start: "top 60%",
-                                toggleActions: "play none none reverse"
-                            }
-                        }
-                    );
-                }
+            // ScrollTrigger for "Active" glowing state based on center position
+            const targets: Element[] = [];
+            const groupEl = card.querySelector('.group');
+            if (groupEl) targets.push(groupEl);
+            if (node) targets.push(node);
 
-                // Animate the large typographic letter
-                const typeLetter = card.querySelector('.type-letter');
-                if (typeLetter) {
-                    gsap.fromTo(typeLetter,
-                        { y: 20, opacity: 0, scale: 0.8 },
-                        {
-                            y: 0,
-                            opacity: 1,
-                            scale: 1,
-                            duration: 0.8,
-                            ease: "elastic.out(1, 0.5)",
-                            scrollTrigger: {
-                                trigger: card,
-                                start: "top 60%",
-                                toggleActions: "play none none reverse"
-                            }
-                        }
-                    );
+            ScrollTrigger.create({
+                trigger: card,
+                start: "top 60%",      // triggers when card top enters 60% of screen height
+                end: "bottom 40%",     // ends when card bottom leaves 40% of screen height
+                toggleClass: {
+                    targets: targets,
+                    className: "is-active"
                 }
             });
 
-        }, sectionRef);
+            // 3. Stagger reveal the internal content elements (High-Fidelity organic reveal)
+            const internalElements = card.querySelectorAll('.benefit-letter, .benefit-icon, .benefit-title, .benefit-desc');
+            if (internalElements.length > 0) {
+                tl.fromTo(internalElements,
+                    { y: 20, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.6,
+                        stagger: 0.1,
+                        ease: "power2.out"
+                    },
+                    "<0.1" // Overlap with previous animations
+                );
+            }
+        });
 
-        return () => ctx.revert();
-    }, []);
+    }, { scope: sectionRef });
 
     return (
         <section id="metodologia" ref={sectionRef} className="py-24 bg-transparent relative z-10 overflow-hidden">
             <div className="max-w-5xl mx-auto px-6 md:px-12 w-full">
 
-                <div className="text-center mb-16 md:mb-24">
-                    <h2 className="text-4xl md:text-5xl font-bold text-vyr-text tracking-tight mb-4">
+                <div className="text-left md:text-center mb-16 md:mb-24">
+                    <TechH2 className="mb-4 text-left md:text-center">
                         A Metodologia{" "}
                         <span className="inline-flex gap-1 text-[#D5E8B3]">
                             <span>S.</span>
@@ -133,10 +146,10 @@ export function SafraSection() {
                             <span>R.</span>
                             <span>A.</span>
                         </span>
-                    </h2>
-                    <p className="text-vyr-text-muted mt-2 text-lg md:text-xl max-w-2xl mx-auto">
+                    </TechH2>
+                    <TechBody className="mt-2 text-lg md:text-xl max-w-2xl mx-auto text-left md:text-center">
                         Engenharia de conversão documentada em 5 etapas cíclicas, focada na construção de ecossistemas previsíveis.
-                    </p>
+                    </TechBody>
                 </div>
 
                 {/* Creative Timeline Layout */}
@@ -148,31 +161,25 @@ export function SafraSection() {
                     {/* Glowing active line */}
                     <div
                         ref={lineRef}
-                        className="absolute left-[27px] md:left-12 top-0 w-[2px] bg-gradient-to-b from-[#6D9344] to-[#D5E8B3] rounded-full shadow-[0_0_15px_rgba(213,232,179,0.5)] origin-top z-10"
+                        className="absolute left-[27px] md:left-12 top-0 w-[2px] bg-gradient-to-b from-[#6D2749] to-[#D5E8B3] rounded-full shadow-[0_0_15px_rgba(213,232,179,0.5)] origin-top z-10"
                     />
 
                     {steps.map((step, idx) => (
                         <div key={idx} className="relative flex items-start gap-8 md:gap-16 pl-14 md:pl-32 group">
 
                             {/* Timeline Node - Adjusted exactly perfectly to the 2px line */}
-                            <div className="absolute left-[12px] md:left-[33px] top-6 w-8 h-8 rounded-full border-4 border-[#050506] bg-[#0C0C0E] z-20 timeline-node flex items-center justify-center shadow-[0_0_15px_rgba(213,232,179,0.15)]">
+                            <div className="absolute left-[12px] md:left-[33px] top-[56px] -translate-y-1/2 w-8 h-8 rounded-full border-4 border-[#050506] bg-[#0C0C0E] z-20 timeline-node flex items-center justify-center shadow-[0_0_15px_rgba(109,39,73,0.3)] transition-all duration-500 [&.is-active]:bg-[#8D3A63] [&.is-active]:shadow-[0_0_20px_rgba(255,197,225,0.5)]">
                                 <div className="w-2 h-2 rounded-full bg-white/80" />
                             </div>
 
-                            {/* Timeline Item - Pure Typography Layout */}
-                            <div className="timeline-card flex-1 relative py-6 md:py-8 transition-transform duration-500 hover:-translate-y-1">
-                                <div className="relative z-10">
-                                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight flex flex-wrap items-baseline gap-3 md:gap-4">
-                                        <span className="type-letter inline-block text-4xl sm:text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-[#6D2749] drop-shadow-[0_0_15px_rgba(109,39,73,0.3)]">
-                                            {step.letter}
-                                        </span>
-                                        <span className="text-[#6D2749] text-xl sm:text-2xl md:text-3xl">{`0${idx + 1}.`}</span>
-                                        <span className="break-words">{step.title}</span>
-                                    </h3>
-                                    <p className="text-base md:text-lg text-gray-300 leading-relaxed font-medium max-w-2xl md:pl-[5.5rem]">
-                                        {step.desc}
-                                    </p>
-                                </div>
+                            {/* Timeline Item - Using BenefitCard */}
+                            <div className="timeline-card flex-1 relative transition-transform duration-500 hover:-translate-y-1">
+                                <BenefitCard
+                                    theme="tech"
+                                    letter={step.letter}
+                                    title={step.title}
+                                    description={step.desc}
+                                />
                             </div>
 
                         </div>

@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowRight, BarChart3, TrendingUp, Users } from "lucide-react";
 import { useGSAP } from "@gsap/react";
+import { TechH2 } from "@/components/ui/TechTypography";
 
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
@@ -68,19 +69,19 @@ export function CasesSection() {
             <div className="max-w-7xl mx-auto px-6 relative z-10" ref={containerRef}>
                 <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-16">
                     <div className="max-w-2xl">
-                        <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight">
+                        <TechH2>
                             Arquiteturas que geram <span className="text-[#D5E8B3]">Resultados.</span>
-                        </h2>
+                        </TechH2>
                     </div>
                 </div>
 
                 {/* Cases Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {placeholders.map((item) => (
-                        <div key={item.id} className="case-card group relative p-px rounded-3xl bg-transparent overflow-hidden transition-all duration-500 hover:-translate-y-2">
+                        <div key={item.id} className="case-card group relative p-px rounded-vyr-fluid bg-transparent overflow-hidden transition-all duration-500 hover:-translate-y-2">
                             <div className="absolute inset-0 bg-gradient-to-br from-[#1C050F]/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
-                            <div className="relative h-full bg-transparent backdrop-blur-md rounded-[calc(1.5rem-1px)] p-8 md:p-10 flex flex-col justify-between border border-[#4A1731]/40 group-hover:border-[#6D2749] transition-colors duration-500">
+                            <div className="relative h-full glass-panel rounded-vyr-fluid p-8 md:p-10 flex flex-col justify-between group-hover:bg-[#6D2749]/10 group-hover:border-[#6D2749] overflow-hidden">
                                 <div className="relative z-10">
                                     <div className="flex justify-between items-start mb-8">
                                         <div className="w-12 h-12 rounded-xl bg-transparent flex items-center justify-center border border-[#4A1731]/50 group-hover:border-[#6D2749] transition-all duration-500">

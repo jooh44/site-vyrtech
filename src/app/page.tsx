@@ -1,6 +1,7 @@
 import { Hero } from "@/components/ui/Hero";
 import { ProblemsSection } from "@/components/ui/ProblemsSection";
 import { SafraSection } from "@/components/ui/SafraSection";
+import { ScopesSection } from "@/components/ui/ScopesSection";
 import { CasesSection } from "@/components/ui/CasesSection";
 import { ConversionForm } from "@/components/ui/ConversionForm";
 import { TestimonialsSection } from "@/components/ui/TestimonialsSection";
@@ -16,6 +17,7 @@ export default function Home() {
         <Hero />
         <ProblemsSection />
         <SafraSection />
+        <ScopesSection />
         <CasesSection />
         <ConversionForm />
         <TestimonialsSection />

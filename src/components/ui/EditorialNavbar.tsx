@@ -22,25 +22,23 @@ export function EditorialNavbar() {
 
     return (
         <div className="fixed w-full z-50 top-0 left-0 transition-all duration-300 pointer-events-none md:pointer-events-auto bg-transparent border-transparent md:bg-white/95 md:backdrop-blur-xl md:border-b-2 md:border-black">
-            <nav className="max-w-7xl mx-auto w-full flex items-center justify-end md:justify-between px-6 md:px-12 py-4 pointer-events-auto">
+            <nav className="w-full flex items-center justify-end md:justify-between px-6 md:px-12 lg:px-16 py-4 pointer-events-auto">
                 <Link href="/" className="hidden md:flex items-center gap-3 group hover:opacity-80 transition-opacity">
                     <img src="/logo.png" alt="Vyrtech" className="h-6 md:h-8 object-contain" />
                 </Link>
 
                 <div className="hidden md:flex items-center gap-10 text-xs font-bold tracking-widest uppercase text-gray-500">
+                    <Link href="#servicos" className="hover:text-black transition-colors">Serviços</Link>
                     <Link href="#como-funciona" className="hover:text-black transition-colors">O Sistema</Link>
                     <Link href="#metodologia" className="hover:text-black transition-colors">A Metodologia</Link>
-                    <a href="#solicitar" className="px-6 py-2.5 bg-[#6D2749] hover:bg-[#FFC5E1] hover:text-[#6D2749] text-white transition-colors border border-transparent font-bold">
+                    <a href="#solicitar" className="px-6 py-2.5 bg-[#6D2749] hover:bg-[#FFC5E1] hover:text-[#6D2749] text-white transition-colors border border-transparent font-bold rounded-vyr-fluid">
                         Diagnóstico Gratuito
                     </a>
                 </div>
 
                 <div className="md:hidden flex items-center mt-1">
                     <button
-                        className={`transition-colors p-1 ${isScrolled
-                            ? "text-[#6D2749]"
-                            : "text-white drop-shadow-md"
-                            }`}
+                        className="transition-colors p-1 text-[#6D2749] drop-shadow-sm hover:opacity-80"
                         aria-label="Menu"
                         onClick={() => setIsMenuOpen(true)}
                     >
@@ -72,12 +70,13 @@ export function EditorialNavbar() {
                     </div>
 
                     <div className="flex flex-col gap-6 text-sm font-bold tracking-widest uppercase text-gray-500">
+                        <Link href="#servicos" className="hover:text-[#6D2749] transition-colors" onClick={() => setIsMenuOpen(false)}>Serviços</Link>
                         <Link href="#como-funciona" className="hover:text-[#6D2749] transition-colors" onClick={() => setIsMenuOpen(false)}>O Sistema</Link>
                         <Link href="#metodologia" className="hover:text-[#6D2749] transition-colors" onClick={() => setIsMenuOpen(false)}>A Metodologia</Link>
 
                         <a
                             href="#solicitar"
-                            className="px-6 py-3 bg-[#6D2749] hover:bg-[#FFC5E1] hover:text-[#6D2749] text-white transition-colors text-center border border-transparent mt-4"
+                            className="px-6 py-3 bg-[#6D2749] hover:bg-[#FFC5E1] hover:text-[#6D2749] text-white transition-colors text-center border border-transparent mt-4 rounded-vyr-fluid"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Diagnóstico Gratuito
