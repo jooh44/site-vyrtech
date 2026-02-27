@@ -201,8 +201,6 @@ export function ProblemsSection() {
                     <circle cx="1100" cy="150" r="5" fill="#0C0C0E" stroke="#D5E8B3" strokeWidth="2" className="graph-node" />
                 </svg>
 
-                {/* Subtle Glows */}
-                <div className="absolute top-[20%] right-[10%] w-[400px] h-[400px] bg-[#D5E8B3]/10 rounded-full blur-[60px]" />
                 <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-vyr-dark to-transparent" />
             </div>
 
