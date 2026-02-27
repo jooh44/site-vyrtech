@@ -43,7 +43,7 @@ export function AtelierSection2() {
     ];
 
     return (
-        <section ref={containerRef} className="agitation-section py-16 md:py-24 relative bg-[#0C0C0E] rounded-vyr-fluid mx-4 md:mx-8 mb-8 md:mb-12 mt-12 md:mt-24 shadow-sm border border-[#4A1731]/40">
+        <section ref={containerRef} className="agitation-section py-16 md:py-24 relative bg-[#0C0C0E] rounded-3xl mx-4 md:mx-8 mb-8 md:mb-12 mt-12 md:mt-24 shadow-sm border border-[#4A1731]/40">
             <div className="max-w-7xl mx-auto px-5 md:px-12 relative z-10">
                 <div className="text-left md:text-center max-w-4xl mr-auto md:mx-auto mb-12 md:mb-20 space-y-3 md:space-y-4">
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight uppercase">

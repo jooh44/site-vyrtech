@@ -23,6 +23,7 @@ import { EditorialSafraSection } from "@/components/ui/EditorialSafraSection";
 import { EditorialConversionForm } from "@/components/ui/EditorialConversionForm";
 import { EditorialFooter } from "@/components/ui/EditorialFooter";
 import { EditorialNavbar } from "@/components/ui/EditorialNavbar";
+import { TestimonialsSection } from "@/components/ui/TestimonialsSection";
 import { AnimatedChat } from "@/components/ui/AnimatedChat";
 import { GrowthChart } from "@/components/ui/GrowthChart";
 import { WhatsAppButtonEditorial } from "@/components/ui/WhatsAppButtonEditorial";
@@ -260,35 +261,8 @@ export default function FashionRetailLandingPage() {
                 </div>
             </section>
 
-            {/* 4. Social Proof / Authority (No borders, pure typography) */}
-            <section className="py-32 bg-white border-t-2 border-black">
-                <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
-                    <h2 className="text-sm font-bold tracking-[0.2em] uppercase text-[#6D2749] mb-16">O Impacto Final</h2>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-5xl mx-auto text-left relative before:absolute before:inset-0 before:left-1/2 before:-ml-px before:w-px before:bg-[#6D2749]/20 before:hidden md:before:block">
-                        <div className="pt-8 md:pt-0 md:pr-16 relative">
-                            <span className="absolute -top-12 left-0 text-9xl text-[#FFEBF4] font-serif leading-none">"</span>
-                            <p className="text-2xl text-black font-light italic mb-8 relative z-10 leading-snug text-balance">
-                                Hoje a equipe só atende quem a IA já qualificou. Reduzimos o custo por provador e o faturamento de sábado simplesmente dobrou.
-                            </p>
-                            <div>
-                                <h4 className="font-bold text-black uppercase tracking-widest text-sm">Mariana C.</h4>
-                                <p className="text-xs text-[#6D2749] uppercase tracking-widest mt-1">Boutique Premium</p>
-                            </div>
-                        </div>
-                        <div className="pt-16 border-t border-[#6D2749]/20 md:border-t-0 md:pt-0 md:pl-16 relative">
-                            <span className="absolute md:-top-12 top-4 left-0 md:left-16 text-9xl text-[#FFEBF4] font-serif leading-none">"</span>
-                            <p className="text-2xl text-black font-light italic mb-8 relative z-10 leading-snug text-balance">
-                                Deixar de depender da fachada foi libertador. A Vyrtech estruturou os funis de locação com precisão cirúrgica de dados de luxo.
-                            </p>
-                            <div>
-                                <h4 className="font-bold text-black uppercase tracking-widest text-sm">Juliana M.</h4>
-                                <p className="text-xs text-[#6D2749] uppercase tracking-widest mt-1">Maison Bridal</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            {/* Scrolling Testimonials Ticker */}
+            <TestimonialsSection />
 
             {/* Injected Global Conversion Form */}
             <EditorialConversionForm />
@@ -305,7 +279,7 @@ export default function FashionRetailLandingPage() {
                     <div className="pt-10 flex flex-col sm:flex-row justify-center items-center gap-6">
                         <Link
                             href="#diagnostico"
-                            className="px-12 py-6 bg-[#6D2749] hover:bg-[#FFC5E1] hover:text-[#6D2749] text-white font-bold uppercase tracking-widest text-sm transition-colors flex items-center group rounded-vyr-fluid"
+                            className="px-12 py-6 bg-[#6D2749] hover:bg-[#FFC5E1] hover:text-[#6D2749] text-white font-bold uppercase tracking-widest text-sm transition-colors flex items-center group rounded-3xl"
                         >
                             Solicitar Diagnóstico <ChevronRight className="w-5 h-5 ml-4 group-hover:translate-x-2 transition-transform" />
                         </Link>
