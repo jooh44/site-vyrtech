@@ -161,14 +161,14 @@ export function SafraSection() {
                     {/* Glowing active line */}
                     <div
                         ref={lineRef}
-                        className="absolute left-[27px] md:left-12 top-0 w-[2px] bg-gradient-to-b from-[#6D2749] to-[#D5E8B3] rounded-full shadow-[0_0_15px_rgba(213,232,179,0.5)] origin-top z-10"
+                        className="absolute left-[27px] md:left-12 top-0 w-[2px] bg-gradient-to-b from-[#9DB479] to-[#D5E8B3] rounded-full shadow-[0_0_15px_rgba(213,232,179,0.5)] origin-top z-10"
                     />
 
                     {steps.map((step, idx) => (
                         <div key={idx} className="relative flex items-start gap-8 md:gap-16 pl-14 md:pl-32 group">
 
                             {/* Timeline Node - Adjusted exactly perfectly to the 2px line */}
-                            <div className="absolute left-[12px] md:left-[33px] top-[56px] -translate-y-1/2 w-8 h-8 rounded-full border-4 border-[#050506] bg-[#0C0C0E] z-20 timeline-node flex items-center justify-center shadow-[0_0_15px_rgba(109,39,73,0.3)] transition-all duration-500 [&.is-active]:bg-[#8D3A63] [&.is-active]:shadow-[0_0_20px_rgba(255,197,225,0.5)]">
+                            <div className="absolute left-[12px] md:left-[33px] top-[56px] -translate-y-1/2 w-8 h-8 rounded-full border-4 border-[#050506] bg-[#0C0C0E] z-20 timeline-node flex items-center justify-center shadow-[0_0_15px_rgba(213,232,179,0.3)] transition-all duration-500 [&.is-active]:bg-[#9DB479] [&.is-active]:shadow-[0_0_20px_rgba(213,232,179,0.5)]">
                                 <div className="w-2 h-2 rounded-full bg-white/80" />
                             </div>
 
