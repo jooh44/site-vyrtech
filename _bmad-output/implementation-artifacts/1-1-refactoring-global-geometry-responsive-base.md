@@ -30,7 +30,9 @@ so that the site has a consistent, sophisticated, and fluid aesthetic.
 
 ## Dev Notes
 
-- **Brownfield Constraint:** The repository already has Next.js 15+, Tailwind 4.0, and GSAP. Do NOT overwrite the base `globals.css` or core configurations. Refactor existing components to match new geometry and flow.
+- **Brownfield Constraint:** The repository already has Next.js 15+, Tailwind 4.0, and GSAP. **Carefully append or merge** any new `@theme` variables into `src/app/globals.css`. Do NOT destroy existing custom utilities or Tailwind resets. Refactor existing components to match new geometry and flow.
+- **GSAP Context:** You MUST use the `useGSAP` hook from `@gsap/react` for all animations to avoid memory leaks in React 19. Do NOT use legacy `useEffect` for GSAP.
+- **Dynamic Classes:** Use a `cn` utility (clsx + tailwind-merge) when building dynamic combinations of Tailwind classes (especially for our fluid geometry `rounded-...`), to prevent CSS class clashing.
 
 - **Architecture Compliance:** Use Tailwind 4.0's CSS-variable-first approach. Do not hardcode hex values in component files.
 - **Performance:** Ensure that the CSS variables do not cause excessive style recalculations on mobile.
