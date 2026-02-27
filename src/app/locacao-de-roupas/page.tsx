@@ -271,7 +271,7 @@ export default function FashionRetailLandingPage() {
             <section id="solicitar" className="py-40 bg-black text-white text-center px-6 border-t-8 border-[#6D2749]">
                 <div className="max-w-4xl mx-auto space-y-12">
                     <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none text-balance">
-                        ESCALAR SUA LOJA <br className="hidden md:block" /> EXIGE AÇÃO.
+                        ESCALAR SUA LOJA <br className="hidden md:block" /> EXIGE <span className="text-[#6D2749]">AÇÃO.</span>
                     </h2>
                     <p className="text-xl text-gray-400 font-light max-w-2xl mx-auto text-balance">
                         Se a sua loja possui tickets premium e time tático preparado para agendamentos, aplique para nossa Assessoria de Crescimento Exclusiva.

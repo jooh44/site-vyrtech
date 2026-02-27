@@ -11,7 +11,7 @@ export function EditorialConversionForm() {
                 <div className="lg:w-1/2 flex flex-col justify-center">
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-black mb-6 tracking-tight text-balance uppercase leading-[0.9]">
                         PRONTO PARA<br />TRANSFORMAR<br />
-                        <span className="text-[#6D2749] italic font-serif">DADOS EM RECEITA?</span>
+                        <span className="text-[#6D2749] italic font-editorial font-light">DADOS EM RECEITA?</span>
                     </h2>
                     <p className="text-lg text-gray-700 font-light mb-8 leading-relaxed text-balance">
                         Não somos uma agência comum. Operamos como seu braço direito de Growth.
