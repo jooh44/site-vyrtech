@@ -121,7 +121,7 @@ export function LeadForm({ formId, theme = "tech" }: LeadFormProps) {
                             "w-full rounded-lg pl-10 pr-4 py-3 focus:outline-none transition-all duration-300 relative z-20",
                             isTech
                                 ? "bg-transparent border border-[#4A1731]/40 text-white focus:border-[#6D2749]"
-                                : "bg-white border border-black/20 text-black focus:border-[#6D2749] focus:ring-1 focus:ring-[#6D2749]"
+                                : "autofill-light bg-white border border-black/20 text-black focus:border-[#6D2749] focus:ring-1 focus:ring-[#6D2749]"
                         )}
                     />
                 </div>
@@ -144,7 +144,7 @@ export function LeadForm({ formId, theme = "tech" }: LeadFormProps) {
                             "w-full rounded-lg pl-10 pr-4 py-3 focus:outline-none transition-all duration-300 relative z-20",
                             isTech
                                 ? "bg-transparent border border-[#4A1731]/40 text-white focus:border-[#6D2749]"
-                                : "bg-white border border-black/20 text-black focus:border-[#6D2749] focus:ring-1 focus:ring-[#6D2749]"
+                                : "autofill-light bg-white border border-black/20 text-black focus:border-[#6D2749] focus:ring-1 focus:ring-[#6D2749]"
                         )}
                     />
                 </div>
@@ -165,7 +165,7 @@ export function LeadForm({ formId, theme = "tech" }: LeadFormProps) {
                             "w-full rounded-lg pl-10 pr-4 py-3 focus:outline-none transition-all duration-300 appearance-none relative z-20",
                             isTech
                                 ? "bg-[#0C0C0E] border border-[#4A1731]/40 text-white focus:border-[#6D2749]"
-                                : "bg-white border border-black/20 text-black focus:border-[#6D2749] focus:ring-1 focus:ring-[#6D2749]"
+                                : "autofill-light bg-white border border-black/20 text-black focus:border-[#6D2749] focus:ring-1 focus:ring-[#6D2749]"
                         )}
                     >
                         <option value="" disabled>Selecione seu segmento...</option>
