@@ -43,8 +43,8 @@ export function EditorialFooter() {
             <div className="max-w-7xl mx-auto px-6 border-t border-gray-200 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-gray-400 font-light uppercase tracking-wider">
                 <p>© 2026 Vyrtech Growth. Todos os direitos reservados.</p>
                 <div className="flex space-x-6 mt-4 md:mt-0">
-                    <a href="#" className="hover:text-[#6D2749] transition-colors">Termos de Uso</a>
-                    <a href="#" className="hover:text-[#6D2749] transition-colors">Política de Privacidade</a>
+                    <Link href="/termos-de-servico" className="hover:text-[#6D2749] transition-colors">Termos de Uso</Link>
+                    <Link href="/politica-de-privacidade" className="hover:text-[#6D2749] transition-colors">Política de Privacidade</Link>
                 </div>
             </div>
         </footer>
