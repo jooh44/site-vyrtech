@@ -87,7 +87,8 @@ export default function FashionRetailLandingPage() {
             <EditorialSafraSection />
 
             {/* 4. The Methodology Application (Solution) - NOW COMBINED WITH SUITS SHOWCASE BG */}
-            <section id="como-funciona" className="pt-32 pb-24 md:pt-40 md:pb-32 relative border-t-2 border-black overflow-hidden bg-[#050506]">
+            <section id="servicos" className="pt-32 pb-24 md:pt-40 md:pb-32 relative border-t-2 border-black overflow-hidden bg-[#050506]">
+                <div id="como-funciona" className="absolute -top-20 pointer-events-none" />
                 {/* Background Image - Fixed Parallax Effect */}
                 <div
                     className="absolute inset-0 z-0 bg-center bg-cover bg-no-repeat bg-fixed grayscale-[0.2] opacity-70"
