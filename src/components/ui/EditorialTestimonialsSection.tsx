@@ -24,7 +24,6 @@ export function EditorialTestimonialsSection() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-5xl mx-auto text-left relative before:absolute before:inset-0 before:left-1/2 before:-ml-px before:w-px before:bg-[#6D2749]/20 before:hidden md:before:block">
                     {/* Testimonial 1 */}
                     <div className="pt-8 md:pt-0 md:pr-16 relative">
-                        <span className="absolute -top-12 left-0 text-9xl text-[#FFEBF4] font-editorial leading-none">"</span>
                         <div className="flex gap-1 mb-6 relative z-10">
                             {[...Array(5)].map((_, i) => (
                                 <Star key={i} className="w-5 h-5 text-[#6D2749] fill-[#6D2749]" />
@@ -46,7 +45,6 @@ export function EditorialTestimonialsSection() {
 
                     {/* Testimonial 2 */}
                     <div className="pt-16 border-t border-[#6D2749]/20 md:border-t-0 md:pt-0 md:pl-16 relative">
-                        <span className="absolute md:-top-12 top-4 left-0 md:left-16 text-9xl text-[#FFEBF4] font-editorial leading-none">"</span>
                         <div className="flex gap-1 mb-6 relative z-10">
                             {[...Array(5)].map((_, i) => (
                                 <Star key={i} className="w-5 h-5 text-[#6D2749] fill-[#6D2749]" />
