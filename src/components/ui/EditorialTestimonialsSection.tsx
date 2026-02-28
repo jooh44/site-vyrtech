@@ -18,46 +18,53 @@ export function EditorialTestimonialsSection() {
 
     return (
         <section className="py-24 md:py-32 bg-white border-t-2 border-black relative overflow-hidden">
-            <div className="max-w-7xl mx-auto px-6 relative z-10 mb-16">
-                <div className="text-center">
-                    <h2 className="text-sm font-bold tracking-[0.2em] uppercase text-[#6D2749] mb-4">O Impacto Final</h2>
-                    <h3 className="text-4xl md:text-5xl font-black text-black tracking-tight uppercase">
-                        Quem já está <span className="text-[#6D2749]">colhendo os frutos</span>
-                    </h3>
-                </div>
-            </div>
+            <div className="max-w-7xl mx-auto px-6 md:px-12 text-center relative z-10">
+                <h2 className="text-sm font-bold tracking-[0.2em] uppercase text-[#6D2749] mb-16">O Impacto Final</h2>
 
-            <div className="max-w-5xl mx-auto px-6 relative z-10">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-                    {testimonials.map((testimonial, idx) => (
-                        <div key={idx} className="bg-[#F9F9F9] border border-black hover:border-vyr-wine transition-all duration-500 rounded-3xl p-8 md:p-10 flex flex-col relative group">
-
-                            {/* Decorative Quote Mark */}
-                            <span className="absolute -top-10 left-6 text-9xl text-[#FFC5E1]/30 font-editorial leading-none group-hover:text-[#FFC5E1]/80 transition-colors duration-500">
-                                &ldquo;
-                            </span>
-
-                            <div className="flex gap-1 mb-8 relative z-10 mt-4">
-                                {[...Array(5)].map((_, i) => (
-                                    <Star key={i} className="w-5 h-5 text-[#6D2749] fill-[#6D2749]" />
-                                ))}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-5xl mx-auto text-left relative before:absolute before:inset-0 before:left-1/2 before:-ml-px before:w-px before:bg-[#6D2749]/20 before:hidden md:before:block">
+                    {/* Testimonial 1 */}
+                    <div className="pt-8 md:pt-0 md:pr-16 relative">
+                        <span className="absolute -top-12 left-0 text-9xl text-[#FFEBF4] font-editorial leading-none">"</span>
+                        <div className="flex gap-1 mb-6 relative z-10">
+                            {[...Array(5)].map((_, i) => (
+                                <Star key={i} className="w-5 h-5 text-[#6D2749] fill-[#6D2749]" />
+                            ))}
+                        </div>
+                        <p className="text-2xl text-black font-light italic mb-8 relative z-10 leading-snug text-balance">
+                            {testimonials[0].content}
+                        </p>
+                        <div className="flex items-center gap-4 relative z-10">
+                            <div className="w-12 h-12 shrink-0 rounded-full bg-[#FFEBF4] border border-[#FFC5E1] flex items-center justify-center text-[#6D2749] font-bold text-lg">
+                                {testimonials[0].avatar}
                             </div>
-
-                            <p className="text-black font-light italic mb-10 relative z-10 text-lg md:text-xl leading-relaxed flex-1">
-                                "{testimonial.content}"
-                            </p>
-
-                            <div className="flex items-center gap-4 relative z-10">
-                                <div className="w-14 h-14 shrink-0 rounded-full bg-[#FFEBF4] border border-[#FFC5E1] flex items-center justify-center text-[#6D2749] font-bold text-xl group-hover:bg-[#6D2749] group-hover:text-white transition-all duration-500">
-                                    {testimonial.avatar}
-                                </div>
-                                <div className="min-w-0">
-                                    <h4 className="text-black font-black uppercase text-sm tracking-wider">{testimonial.name}</h4>
-                                    <p className="text-xs text-[#6D2749] uppercase tracking-widest mt-1 opacity-80">{testimonial.role}</p>
-                                </div>
+                            <div>
+                                <h4 className="font-bold text-black uppercase tracking-widest text-sm">{testimonials[0].name}</h4>
+                                <p className="text-xs text-[#6D2749] uppercase tracking-widest mt-1">{testimonials[0].role}</p>
                             </div>
                         </div>
-                    ))}
+                    </div>
+
+                    {/* Testimonial 2 */}
+                    <div className="pt-16 border-t border-[#6D2749]/20 md:border-t-0 md:pt-0 md:pl-16 relative">
+                        <span className="absolute md:-top-12 top-4 left-0 md:left-16 text-9xl text-[#FFEBF4] font-editorial leading-none">"</span>
+                        <div className="flex gap-1 mb-6 relative z-10">
+                            {[...Array(5)].map((_, i) => (
+                                <Star key={i} className="w-5 h-5 text-[#6D2749] fill-[#6D2749]" />
+                            ))}
+                        </div>
+                        <p className="text-2xl text-black font-light italic mb-8 relative z-10 leading-snug text-balance">
+                            {testimonials[1].content}
+                        </p>
+                        <div className="flex items-center gap-4 relative z-10">
+                            <div className="w-12 h-12 shrink-0 rounded-full bg-[#FFEBF4] border border-[#FFC5E1] flex items-center justify-center text-[#6D2749] font-bold text-lg">
+                                {testimonials[1].avatar}
+                            </div>
+                            <div>
+                                <h4 className="font-bold text-black uppercase tracking-widest text-sm">{testimonials[1].name}</h4>
+                                <p className="text-xs text-[#6D2749] uppercase tracking-widest mt-1">{testimonials[1].role}</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
