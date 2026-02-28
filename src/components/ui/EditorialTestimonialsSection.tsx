@@ -3,29 +3,29 @@ import { Star } from "lucide-react";
 export function EditorialTestimonialsSection() {
     const testimonials = [
         {
-            name: "Mariana C.",
-            role: "Boutique Premium",
-            content: "Hoje a equipe só atende quem a IA já qualificou. Reduzimos o custo por provador e o faturamento de sábado simplesmente dobrou.",
-            avatar: "M"
+            name: "Thiago G. Almeida Silva",
+            role: "Stillu's locações",
+            content: "100% de aumento nas locações semanais! De 40 locações para 80 semanais!",
+            avatar: "T"
         },
         {
-            name: "Juliana M.",
-            role: "Maison Bridal",
-            content: "Deixar de depender da fachada foi libertador. A Vyrtech estruturou os funis de locação com precisão cirúrgica de dados de luxo.",
-            avatar: "J"
+            name: "Michele M. Lehn",
+            role: "Universo das Noivas",
+            content: <>De 2 noivas agendadas através da internet por semana para 8 <strong className="font-bold">todo dia!</strong></>,
+            avatar: "M"
         },
         // Duplicating for sufficient length in the ticker
         {
-            name: "Mariana C.",
-            role: "Boutique Premium",
-            content: "Hoje a equipe só atende quem a IA já qualificou. Reduzimos o custo por provador e o faturamento de sábado simplesmente dobrou.",
-            avatar: "M"
+            name: "Thiago G. Almeida Silva",
+            role: "Stillu's locações",
+            content: "100% de aumento nas locações semanais! De 40 locações para 80 semanais!",
+            avatar: "T"
         },
         {
-            name: "Juliana M.",
-            role: "Maison Bridal",
-            content: "Deixar de depender da fachada foi libertador. A Vyrtech estruturou os funis de locação com precisão cirúrgica de dados de luxo.",
-            avatar: "J"
+            name: "Michele M. Lehn",
+            role: "Universo das Noivas",
+            content: <>De 2 noivas agendadas através da internet por semana para 8 <strong className="font-bold">todo dia!</strong></>,
+            avatar: "M"
         }
     ];
 

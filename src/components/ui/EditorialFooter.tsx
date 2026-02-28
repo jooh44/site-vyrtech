@@ -20,10 +20,10 @@ export function EditorialFooter() {
                         Soluções
                     </h4>
                     <ul className="space-y-3 text-sm text-gray-500 font-light">
-                        <li><Link href="/#diagnostico" className="hover:text-[#6D2749] transition-colors">Tráfego B2B Qualificado</Link></li>
-                        <li><Link href="/#diagnostico" className="hover:text-[#6D2749] transition-colors">Automação Make/Zapier</Link></li>
-                        <li><Link href="/#diagnostico" className="hover:text-[#6D2749] transition-colors">Metodologia S.A.F.R.A.</Link></li>
-                        <li><Link href="/#diagnostico" className="hover:text-[#6D2749] transition-colors">Consultoria de CRO</Link></li>
+                        <li><Link href="#diagnostico" className="hover:text-[#6D2749] transition-colors">Tráfego B2B Qualificado</Link></li>
+                        <li><Link href="#diagnostico" className="hover:text-[#6D2749] transition-colors">Automação Make/Zapier</Link></li>
+                        <li><Link href="#diagnostico" className="hover:text-[#6D2749] transition-colors">Metodologia S.A.F.R.A.</Link></li>
+                        <li><Link href="#diagnostico" className="hover:text-[#6D2749] transition-colors">Consultoria de CRO</Link></li>
                     </ul>
                 </div>
 
