@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { User, Mail, Briefcase, ArrowRight } from "lucide-react";
+import { User, Mail, Briefcase, ArrowRight, Phone } from "lucide-react";
 import { cn } from "@/components/ui/TechTypography";
+import { useRouter } from "next/navigation";
 
 interface LeadFormProps {
     formId: string;
@@ -11,13 +12,14 @@ interface LeadFormProps {
 
 export function LeadForm({ formId, theme = "tech" }: LeadFormProps) {
     const isTech = theme === "tech";
+    const router = useRouter();
 
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [isSuccess, setIsSuccess] = useState(false);
 
     const [formData, setFormData] = useState({
         name: "",
         email: "",
+        phone: "",
         niche: "",
         _honeypot: ""
     });
@@ -37,41 +39,30 @@ export function LeadForm({ formId, theme = "tech" }: LeadFormProps) {
 
         setIsSubmitting(true);
 
-        // Simulate API call / Webhook
-        await new Promise(resolve => setTimeout(resolve, 1500));
+        try {
+            const response = await fetch('/api/leads', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    formId,
+                    theme,
+                    ...formData,
+                    source_url: window.location.href,
+                }),
+            });
 
-        console.log("Form Submitted:", {
-            formId,
-            ...formData,
-            source_url: window.location.href,
-        });
+            if (!response.ok) {
+                console.error("Failed to submit form to webhook");
+            }
+        } catch (error) {
+            console.error("Error submitting form:", error);
+        }
 
-        setIsSubmitting(false);
-        setIsSuccess(true);
+        // We do not set isSubmitting(false) immediately so the button stays in "loading" state during redirect
+        router.push(`/obrigado?theme=${theme}`);
     };
-
-    if (isSuccess) {
-        return (
-            <div className="h-full flex flex-col items-center justify-center text-center space-y-4 py-8">
-                <div
-                    className={cn(
-                        "w-20 h-20 rounded-full flex items-center justify-center mb-2",
-                        isTech ? "bg-[#D5E8B3]/10" : "bg-[#6D2749]/10"
-                    )}
-                >
-                    <svg className={cn("w-10 h-10", isTech ? "text-[#D5E8B3]" : "text-[#6D2749]")} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                </div>
-                <h3 className={cn("text-2xl font-bold", isTech ? "text-white" : "text-black")}>
-                    Solicitação Recebida!
-                </h3>
-                <p className={cn("text-balance", isTech ? "text-white/60" : "text-gray-600")}>
-                    Nossos especialistas estão analisando seu perfil. Você receberá um contato em breve.
-                </p>
-            </div>
-        );
-    }
 
     const techOptions = [
         { value: "Tecnologia", label: "Tecnologia & SaaS" },
@@ -140,6 +131,29 @@ export function LeadForm({ formId, theme = "tech" }: LeadFormProps) {
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="nome@empresa.com.br"
+                        className={cn(
+                            "w-full rounded-lg pl-10 pr-4 py-3 focus:outline-none transition-all duration-300 relative z-20",
+                            isTech
+                                ? "bg-transparent border border-[#4A1731]/40 text-white focus:border-[#6D2749]"
+                                : "autofill-light bg-white border border-black/20 text-black focus:border-[#6D2749] focus:ring-1 focus:ring-[#6D2749]"
+                        )}
+                    />
+                </div>
+            </div>
+
+            <div>
+                <label className={cn("block text-sm font-medium mb-1.5", isTech ? "text-white/70" : "text-gray-700")}>
+                    WhatsApp / Telefone
+                </label>
+                <div className="relative">
+                    <Phone className={cn("absolute left-3 top-3 w-5 h-5 z-10", isTech ? "text-white/40" : "text-gray-400")} />
+                    <input
+                        required
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        placeholder="(11) 99999-9999"
                         className={cn(
                             "w-full rounded-lg pl-10 pr-4 py-3 focus:outline-none transition-all duration-300 relative z-20",
                             isTech
