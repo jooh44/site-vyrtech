@@ -115,7 +115,7 @@ export function Hero() {
                     </p>
 
                     <div className="hero-element flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center z-20">
-                        <button className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#D5E8B3] hover:bg-[#C4DB9B] text-[#050506] font-bold transition-all shadow-[0_0_20px_rgba(213,232,179,0.3)] hover:shadow-[0_0_30px_rgba(213,232,179,0.5)] hover:scale-[1.02] group flex items-center justify-center border border-[transparent]">
+                        <button className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#D5E8B3] hover:bg-[#C4DB9B] text-[#050506] font-bold transition-all shadow-[0_0_20px_rgba(213,232,179,0.3)] hover:shadow-[0_0_30px_rgba(213,232,179,0.5)] hover:scale-[1.02] group flex items-center justify-center border border-[transparent]" onClick={() => document.getElementById('diagnostico')?.scrollIntoView({ behavior: 'smooth' })}>
                             Solicitar Diagnóstico
                             <ArrowUpRight className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
                         </button>

@@ -102,7 +102,10 @@ export function CasesSection() {
                                     </p>
                                 </div>
 
-                                <div className="mt-8 pt-6 border-t border-white/5 flex items-center justify-between text-white/50 group-hover:text-white transition-colors cursor-not-allowed">
+                                <div
+                                    className="mt-8 pt-6 border-t border-white/5 flex items-center justify-between text-white/50 group-hover:text-white transition-colors cursor-pointer"
+                                    onClick={() => document.getElementById('diagnostico')?.scrollIntoView({ behavior: 'smooth' })}
+                                >
                                     <span className="text-sm font-medium">Quero construir meu case</span>
                                     <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
                                 </div>
