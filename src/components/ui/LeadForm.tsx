@@ -4,6 +4,8 @@ import { useState } from "react";
 import { User, Mail, Briefcase, ArrowRight, Phone } from "lucide-react";
 import { cn } from "@/components/ui/TechTypography";
 import { useRouter } from "next/navigation";
+import { sendGTMEvent } from "@/lib/gtm-utils";
+import { TrackingEvents } from "@/lib/tracking-events";
 
 interface LeadFormProps {
     formId: string;
@@ -53,7 +55,15 @@ export function LeadForm({ formId, theme = "tech" }: LeadFormProps) {
                 }),
             });
 
-            if (!response.ok) {
+            if (response.ok) {
+                // Tracking success WITHOUT PII (Name, Email, Phone)
+                sendGTMEvent(TrackingEvents.LEAD_SUBMISSION, {
+                    validation_status: "success",
+                    form_id: formId,
+                    theme: theme,
+                    niche: formData.niche,
+                });
+            } else {
                 console.error("Failed to submit form to webhook");
             }
         } catch (error) {
