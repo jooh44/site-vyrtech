@@ -3,7 +3,7 @@ import { Inter, Inter_Tight } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { SmoothScroll } from "@/components/ui/SmoothScroll";
-import { GTM_ID } from "../lib/gtm-utils";
+import { GTM_ID } from "@/lib/gtm-utils";
 
 const inter = Inter({
   variable: "--font-inter",
