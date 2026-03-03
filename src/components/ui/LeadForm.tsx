@@ -9,10 +9,11 @@ import { TrackingEvents } from "@/lib/tracking-events";
 
 interface LeadFormProps {
     formId: string;
+    trackingId?: string;
     theme?: "tech" | "editorial";
 }
 
-export function LeadForm({ formId, theme = "tech" }: LeadFormProps) {
+export function LeadForm({ formId, trackingId, theme = "tech" }: LeadFormProps) {
     const isTech = theme === "tech";
     const router = useRouter();
 
@@ -57,9 +58,10 @@ export function LeadForm({ formId, theme = "tech" }: LeadFormProps) {
 
             if (response.ok) {
                 // Tracking success WITHOUT PII (Name, Email, Phone)
+                // Use trackingId if provided, otherwise fallback to formId
                 sendGTMEvent(TrackingEvents.LEAD_SUBMISSION, {
                     validation_status: "success",
-                    form_id: formId,
+                    form_id: trackingId || formId,
                     theme: theme,
                     niche: formData.niche,
                 });
