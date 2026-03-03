@@ -18,6 +18,10 @@ const interTight = Inter_Tight({
 export const metadata: Metadata = {
   title: "Vyrtech - Consultoria de Crescimento",
   description: "Soluções de Marketing para empresas que buscam mais Clientes e Vendas.",
+  icons: {
+    icon: "/vyrtech-uva.svg",
+    apple: "/vyrtech-uva.svg",
+  },
 };
 
 export default function RootLayout({
