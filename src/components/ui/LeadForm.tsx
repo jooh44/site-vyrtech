@@ -184,7 +184,7 @@ export function LeadForm({ formId, trackingId, theme = "tech" }: LeadFormProps) 
                         >
                             {currentStep === 1 && (
                                 <StepField label="Como devemos te chamar?" icon={User} isTech={isTech}>
-                                    <input required type="text" name="name" value={formData.name} onChange={handleChange} autoFocus placeholder="Seu nome completo" className={inputClasses(isTech)} />
+                                    <input required type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Seu nome completo" className={inputClasses(isTech)} />
                                 </StepField>
                             )}
 
