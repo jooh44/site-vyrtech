@@ -52,7 +52,9 @@ export function ProblemsSection() {
         gsap.registerPlugin(ScrollTrigger);
 
         const ctx = gsap.context(() => {
-            gsap.fromTo(".problem-card",
+            const cards = gsap.utils.toArray<HTMLElement>(".problem-card");
+
+            gsap.fromTo(cards,
                 { y: 60, opacity: 0 },
                 {
                     y: 0,
@@ -66,6 +68,19 @@ export function ProblemsSection() {
                     }
                 }
             );
+
+            // Mobile scroll activation
+            cards.forEach((card) => {
+                ScrollTrigger.create({
+                    trigger: card,
+                    start: "top 60%",
+                    end: "bottom 40%",
+                    toggleClass: {
+                        targets: card,
+                        className: "is-active"
+                    }
+                });
+            });
 
             // 1. Animate Primary Growth Path (Draw-in effect - Slower)
             gsap.fromTo(".graph-path-primary",
@@ -218,21 +233,21 @@ export function ProblemsSection() {
                     {problems.map((prob, idx) => (
                         <div
                             key={idx}
-                            className="problem-card relative bg-transparent backdrop-blur-md border border-[#4A1731]/40 p-8 rounded-3xl hover:bg-transparent hover:border-vyr-wine transition-all duration-500 group overflow-hidden"
+                            className="problem-card relative bg-transparent backdrop-blur-md border border-[#4A1731]/40 p-8 rounded-3xl hover:bg-transparent hover:border-vyr-wine [&.is-active]:border-vyr-wine transition-all duration-500 group overflow-hidden"
                         >
                             {/* Abstract Tech Grid inside Card */}
-                            <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:24px_24px] rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                            <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:24px_24px] rounded-2xl opacity-0 group-hover:opacity-100 group-[.is-active]:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
                             {/* Glowing Accent Line */}
-                            <div className="absolute top-0 left-0 w-0 h-[3px] bg-gradient-to-r from-vyr-wine to-[#6D2749] group-hover:w-full transition-all duration-700 ease-out" />
+                            <div className="absolute top-0 left-0 h-[3px] bg-gradient-to-r from-vyr-wine to-[#6D2749] w-0 group-hover:w-full group-[.is-active]:w-full transition-all duration-700 ease-out" />
 
                             <div className="flex justify-between items-start mb-6 relative z-10 w-full">
-                                <div className="w-12 h-12 rounded-xl bg-transparent flex items-center justify-center border border-[#4A1731]/50 group-hover:border-[#6D2749] transition-all duration-500">
+                                <div className="w-12 h-12 rounded-xl bg-transparent flex items-center justify-center border border-[#4A1731]/50 group-hover:border-[#6D2749] group-[.is-active]:border-[#6D2749] transition-all duration-500">
                                     {prob.icon}
                                 </div>
                             </div>
 
-                            <h3 className="text-xl font-semibold text-vyr-text mb-3 group-hover:text-white transition-colors relative z-10">
+                            <h3 className="text-xl font-semibold text-vyr-text mb-3 group-hover:text-white group-[.is-active]:text-white transition-colors relative z-10">
                                 {prob.title}
                             </h3>
                             <p className="text-vyr-text-muted text-sm leading-relaxed relative z-10">

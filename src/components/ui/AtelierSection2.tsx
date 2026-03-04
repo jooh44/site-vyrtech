@@ -6,12 +6,15 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Droplets, Users, TrendingDown } from "lucide-react";
 
-gsap.registerPlugin(ScrollTrigger);
+if (typeof window !== "undefined") {
+    gsap.registerPlugin(ScrollTrigger);
+}
 
 export function AtelierSection2() {
     const containerRef = useRef<HTMLDivElement>(null);
 
     useGSAP(() => {
+        // Entrance animation
         gsap.fromTo(".agitation-card",
             { y: 40, opacity: 0 },
             {
@@ -22,6 +25,20 @@ export function AtelierSection2() {
                 }
             }
         );
+
+        // Mobile scroll activation
+        const cards = gsap.utils.toArray<HTMLElement>(".agitation-card");
+        cards.forEach((card) => {
+            ScrollTrigger.create({
+                trigger: card,
+                start: "top 60%",
+                end: "bottom 40%",
+                toggleClass: {
+                    targets: card,
+                    className: "is-active"
+                }
+            });
+        });
     }, { scope: containerRef });
 
     const pains = [
@@ -56,8 +73,8 @@ export function AtelierSection2() {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
                     {pains.map((pain, idx) => (
-                        <div key={idx} className="agitation-card bg-white rounded-[1.5rem] shadow-sm border border-[#6D2749]/10 p-6 md:p-10 hover:bg-[#FFEBF4] transition-colors group">
-                            <pain.icon className="w-8 h-8 md:w-10 md:h-10 text-[#6D2749] mb-4 md:mb-8 group-hover:-translate-y-2 transition-transform" strokeWidth={1.5} />
+                        <div key={idx} className="agitation-card bg-white rounded-[1.5rem] shadow-sm border border-[#6D2749]/10 p-6 md:p-10 hover:bg-[#FFEBF4] [&.is-active]:bg-[#FFEBF4] transition-colors group">
+                            <pain.icon className="w-8 h-8 md:w-10 md:h-10 text-[#6D2749] mb-4 md:mb-8 group-hover:-translate-y-2 group-[.is-active]:-translate-y-2 transition-transform" strokeWidth={1.5} />
                             <h3 className="text-lg md:text-xl font-bold text-black mb-2 md:mb-4 uppercase tracking-widest leading-tight">{pain.title}</h3>
                             <p className="text-sm md:text-base text-gray-600 leading-relaxed font-light">
                                 {pain.desc}

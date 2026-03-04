@@ -6,12 +6,15 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MonitorSmartphone, Rocket, Bot, Database, Palette, Briefcase } from "lucide-react";
 
-gsap.registerPlugin(ScrollTrigger);
+if (typeof window !== "undefined") {
+    gsap.registerPlugin(ScrollTrigger);
+}
 
 export function ScopesSection() {
     const containerRef = useRef<HTMLDivElement>(null);
 
     useGSAP(() => {
+        // Entrance animation
         gsap.fromTo(".scope-card",
             { y: 40, opacity: 0 },
             {
@@ -27,6 +30,20 @@ export function ScopesSection() {
                 }
             }
         );
+
+        // Mobile scroll activation
+        const cards = gsap.utils.toArray<HTMLElement>(".scope-card");
+        cards.forEach((card) => {
+            ScrollTrigger.create({
+                trigger: card,
+                start: "top 60%",
+                end: "bottom 40%",
+                toggleClass: {
+                    targets: card,
+                    className: "is-active"
+                }
+            });
+        });
     }, { scope: containerRef });
 
     const scopes = [
@@ -75,8 +92,10 @@ export function ScopesSection() {
                     from { transform: rotate(360deg); }
                     to { transform: rotate(0deg); }
                 }
-                .group:hover .animate-tech-spin { animation: tech-spin 20s linear infinite; }
-                .group:hover .animate-tech-spin-reverse { animation: tech-spin-reverse 15s linear infinite; }
+                .group:hover .animate-tech-spin,
+                .group.is-active .animate-tech-spin { animation: tech-spin 20s linear infinite; }
+                .group:hover .animate-tech-spin-reverse,
+                .group.is-active .animate-tech-spin-reverse { animation: tech-spin-reverse 15s linear infinite; }
                 `
             }} />
 
@@ -104,12 +123,12 @@ export function ScopesSection() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1px] bg-white/10 border border-white/20 rounded-2xl overflow-hidden shadow-2xl backdrop-blur-xl relative z-10">
                     {scopes.map((scope, idx) => (
-                        <div key={idx} className="scope-card bg-[#050506]/90 hover:bg-[#050506]/60 p-10 transition-all duration-500 group relative overflow-hidden">
-                            {/* Hover Gradient */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-[#1C050F]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                        <div key={idx} className="scope-card bg-[#050506]/90 hover:bg-[#050506]/60 [&.is-active]:bg-[#050506]/60 p-10 transition-all duration-500 group relative overflow-hidden">
+                            {/* Hover/Active Gradient */}
+                            <div className="absolute inset-0 bg-gradient-to-br from-[#1C050F]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 group-[.is-active]:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
-                            {/* CSS Animated Tech Shapes (Visible and glowing on hover) */}
-                            <div className="absolute top-4 right-4 w-28 h-28 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-0">
+                            {/* CSS Animated Tech Shapes */}
+                            <div className="absolute top-4 right-4 w-28 h-28 opacity-0 group-hover:opacity-100 group-[.is-active]:opacity-100 transition-opacity duration-700 pointer-events-none z-0">
                                 <svg viewBox="0 0 100 100" className="w-full h-full drop-shadow-[0_0_8px_rgba(255,197,225,0.4)]">
                                     <circle cx="50" cy="50" r="40" stroke="#FFC5E1" strokeWidth="0.5" strokeDasharray="4 4" fill="none" className="animate-tech-spin origin-center" />
                                     <circle cx="50" cy="50" r="25" stroke="#6D2749" strokeWidth="1" strokeDasharray="2 6" fill="none" className="animate-tech-spin-reverse origin-center" />
@@ -118,7 +137,7 @@ export function ScopesSection() {
                             </div>
 
                             <div className="relative z-10">
-                                <scope.icon className="w-10 h-10 text-[#FFC5E1] mb-8 group-hover:-translate-y-2 transition-transform duration-300" strokeWidth={1.5} />
+                                <scope.icon className="w-10 h-10 text-[#FFC5E1] mb-8 group-hover:-translate-y-2 group-[.is-active]:-translate-y-2 transition-transform duration-300" strokeWidth={1.5} />
                                 <h3 className="text-xl font-bold text-white mb-4 uppercase tracking-widest">{scope.title}</h3>
                                 <p className="text-gray-400 leading-relaxed font-light">
                                     {scope.desc}

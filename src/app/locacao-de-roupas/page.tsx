@@ -69,6 +69,17 @@ export default function FashionRetailLandingPage() {
                         }
                     }
                 );
+
+                // Mobile scroll activation
+                ScrollTrigger.create({
+                    trigger: step,
+                    start: "top 60%",
+                    end: "bottom 40%",
+                    toggleClass: {
+                        targets: step,
+                        className: "is-active"
+                    }
+                });
             });
 
         }, containerRef);
@@ -114,7 +125,7 @@ export default function FashionRetailLandingPage() {
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 border border-white/20 bg-[#050506]/60 backdrop-blur-xl rounded-xl overflow-hidden shadow-2xl">
 
                         {/* Step 1 */}
-                        <div className="system-step flex flex-col border-b lg:border-b-0 lg:border-r border-white/10 relative group hover:bg-white/5 transition-colors duration-500">
+                        <div className="system-step flex flex-col border-b lg:border-b-0 lg:border-r border-white/10 relative group hover:bg-white/5 [&.is-active]:bg-white/5 transition-colors duration-500">
                             <div className="p-8 lg:p-10 border-b border-white/10 flex flex-col justify-start flex-1 relative z-10">
                                 <div className="step-symbol mb-6">
                                     <MapPin className="w-10 h-10 text-[#FFC5E1]" strokeWidth={1.5} />
@@ -224,7 +235,7 @@ export default function FashionRetailLandingPage() {
                         </div>
 
                         {/* Step 2 */}
-                        <div className="system-step flex flex-col border-b lg:border-b-0 lg:border-r border-white/10 relative group hover:bg-white/5 transition-colors duration-500">
+                        <div className="system-step flex flex-col border-b lg:border-b-0 lg:border-r border-white/10 relative group hover:bg-white/5 [&.is-active]:bg-white/5 transition-colors duration-500">
                             <div className="p-8 lg:p-10 border-b border-white/10 flex flex-col justify-start flex-1 relative z-10">
                                 <div className="step-symbol mb-6">
                                     <Bot className="w-10 h-10 text-[#FFC5E1]" strokeWidth={1.5} />
@@ -242,7 +253,7 @@ export default function FashionRetailLandingPage() {
                         </div>
 
                         {/* Step 3 */}
-                        <div className="system-step flex flex-col relative group hover:bg-white/5 transition-colors duration-500">
+                        <div className="system-step flex flex-col relative group hover:bg-white/5 [&.is-active]:bg-white/5 transition-colors duration-500">
                             <div className="p-8 lg:p-10 border-b border-white/10 flex flex-col justify-start flex-1 relative z-10">
                                 <div className="step-symbol mb-6">
                                     <DollarSign className="w-10 h-10 text-[#FFC5E1]" strokeWidth={1.5} />
