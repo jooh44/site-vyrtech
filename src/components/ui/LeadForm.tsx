@@ -251,40 +251,43 @@ export function LeadForm({ formId, trackingId, theme = "tech" }: LeadFormProps) 
                     </AnimatePresence>
                 </div>
 
-                <div className="flex flex-col space-y-4 pt-6 border-t border-white/10">
-                    <div className="flex items-center justify-between">
-                        <button
-                            type="button"
-                            onClick={prevStep}
-                            className={cn(
-                                "flex items-center text-sm font-medium transition-opacity",
-                                currentStep === 1 ? "opacity-0 pointer-events-none" : "opacity-100",
-                                isTech ? "text-white/50 hover:text-white" : "text-gray-500 hover:text-black"
-                            )}
-                        >
-                            <ChevronLeft className="w-4 h-4 mr-1" /> Voltar
-                        </button>
+                <div className="flex flex-col space-y-4 pt-4">
+                    <div className="flex flex-col sm:flex-row gap-3">
+                        {currentStep > 1 && (
+                            <button
+                                type="button"
+                                onClick={prevStep}
+                                className={cn(
+                                    "py-4 px-6 rounded-xl font-bold transition-all flex items-center justify-center border",
+                                    isTech
+                                        ? "border-white/10 text-white/70 hover:bg-white/5 hover:text-white"
+                                        : "border-black/10 text-gray-600 hover:bg-gray-50"
+                                )}
+                            >
+                                <ChevronLeft className="w-5 h-5 mr-1" /> Voltar
+                            </button>
+                        )}
 
                         <button
                             type="submit"
                             disabled={!isStepValid || isSubmitting}
                             className={cn(
-                                "py-3 px-8 rounded-lg font-bold transition-all flex items-center justify-center disabled:opacity-50",
+                                "py-4 px-8 rounded-xl font-black transition-all flex items-center justify-center disabled:opacity-30 disabled:grayscale flex-1 uppercase tracking-wider",
                                 isTech
-                                    ? "bg-[#D5E8B3] hover:bg-[#C4DB9B] text-[#050506] shadow-[0_0_15px_rgba(213,232,179,0.2)]"
-                                    : "bg-[#6D2749] hover:bg-[#4A1731] text-white shadow-md hover:shadow-lg"
+                                    ? "bg-[#D5E8B3] hover:bg-white text-[#050506] shadow-[0_0_20px_rgba(213,232,179,0.3)] hover:shadow-[0_0_25px_rgba(255,255,255,0.4)] scale-[1.02] active:scale-[0.98]"
+                                    : "bg-[#6D2749] hover:bg-[#8B315D] text-white shadow-lg hover:shadow-xl active:scale-[0.98]"
                             )}
                         >
-                            {isSubmitting ? "Enviando..." : currentStep === STEPS_COUNT ? "Enviar Diagnóstico" : "Próximo"}
-                            {!isSubmitting && <ArrowRight className="w-4 h-4 ml-2" />}
+                            {isSubmitting ? "Enviando..." : currentStep === STEPS_COUNT ? "Enviar Diagnóstico" : "Próximo Passo"}
+                            {!isSubmitting && <ArrowRight className="w-5 h-5 ml-2" />}
                         </button>
                     </div>
 
                     <p className={cn(
-                        "text-[10px] text-center opacity-40 uppercase tracking-widest",
+                        "text-[10px] text-center opacity-40 uppercase tracking-[0.2em] font-bold mt-2",
                         isTech ? "text-white" : "text-black"
                     )}>
-                        Seus dados estão protegidos de acordo com a LGPD.
+                        🔒 Seus dados estão protegidos de acordo com a LGPD.
                     </p>
                 </div>
             </form>
@@ -294,12 +297,17 @@ export function LeadForm({ formId, trackingId, theme = "tech" }: LeadFormProps) 
 
 function StepField({ label, icon: Icon, isTech, children }: { label: string, icon: any, isTech: boolean, children: React.ReactNode }) {
     return (
-        <div className="space-y-4">
-            <label className={cn("block text-xl md:text-2xl font-bold tracking-tight", isTech ? "text-white" : "text-black")}>
+        <div className="space-y-6">
+            <label className={cn("block text-2xl md:text-3xl font-black tracking-tighter leading-tight", isTech ? "text-white" : "text-black")}>
                 {label}
             </label>
-            <div className="relative">
-                <Icon className={cn("absolute left-4 top-4 w-6 h-6 z-10", isTech ? "text-white/40" : "text-gray-400")} />
+            <div className="relative group">
+                <div className={cn(
+                    "absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center rounded-lg transition-colors z-30",
+                    isTech ? "bg-white/5 group-focus-within:bg-[#D5E8B3]/20" : "bg-gray-100 group-focus-within:bg-[#6D2749]/10"
+                )}>
+                    <Icon className={cn("w-5 h-5 transition-colors", isTech ? "text-white/40 group-focus-within:text-[#D5E8B3]" : "text-gray-400 group-focus-within:text-[#6D2749]")} />
+                </div>
                 {children}
             </div>
         </div>
@@ -307,8 +315,8 @@ function StepField({ label, icon: Icon, isTech, children }: { label: string, ico
 }
 
 const inputClasses = (isTech: boolean) => cn(
-    "w-full rounded-xl pl-12 pr-4 py-4 text-lg focus:outline-none transition-all duration-300 relative z-20",
+    "w-full rounded-xl pl-16 pr-4 py-5 text-lg font-medium focus:outline-none transition-all duration-300 relative z-20 border-2",
     isTech
-        ? "bg-[#121214] border border-white/10 text-white focus:border-vyr-wine"
-        : "autofill-light bg-gray-50 border border-black/10 text-black focus:border-[#6D2749] focus:ring-1 focus:ring-[#6D2749]"
+        ? "bg-[#0A0A0B]/80 hover:bg-[#121214] border-white/5 text-white focus:border-[#D5E8B3] focus:shadow-[0_0_15px_rgba(213,232,179,0.1)]"
+        : "autofill-light bg-gray-50/50 hover:bg-white border-black/5 text-black focus:border-[#6D2749] focus:ring-1 focus:ring-[#6D2749]"
 );
